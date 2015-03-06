@@ -2,7 +2,7 @@
 
 The hint for the problem says
 
-> The timing in this challenge is clearly not very realistic---but the methods you\'ll use here can be extended to real-world implementations of modular exponentiation.
+> The timing in this challenge is clearly not very realistic---but the methods you'll use here can be extended to real-world implementations of modular exponentiation.
 
 Opening up the package, we see that they have implemented a simple modular exponentiation algorithm which takes your input `b` and computes `b^e % m` for a randomly-generated, secret exponent `e` and a large safe prime `m`. The obvious change here is that the square-and-multiply exponentiation algorithm, aptly named `slowpower`, pauses for one full second any time an intermediate result is equal to 4.
 
