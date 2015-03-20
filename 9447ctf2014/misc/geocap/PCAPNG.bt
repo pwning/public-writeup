@@ -1,0 +1,66 @@
+//--------------------------------------
+//--- 010 Editor v5.0.2 Binary Template
+//
+// File:
+// Author: Erye
+// Revision: 1
+// Purpose: pcapng
+//--------------------------------------
+typedef struct {
+    uint32 type;
+    uint32 length;
+    uint32 body[(length/4)-3];
+    uint32 length2;
+} BLOCK;
+
+typedef struct {
+    uint32 type;
+    uint32 length;
+    uint32 magic;
+    uint16 major_ver;
+    uint16 minor_ver;
+    uint64 sect_length;
+    uint32 options[(length/4)-7];
+    uint32 length2;
+} SECTIONHEADER;
+
+LittleEndian();
+SECTIONHEADER header;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
+BLOCK pkt;
