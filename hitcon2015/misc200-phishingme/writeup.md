@@ -18,13 +18,14 @@ Given this information, the first impulse is to quickly create a malicious docum
 Since this challenge requires using macros in a Word document to complete the challenge, we outline the steps of creating macros below. 
 
 If using MS Word 2003, click on `Tools` then `Macros` and then finally `Macros`. 
-![MS Word 2003](https://github.com/pwning/public-writeup/blob/master/hitcon2015/misc200-phishingme/office_2003.png)
+<img src="https://github.com/pwning/public-writeup/blob/master/hitcon2015/misc200-phishingme/office_2003.png" width="500">
 
 If using MS Word 2007, click on `View` then `Macros` and thenn finally `View Macros`.
-![MS Word 2007](https://github.com/pwning/public-writeup/blob/master/hitcon2015/misc200-phishingme/office_2007.png)
+<img src="https://github.com/pwning/public-writeup/blob/master/hitcon2015/misc200-phishingme/office_2007.png" width="600">
 
 Create a macro named `AutoOpen` in the `macro` dialog box and it will launch the `Visual Basic Editor` where you can create and debug your `macros`.
-![macro dialog box](https://github.com/pwning/public-writeup/blob/master/hitcon2015/misc200-phishingme/macro_dialog.png)
+
+<img src="https://github.com/pwning/public-writeup/blob/master/hitcon2015/misc200-phishingme/macro_dialog.png" width="400">
 
 
 ####So how do we exfil all the data?  
