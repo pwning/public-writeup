@@ -9,4 +9,5 @@ logarithms in certain subgroups. We send the number `pow(2, p/(2*3**306), p)`
 as the base, which gives us a group of size `2*3**306` in which to work.
 
 When we receive the response, we can easily calculate the discrete logarithm
-in our subgroup, as it has a fairly small order. This gives us our flag.
+in our subgroup, as it has a fairly small order. This gives us our flag 
+`hitcon{CBRT_cbrt_Cbrt_CbRt_cBrT_cBRT_RePeAt......}`
