@@ -65,8 +65,8 @@ This gives us the password: `hitconctf2015givemeshell`
 
 Having leaked the password, we make another connection where we use the format
 string vulnerability to point `do_job`'s GOT entry at `system`'s PLT entry. We
-can then specify a command to run as the username and the correct password, run
-arbitrary commands.
+can then specify a command to run as the username and the correct
+password, and run arbitrary commands.
 
 See
 [exploit.py](https://github.com/pwning/public-writeup/blob/master/hitcon2015/web200-nanana/exploit.py)
