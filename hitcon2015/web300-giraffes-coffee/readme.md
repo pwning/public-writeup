@@ -1,5 +1,11 @@
 ## Giraffe's Coffee - Web 300 Problem - Writeup by Robert Xiao (@nneonneo)
 
+### Description
+> Find the flag!<br>
+> http://52.69.0.204
+
+### Solution
+
 First thing we do is go to View Source, which tells us to go look at the source code at `index.phps`. Although the web interface only lets you register and login, the source code shows that there are functions for "verify" and "reset" which together allow you to reset a user's password. It's clear that our goal is to reset the password for the `admin` account.
 
 Everything seems escaped properly, so we aren't going to get in via SQLi. Instead, look at the reset password functions. `reset` generates a password reset token which is "mailed" to the IP address that the user originally registered with; passing that token to `verify` will reset the user's password.
