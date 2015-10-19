@@ -58,8 +58,8 @@ smashing detected ***: argv0`), so we can obtain the leaked value by inspecting
 that header.  Since `argv[0]` is normally a stack address, its bottom 6 bytes
 are non-zero, whereas the address of `g_password` is `0x601090`. Since
 `sprintf` will write exactly one null byte, we use the `username`, `password`,
-and `job` fields to write zeros over the high bits of `argv[0]`, then write the
-address of `g_password` using the action field.
+and `job` fields to write zeros over the high bytes of `argv[0]`, then
+write the address of `g_password` using the action field.
 
 This gives us the password: `hitconctf2015givemeshell`
 
