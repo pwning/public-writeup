@@ -33,7 +33,7 @@ As we read the code, we lay out the equations with these DWORDs as variables:
 - `s1*s5 == 0x313AC784`
 
 Then, we run z3 to get the correct code: `KTIY-ML5M-VK7R-FE5Q-L6DD`. See
-[solve.py](https://github.com/pwning/public-writeup/blob/master/hitcon2du015/rev300-risky/solve.py)
+[solve.py](https://github.com/pwning/public-writeup/blob/master/hitcon2015/rev300-risky/solve.py)
 for the full solution.
 
 ## Flag
