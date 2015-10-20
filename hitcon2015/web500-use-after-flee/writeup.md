@@ -33,7 +33,7 @@ environment with the exact same php/libc versions.
 
 As described in Taoguang's writeup, the bug is a use-after-free in
 unserializing `SplDoublyLinkedList` objects. PHP's object serialization
-allows a value reference a previously unserialized object (see
+allows a value to reference a previously unserialized object (see
 [here](http://www.phpinternalsbook.com/classes_objects/serialization.html)
 for some more details).  When an deserialized object's `__wakeup` method
 is called, it can free one of its member objects by reassigning the
