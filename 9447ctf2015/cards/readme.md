@@ -47,9 +47,9 @@ void shuffle(long long *deck, int size) {
 ```
 
 Since `val % size` can be negative if `val` is negative, the code attempts to ensure that the value is always
-positive before proceeding. However, there is exactly one negative number that remains negative after inverting
+positive before doing the swap. However, there is exactly one negative number that remains negative after inverting
 its sign, namely `0x8000000000000000`, since two's complement negation ensures `-val == (~val) + 1`. Therefore,
-we can swap `deck[val % size]` with an arbitrary value to where `val = 0x8000000000000000`
+we can swap `deck[val % size]` with an arbitrary value, where `val = 0x8000000000000000`
 (`-9223372036854775808`) and `size` is a controlled integer between 1 and 52. This swapped value will become
 one of our cards and will be printed to us in `playGame`.
 
