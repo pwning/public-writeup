@@ -3,9 +3,9 @@
 ### Description
 
 We're given the binary and the source code. The game starts by asking you to enter up to 52 cards, where
-cards are 64-bit nonzero integers. It then performs some unnecessary shuffling to the cards, and starts the
-game. The game consists of many rounds of both you and the opponent choosing a card. Whoever chooses the larger
-card wins. The game continues until you have chosen every card exactly once.
+cards are 64-bit nonzero integers. It then performs some unnecessary shuffling to the cards and starts the
+game. The game consists of many rounds of both you and the opponent choosing a card, and whoever chooses the larger
+card wins the round. The game continues until you have chosen every card exactly once.
 If you win more rounds than the opponent, you get the flag.
 
 However, the game appears to be impossible to win, since the opponent will always choose the card above yours
@@ -48,16 +48,16 @@ void shuffle(long long *deck, int size) {
 
 Since `val % size` can be negative if `val` is negative, the code attempts to ensure that the value is always
 positive before doing the swap. However, there is exactly one negative number that remains negative after inverting
-its sign, namely `0x8000000000000000`, since two's complement negation ensures `-val == (~val) + 1`. Therefore,
+its sign, namely `0x8000000000000000`, since two's complement negation results in `-val == (~val) + 1`. Therefore,
 we can swap `deck[val % size]` with an arbitrary value, where `val = 0x8000000000000000`
 (`-9223372036854775808`) and `size` is a controlled integer between 1 and 52. This swapped value will become
 one of our cards and will be printed to us in `playGame`.
 
-By controlling the size, we can set deck to be any small, odd negative nummber.
+Since we control the size, we can set deck to be any small, odd negative nummber.
 
 By analyzing the stack, we see that `deck[-1]` is the return address for `shuffle`. However, we cannot
-swap that value until we have a leak. Conveniently, if `playGame` has not yet been called, then
+swap that value until we have a PIE leak. Conveniently, if `playGame` has not yet been called, then
 `deck[-3]` has a leftover pointer to `_start`, which is fine to corrupt. We can use this leak to compute
-the address of `printFlag`, and then swap this value onto `deck[-1]`.
+the address of `printFlag`, and then swap this value into `deck[-1]`.
 
 See `solve.py` for the finished exploit.
