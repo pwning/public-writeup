@@ -53,7 +53,7 @@ we can swap `deck[val % size]` with an arbitrary value, where `val = 0x800000000
 (`-9223372036854775808`) and `size` is a controlled integer between 1 and 52. This swapped value will become
 one of our cards and will be printed to us in `playGame`.
 
-Since we control the size, we can set deck to be any small, odd negative nummber.
+Since we control the size, we can make the index any small, odd negative nummber.
 
 By analyzing the stack, we see that `deck[-1]` is the return address for `shuffle`. However, we cannot
 swap that value until we have a PIE leak. Conveniently, if `playGame` has not yet been called, then
