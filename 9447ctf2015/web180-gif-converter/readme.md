@@ -20,12 +20,12 @@ Consequently, FFmpeg has to guess the file format from the contents of the file,
 so we can upload things that are not GIFs.
 
 FFmpeg supports certain meta file formats which are capable of including files.
-The format I chose was HTTP Live Streaming, which can read local files using
+The format I chose was HTTP Live Streaming, which can read local files using the
 `file://` protocol. Hence, we construct an HLS playlist and feed it to the gif
 converter, which renders the contents of that text file as the WebM video.
 
-See the attached `upload.gif` for more details. Upon submitting this file to
-the uploader, the resulting video contains the flag.
+See the attached `upload.gif` for what was actually uploaded. Upon submitting
+this file to the website, we get a video that shows he flag.
 
 ### Flag
 
