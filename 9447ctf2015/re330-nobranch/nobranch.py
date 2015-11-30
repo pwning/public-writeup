@@ -1,5 +1,8 @@
 smt = 'boolector'
 
+# Define some functions for cross-compatability between z3 and boolector.
+# (When working on this challenge, I started with z3 and then switched to
+# boolector for performance reasons).
 if smt == 'z3':
   from z3 import *
   def AShR(x, y):
@@ -35,6 +38,7 @@ elif smt == 'boolector':
     return ctxt.Uext(x, ext)
 
 class Reg(object):
+  """Represents an x86 register, or a slice thereof. (Also used for stack slots)"""
   def __init__(self, name, high, low):
     if isinstance(name, Reg):
       parent = name
@@ -169,6 +173,9 @@ var_33 = 2
 var_32 = 1
 var_31 = 0
 
+# We treat the i/o buffers and stack slots as registers;
+# a quick peek at the asm confirms that, in this case,
+# the approach is sound.
 outbuf = [Reg('y'+str(i), 7, 0) for i in range(0x1F)]
 inbuf = [Reg('x'+str(i), 7, 0) for i in range(0x12)]
 stack = [Reg('t'+str(i), 7, 0) for i in range(34)]
@@ -177,6 +184,7 @@ class State(object):
   def __init__(self):
     self.dict = {reg.name:Var(reg.name, reg.bits) for reg in gpregs+outbuf+inbuf+stack}
   def __getitem__(self, reg):
+    """Get the current expression for a particular register. Passes through integers."""
     if isinstance(reg, (int, long)):
       return reg
     val = self.dict[reg.name]
@@ -185,6 +193,7 @@ class State(object):
     else:
       return Extract(reg.high, reg.low, val)
   def __setitem__(self, reg, val):
+    """Update the state with an expression (auto-converts integers to BitVec constants)."""
     if isinstance(val, (int, long)):
       val = Const(val, reg.bits)
     else:
@@ -200,6 +209,8 @@ class State(object):
     self.dict[reg.name] = simplify(Concat(*newval) if len(newval) > 1 else newval[0])
 
 state = State()
+
+# Implementations of the instructions used by nobranch.
 
 def _mov(dst, src):
   state[dst] = state[src]
@@ -307,6 +318,7 @@ if smt == 'z3':
   # The real chal
   s.add(*[state[x] == ord(y) for x, y in zip(outbuf, 'HMQhQLi6VqgeOj78AbiaqquK3noeJt')])
   
+  # For testing:
   # 'AAAAAAAAAAAAAAAAAA'
   # s.add(*[state[x] == ord(y) for x, y in zip(outbuf, 'jw6wLPdwMYxqPyQJqs0hqRXCUaSKYT')])
   
