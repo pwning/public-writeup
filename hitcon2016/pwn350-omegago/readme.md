@@ -30,7 +30,7 @@ whether or not to play again.
 Reversing the Go implementation, we see that it creates computer and
 human player objects that implement a virtual `Play` method.
 
-```
+```cpp
 class Player {
  public:
   virtual void Play(GameState *state, int player_number, uint32_t *row, uint32_t *col) {};
@@ -51,7 +51,7 @@ human (`X` - 2). Each of the 19x19 positions is represented by two
 adjacent bits (a half-nibble) in the bitmap (with the 0b11 value never
 occurring).
 
-```
+```cpp
 struct GameState {
   uint64_t board_bitmap[12];
   uint32_t move_row;
@@ -67,7 +67,7 @@ The program keeps track of the history of the game with a static global
 array of `GameState` pointers. The array occurs immediately before a
 global variable containing the current game state.
 
-```
+```cpp
 GameState *g_history[364];
 GameState g_current_state;
 ```
@@ -75,7 +75,7 @@ GameState g_current_state;
 Each move, the program allocates a new `GameState` and copies the
 current game state into it. 
 
-```
+```cpp
 GameState *state = new Gamestate;
 *state = g_current_state;
 g_history[g_history_size] = state;
@@ -83,7 +83,7 @@ g_history[g_history_size] = state;
 
 Taking a move back is implemented by the following logic:
 
-```
+```cpp
 delete_last_move() {
   ...
   delete g_history[--g_history_size];
@@ -115,8 +115,8 @@ pointers past the end of `g_history`.
 ### Exploit
 
 In order to trigger teh bug, we need to construct a game which takes
->394 moves, taking into account that repeat positions are not allowed,
-and the board only has 19x19, or 361 points.
+greater than 394 moves, taking into account that repeat positions are
+not allowed, and the board only has 19x19, or 361 points.
 
 To do this, we use the concept of [ko](http://senseis.xmp.net/?ko).
 
@@ -154,7 +154,7 @@ Next, X moves elsewhere, say A1, and O mirrors accordingly:
 ```
 
 Now, X can recapture the ko without repeating the position by playing
-I4:
+I3:
 
 ```
   ABCDEFGHIJ
@@ -192,7 +192,7 @@ Now we place a piece to increment the `GameState` pointer by 0x80. This
 points `g_history[364]` to a location containing some zeros, followed by
 a libc address. At this point, we have:
 
-```
+```cpp
 g_history[364] = computer_move + 0x80
 g_history[365] = move_we_just_made
 g_history[366] = computer_response
@@ -201,7 +201,7 @@ g_history[366] = computer_response
 by taking back our move, we execute the `take_back_move`, which ends
 with:
 
-```
+```cpp
 // g_history_size = 365
 *g_current_state = g_history[g_history_size - 1];
 
@@ -234,11 +234,15 @@ computer move, the program jumps an addres of our choosing.
 
 Since the program is an xinetd service, we were able to use a gadget in libc which does:
 
-```
+```cpp
 execve("/bin/sh", rsp + 0x70, environ);
 ```
 
 to get a shell.
+
+See
+[exploit.py](https://github.com/pwning/public-writeup/blob/master/hitcon2016/pwn350-omegago/exploit.py)
+for the full exploit.
 
 For unknown reasons, despite having a reliable local exploit, the
 exploit was unreliable against the remote server (in Japan) when sent
