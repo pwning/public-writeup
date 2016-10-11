@@ -112,7 +112,7 @@ Next, we setup the following layout:
 +--------+-----------+-----------------------+
 ```
 
-The guard allocations serve to prevent unwanted consolidations when freeing
+The guard allocations prevent unwanted consolidations when freeing
 `overwrite` and `top`.
 
 We make `target` 0xae8 bytes large so that the `size` field in the malloc chunk
@@ -170,11 +170,11 @@ overlaps `partial2`.
 +-----------+----------------------------------------------+
 ```
 
-We have now overlapped a large free block with a an allocated block, but this
-isn't useful yet, as we don't know any addresses. Now, we turn to leaking libc.
-Log messages are printed via a format string with `%s`, so we need to place a
-libc address precisely at the start of an allocated log buffer (in this case,
-`partial2`).
+We have now overlapped a large free block with an allocated block, but
+this isn't useful yet, as we don't know any addresses. Now, we turn to
+leaking libc.  Log messages are printed via a format string with `%s`,
+so we need to place a libc address precisely at the start of an
+allocated log buffer (in this case, `partial2`).
 
 First, we reallocate `partial1` (0x80) out of the `top` chunk:
 
@@ -250,8 +250,9 @@ fastbin.
 +-----------+-----------------+--------------+------+-------------+
 ```
 
-Once again, we free overlap and reallocate it, this time overwriting the next
-pointer of `fb1` with the a fake fastbin chunk before `__malloc_hook`.
+Once again, we free `overlap` and reallocate it, this time overwriting
+the next pointer of `fb1` with the a fake fastbin chunk before
+`__malloc_hook`.
 
 Finally, we we make two allocations of size 0x68. The first allocation is
 located at `fb1`, and sets the head of the fastbin to `fb1`'s next pointer (the
