@@ -116,12 +116,12 @@ points in front of an allocated `g_small_secret`:
 +--------------------+---+
 ```
 
- We then write write a fake malloc chunk with next and prev pointing to
-`&g_big_secret - 0x10`, and overwrite `g_small_secret`'s malloc chunk, setting
-`prev_inuse` to 0 so that when the chunk is freed via `g_small`, it will
-consolidate backwards, unlinking the fake chunk. After `g_small_secret`'s
-chunk, we place an additional chunk with `prev_inuse` set to prevent forward
-consolidation.
+We then write a fake malloc chunk with next and prev pointing to
+`&g_big_secret - 0x10`, and overwrite `g_small_secret`'s malloc chunk,
+setting `prev_inuse` to 0 so that when the chunk is freed via `g_small`,
+it will consolidate backwards, unlinking the fake chunk. After
+`g_small_secret`'s chunk, we place an additional chunk with `prev_inuse`
+set to prevent forward consolidation.
 
 ```
 +---------+------+
