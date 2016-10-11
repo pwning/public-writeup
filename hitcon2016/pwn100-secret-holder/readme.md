@@ -9,9 +9,10 @@ nc 52.68.31.117 5566
 
 ### Overview
 
-The program implements a somewhat contrived secret keeping service. The
-service supports storing three types of secrets, small (40 bytes), big
-(4000 bytes), and huge (400000 bytes).
+Secret Holder is an x86-64 ELF (NX, partial RELRO, no PIE) implementing
+a somewhat contrived secret keeping service. The service supports
+storing three types of secrets, small (40 bytes), big (4000 bytes), and
+huge (400000 bytes).
 
 The user can modify and free secrets after adding them.
 
