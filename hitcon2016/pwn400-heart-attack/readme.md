@@ -195,7 +195,7 @@ called `partial2_2` perfectly overlaps `partial2`.
 +-----------+-----------------+------------+-----------+-----+
 | overwrite |                 | partial2   |           |     |
 +-----------+-----------------+------------+-----------+-----+
-| overwrite | partial1        | partial2_2 |                 |
+| overwrite | partial1        | partial2_2 | top (freed)     |
 +-----------+-----------------+------------+-----------------+
 ```
 
@@ -275,7 +275,7 @@ See
 [exploit.py](https://github.com/pwning/public-writeup/blob/master/hitcon2016/pwn400-heart-attack/exploit.py)
 for the full exploit.
 
-For some reasons (perhaps partial reads), despite having a reliable local
-exploit, the exploit did not work against the remote server (in Japan) when
-sent from a machine in the US. To land this, we had to run the exploit from a
-machine in Japan.
+For some reason (perhaps partial reads), despite having a reliable local
+exploit, the exploit did not work against the remote server (in Japan)
+when sent from a machine in the US. To land this, we had to run the
+exploit from a machine in Japan.
