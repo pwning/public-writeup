@@ -55,7 +55,7 @@ else:
 
 Where we get:
 
-![alt-text](/images/results-trump-likes-colors.png){:style="max-height: 300px; width: auto;"}
+![alt-text](images/results-trump-likes-colors.png){:style="max-height: 300px; width: auto;"}
 
 
 
