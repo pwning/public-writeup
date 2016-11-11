@@ -1,7 +1,8 @@
 
 # Trump likes Colors Writeup
-### Writeup for HackTheVote 2016, 250 Points scored for Plaid Parliment of Pwning
-November 4, 2016
+### Writeup for HackTheVote 2016, 250 Points
+@evandesantola  [evandesantola.com](evandesantola.com)
+
 
 ## Description
 >Somebody leAked TrumP's favorite colors, looks like they used a really esoteric format. Some chiNese hacker named "DanGer Mouse" provided us the leak, getting this crucial info could really sway voters at the polls!"
@@ -19,7 +20,8 @@ After waiting for the images to process, we get a large folder full of 16,384 im
 
 Iterating through the files and comparing them with:
 
-<'cmp --silent $first $second || echo "files are different"'>
+<`cmp --silent $first $second || echo "files are different"`>
+
 We discover that all the intermediary files containing frame rate information are all identical and that these images are displayed at a constant frame rate. We assume that the only thing that is changing between frames is the changes between the images is the pixels within the images.
 
 As there are 16384 frames (128*128), we hypothesize that the image likely corresponds to another image (with dimensions 128 by 128), whose pixels are encoded by the relative proportion of colors in the top right of our images.
@@ -28,7 +30,7 @@ As there are 16384 frames (128*128), we hypothesize that the image likely corres
 
 We iterate through the pixels of each frame and set a new image's pixels to be the relative color frequencies:
 
-'''python
+```python
 if (pix[row,col]==(255,255,255,255)): 
 	continue #Ignore black pixels
 else:
@@ -40,7 +42,7 @@ else:
 	
  pixels[i/128,i % 128]= (255*rs/(rs+bs+gs),
  	(255*gs/(rs+gs+bs)),(255*bs/(rs+gs+bs)))
-'''
+```
 
 Where we get:
 
@@ -50,13 +52,13 @@ Where we get:
 
 Cleaning this image up, we see that in the above image, each bar has a unique height, and that there are approximately enough bars to make out the characters in a flag.  Additionally, each bar has a height on the range [0,128), suggesting to us that the height of each bar corresponds to an ASCII character.   Modifying our script, we get the height of each bar and its corresponding ASCII character with a script, with:
 
-'''python
+```python
 t=""
 for column in columnHeights:
 	if (column!=127):
 		t+= str(unichr(column))
 print t
-'''
+```
 
 [Images and Code](/files/TrumpLikesColorsStuff.zip)
 
