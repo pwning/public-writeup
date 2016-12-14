@@ -1,6 +1,8 @@
 # Fuckzing reverse Writeup
 ### EKOPARTY 2016 – rev250
 
+Adam Van Prooyen [website](http://van.prooyen.com/reversing/2016/10/30/Fuckzing-reverse-Writeup.html)
+
 ## Overview
 This challenge is a bit different than other reversing challenges. Instead of guessing the flag and the program accepting or rejecting it, you send your guess to the server (running the program) and if your input is correct it outputs the flag. The only practical difference here is that we need to generate the correct input locally and send the input to the server to receive the flag.
 
