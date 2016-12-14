@@ -27,15 +27,15 @@ When I felt like I had an good understanding of how cipher functioned, I decided
 
 On a high level, encrypt separates the 16 byte input and key into two 8 byte chunks L, R and k_L, k_R respectively. Then, L is xored against f(R, k_R) and k_R is set to f(k_R, 0x9104f95de694dc50). Finally, L and R along with k_L and k_R are swapped. This is repeated 14 times.
 
-![Feistel Round](feistel_round.png){:style="max-height: 300px; width: auto;"}
+![Feistel Round](feistel_round.png)
 
 The function f was not too long either. However, it consisted mostly of confusing, low-level bitwise arithmetic intended to mix its arguments: 
 
-![Round Function](f_overview.png){:style="max-height: 400px; width: auto;"}
+![Round Function](f_overview.png)
 
 In addition, it relies on a recursive subroutine that does similar bit mixing operations:
 
-![Round Function Helper](f_sub_overview.png){:style="max-height: 400px; width: auto;"}
+![Round Function Helper](f_sub_overview.png)
 
 ## Feistel networks
 
