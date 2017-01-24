@@ -67,7 +67,7 @@ The round function breaks down as
     o2 = vpshufb(vpxor(y2, r1), getvec(constants, 0x220))
     o3 = vpshufb(vpxor(y2, r3), getvec(constants, 0x240))
 
-where `vshufnet` is a complicated function mapping a single input to a single output involving a bunch of weird shifts and such. The `vpshufb`s are all invertible thanks to the particular constants chosen.
+where `vshufnet` is a complicated function mapping a single input to a single output involving a bunch of shuffles and XORs. The `vpshufb`s are all invertible thanks to the particular constants chosen.
 
 By calculating `o0 ^ invshuf(o1)` we can recover `r0^r2 = x0`, which lets us get `y0`. Similarly, `invshuf(o2) ^ invshuf(o3)` gives `r1^r3 = x1`, which yields `y1` and then `y2` (just by running the forward calculations for `y0`, `y1`, and `y2`). With `y1` and `y2`, we can calculate `r0` through `r3` and thereby invert the round function.
 
