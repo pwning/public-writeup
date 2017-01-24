@@ -6,7 +6,7 @@ We need your skillz because one G**gle car has become mad and tries to kill as m
 
 ### Solution
 
-We are provided an encryption program and a ciphertext file. The encryption program takes no parameters (i.e. no external key) so we "only" have to implement a decryption program.
+We are provided an [encryption program](encryptor) and a [ciphertext](ciphertext) file. The encryption program takes no parameters (i.e. no external key) so we "only" have to implement a decryption program.
 
 Opening the program in IDA, we see that it's almost entirely AVX2 instructions, which IDA doesn't decompile. We'll have to attack the assembly directly. Below, a "yword" is a 256-bit (32-byte) quantity, named after the `ymmN` 256-bit AVX2 registers.
 
