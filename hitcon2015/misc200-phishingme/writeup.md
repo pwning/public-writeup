@@ -1,6 +1,6 @@
-#PhishingMe - Misc 200 Problem - Writeup by Erye Hernandez (@eryeh)
+# PhishingMe - Misc 200 Problem - Writeup by Erye Hernandez (@eryeh)
 
-###Description
+### Description
 ```
 Sent me a .doc, I will open it if your subject is "HITCON 2015"!
 Find the flag under my file system. 
@@ -10,11 +10,11 @@ phishing.me.hitcon.2015@gmail.com.
 Based on the description and problem title, the goal of this challenge is to email a malicious document to `phishing.me.hitcon.2015@gmail.com` which will somehow exfiltrate the file that contains the flag from their system. 
 
 
-###Walkthrough
+### Walkthrough
 Given this information, the first impulse is to quickly create a malicious document using `Metasploit` (more info [here](https://www.offensive-security.com/metasploit-unleashed/vbscript-infection-methods/)). `Metasploit` automagically creates `VBScript` code and a `reverse tcp shell` payload that you just copy and paste to your Word document. This payload gives us a shell into their system so we can easily navigate and find the text file containing the flag. Despite this method working locally when we tested it, it does not solve the problem. This means that the remote system has some kind of firewall that blocks outgoing traffic. Since this is a `200 pt` problem, it makes sense that solving it would require a bit more work.
 
 
-####Creating a macro in Word
+#### Creating a macro in Word
 Since this challenge requires using macros in a Word document to complete the challenge, we outline the steps of creating macros below. 
 
 If using MS Word 2003, click on `Tools` then `Macros` and then finally `Macros`. 
@@ -28,7 +28,7 @@ Create a macro named `AutoOpen` in the `macro` dialog box and it will launch the
 <img src="https://github.com/pwning/public-writeup/blob/master/hitcon2015/misc200-phishingme/macro_dialog.png" width="400">
 
 
-####So how do we exfil all the data?  
+#### So how do we exfil all the data?  
 
 When the `reverse shell` payload route failed, we decide to find alternatives to exfiltrating data. Since `TCP port 80` is a common port that is not blocked, we first explore the possibility of getting data out using plain old `HTTP`. We use the script below to check if `outgoing` traffic on `TCP port 80` is possible.
 
@@ -54,7 +54,7 @@ End Sub
 We see their server connecting to ours so this is good news! The above script also tells us that it is possible to issue command line instructions to the system via `VBScript`. We can use `DNS` requests to exfiltrate data from their system. Now, we have to figure out where the flag is located. 
 
 
-####Capturing the flag
+#### Capturing the flag
 We created the `VBScript` below to help with the task of finding the flag in the remote system. Since we are using `DNS` lookup queries, we have to make sure that there are no `whitespaces` in the data that is sent as a `DNS` query so we replace `whitespaces` with an `underscore` ("_"). Although not necessary, we also replace the occurences of `periods` (".") with an `underscore`. We decide to first do a file listing of the current working directory as this would be the most logical place for the flag file to be.
 
 ```vb
