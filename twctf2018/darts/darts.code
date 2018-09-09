@@ -1,0 +1,104 @@
+main() {
+    flag = new File("flag").readAsBytesSync()
+    data = new QK2kqq(100, 100).fhghlm(flag)
+    data.forEach(_Closure)
+}
+
+_Closure(K, V) {
+    /* send UDP packets to K with data V */
+    hdvley(K, V)
+}
+
+/* i4RgAL = random.nextInt */
+QK2kqq.mps5g0(int arg) {
+    v20 = new List();
+    int i = 0;
+    while(arg > 0) {
+        int v = ke3oum.i4RgAL();
+        if(v20.contains(v) || v == 0)
+            continue;
+        v20[i] = v;
+        i++;
+        arg--;
+    }
+    return v20;
+}
+
+QK2kqq.fhghlm(List<> arg) {
+    if(arg.length == 0) {
+        throw ArgumentError();
+    }
+    /* not sure */
+    if(any(not (0 <= i && i <= 255) for i in arg)) {
+        throw ArgumentError();
+    }
+    v30 = new HashMap<int, List<int>>;
+    /* generate ports list */
+    v38 = this.mps5g0(this.sa6em2);
+    for(i in v38) {
+        v30[i] = new List(arg.length);
+    }
+
+    v40 = this.hph9df - 1;
+    for(v48 = 0; v48 < arg.length; v48++) {
+        v58 = new Y9u8Iu(v40);
+        v58.o09ha7(arg[v48], this.ke3oum);
+        for(j in v38) {
+            v38[j][v48] = v58.l75g4v(j)
+        }
+    }
+}
+
+Y9u8Iu.enxs4e(OlZeuV random) {
+    return random.i4RgAL();
+}
+
+Y9u8Iu.o09ha7(int arg, OlZeuV random) {
+    if(arg > 255 || arg < 0) {
+        throw ArgumentError();
+    }
+    if(random == null) {
+        throw ArgumentError();
+    }
+    this.gaeym7 = new List(this.awx1n6 + 1);
+    this.gaeym7[0] = arg;
+    for(r28 = 1; r28 < this.gaeym7.length; r28++) {
+        this.gaeym7[r28] = this.enxs4e(random);
+    }
+    while(this.gaeym7.last == 0) {
+        this.gaeym7[this.gaeym7.length - 1] = this.enxs4e(random);
+    }
+    this.oozkuu = true;
+}
+
+e5v35l(int a, int b) {
+    return a ^ b;
+}
+
+zhl9i7(int a, int b) {
+    /* a @ 0x18, b @ 0x10 */
+    if(a == 0 || b == 0) {
+        return 0;
+    }
+
+    return fjke0l[sfyc9a[a] + sfyc9a[b]];
+}
+
+Y9u8Iu.l75g4v(int arg) {
+    if(arg > 255 || arg < 0) {
+        throw ArgumentError();
+    }
+    if(this.oozkuu == false) {
+        throw ArgumentError();
+    }
+
+    if(arg == 0) {
+        return this.h4jcj4;
+    }
+
+    v28 = 0;
+    for(v30 = this.gaeym7.length - 1; v30 >= 0; v30--) {
+        v28 = e5v35l(zhl9i7(v28, arg), this.gaeym7[v30]);
+    }
+    return v28;
+}
