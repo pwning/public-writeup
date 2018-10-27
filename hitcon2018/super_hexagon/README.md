@@ -79,13 +79,101 @@ By spamming and adjusting my failed attempt, I got an overwrite of 4 mostly-arbi
 
 ### Exploiting EL1
 
-TODO
+The bug in EL1 (the kernel), is trivial. The `read` and `write` syscalls
+do not validate that the addresses are in userspace. This gives us
+arbitrary read/write with one minor caveat: While the `write` syscall
+writes out all of the requested bytes, the `read` syscall reads at most
+one byte per invocation.
 
+First, the exploit sets up `read(addr, n)` and `write(addr, data)`
+functions callable from Python.
+
+Since the `read` reads exactly one byte, we cannot simply overwrite a
+return address. We cannot directly overwrite kernel code, because W^X is
+enforced by EL2. Instead, we manipulate page tables to map our own code
+over kernel code.
+
+Using the `mmap` syscall, we map a page, and write the contents of the
+page containing the kernel's syscall handler function. We then patch the
+contents so that the syscall handler function will run shellcode of our
+choice instead. We mprotect it executable (since WX pages are blocked).
+
+We determine our page's IPA (Intermediate Physical Address). We then
+find the page table which maps the syscall handler page and map that
+into userspace by editing page tables. Finally, we run some code which
+remaps the syscall handler page to our page's IPA by writing to page
+table that we just mapped into userspace. Finally, we execute a syscall,
+which calls our modified syscall handler function and runs our
+shellcode.
+
+This gives code execution in EL1 (the kernel).
 
 ### Exploiting EL2
 
-TODO
+EL2 (the hypervisor) only has one interesting hypercall:
 
+`el2_map_ipa(ipa, flags)`
+
+This maps an IPA into the kernel's "physical" address space. This
+implementation look like this:
+
+```c
+void el2_map_ipa(uint64_t ipa, uint64_t flags) {
+  uint64_t idx = (ipa >> 12) & 0x1FF;
+  if (pa == 0x3b000) {
+    // Special case for mapping UART.
+    ...
+    return;
+  }
+
+  // Ensure the requested IPA falls within the reserved kernel memory
+  // range at [0x40000000, 0x4003c000)
+  if (ipa >= 0x3c000) {
+    panic("[VMM] Invalid IPA")
+  }
+
+  // Prohibit mapping the IPAs reserved for kernel code writable (not
+  // relevant for exploiting EL2).
+  if (ipa < 0xc000 && flags & 0x80) {
+    panic("[VMM] try to map writable pages in RO protected area");
+  }
+
+  // Ensure that XN is enabled if the page is writable.
+  if ((flags & 0x40000000000080i64) == 0x80) {
+    panic("[VMM] RWX pages are not allowed");
+  }
+
+  // Map the the IPA in the EL1 to the address 0x40000000 + ipa in EL2.
+  vttbr_el2_translation_tables.entry[idx + (ipa >> 21 << 9)] = (ipa + 0x40000000) | flags;
+}
+```
+
+The bug is that the checks can be bypassed by placing address bits in
+the `flags` parameter and page table flags bits in the `ipa` parameter.
+This allows mapping RWX memory out of bounds of the reserved memory
+region in EL2.
+
+The exploit does:
+```python
+# ipa_table_base is the address of vttbr_el2_translation_tables inside
+# the hypervisor
+ipa_table_base = 0x40107000
+ipa_table_ipa = 0x7000
+# Put the writable flag into the IPA param and or the address into the
+# flags param. The resulting translation table entry (made by orring these
+# two together) will map IPA 0x7000 RW to 0x40107000 in el2.
+map_ipa(ipa_table_ipa | 0x80, 0x443 | ipa_table_base)
+```
+
+This maps the virtualization translation table from EL2 into the kernel
+address space, allows us to expose arbitrary memory from EL2 into EL1.
+We mapped the memory backing the hypercall handler into EL1, overwrite
+it with shellcode to run in EL2, then run the shellcode by performing a
+hypercall.
+
+See
+[exploit\_el12.py](https://github.com/pwning/public-writeup/blob/master/hitcon2018/super_hexagon/exploit_el12.py)
+for our EL1 and EL2 exploits.
 
 ### Exploiting S-EL1 and S-EL3
 
