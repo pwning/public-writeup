@@ -58,7 +58,7 @@ to all of them, at which point we can be fairly confident we've found `N`.
 This allows us to compute `N` using 4 total queries, and then we can use the 
 remainder of our queries to fetch the flag.
 
-Here's our [script](./solution.py) implementing this attack. It outputs a
+Here's our [script](./solve.py) implementing this attack. It outputs a
 hex string which, once-decoded, contains the flag. 
 
 ## Flag
