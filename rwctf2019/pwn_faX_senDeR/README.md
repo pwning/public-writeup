@@ -1,0 +1,5 @@
+### faX_senDeR (pwn)
+
+We are given a statically linked binary with no PIE, and a helper client. We used the client to quickly deduce how to communicate with the server, by observing network traffic. Reversing the server turns out to be not too difficult; some reversing yields a function name `xdr_string` from an error message. From this we can deduced that Sun RPC XDR (eXternal Data Representation) objects are being used to communicate between the server and the client, and many of the important functions and structures can be filled in.
+
+The binary proper is a fairly small heap menu challenge. By sending the right XDR objects, you can create `Contacts` and send `Messages` to contacts. The buffer pointer of the `Message` structure is not zeroed after free. The `xdr_bytes` function takes a `char **` to decode the message into and does not malloc a new buffer if the buffer pointer is not null, which leads to a an easy uaf. We overwrite the `get_long` function pointer in the `xdr_ops` table to point to an `add rsp`, which lets us pivot into the stack buffer when we send data to the server.
