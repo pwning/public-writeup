@@ -1,0 +1,5755 @@
+00: nop
+01: nop
+02: nop
+03: push 6
+05: push 10
+07: mul
+08: push 0
+10: add
+11: galloc
+12: push 0
+14: push 10
+16: push 4
+18: push 10
+20: mul
+21: push 2
+23: add
+24: push 4
+26: push 10
+28: mul
+29: push 2
+31: add
+32: push 4
+34: push 10
+36: mul
+37: push 2
+39: add
+40: push 4
+42: push 10
+44: mul
+45: push 2
+47: add
+48: push 4
+50: push 10
+52: mul
+53: push 2
+55: add
+56: push 4
+58: push 10
+60: mul
+61: push 2
+63: add
+64: push 4
+66: push 10
+68: mul
+69: push 2
+71: add
+72: push 4
+74: push 10
+76: mul
+77: push 2
+79: add
+80: push 4
+82: push 10
+84: mul
+85: push 2
+87: add
+88: push 4
+90: push 10
+92: mul
+93: push 2
+95: add
+96: push 4
+98: push 10
+100: mul
+101: push 2
+103: add
+104: push 4
+106: push 10
+108: mul
+109: push 2
+111: add
+112: push 4
+114: push 10
+116: mul
+117: push 2
+119: add
+120: push 4
+122: push 10
+124: mul
+125: push 2
+127: add
+128: push 4
+130: push 10
+132: mul
+133: push 2
+135: add
+136: push 4
+138: push 10
+140: mul
+141: push 2
+143: add
+144: push 4
+146: push 10
+148: mul
+149: push 2
+151: add
+152: push 4
+154: push 10
+156: mul
+157: push 2
+159: add
+160: push 4
+162: push 10
+164: mul
+165: push 2
+167: add
+168: push 4
+170: push 10
+172: mul
+173: push 2
+175: add
+176: push 4
+178: push 10
+180: mul
+181: push 2
+183: add
+184: push 4
+186: push 10
+188: mul
+189: push 2
+191: add
+192: push 4
+194: push 10
+196: mul
+197: push 2
+199: add
+200: push 4
+202: push 10
+204: mul
+205: push 2
+207: add
+208: push 4
+210: push 10
+212: mul
+213: push 2
+215: add
+216: push 4
+218: push 10
+220: mul
+221: push 2
+223: add
+224: push 4
+226: push 10
+228: mul
+229: push 2
+231: add
+232: push 4
+234: push 10
+236: mul
+237: push 2
+239: add
+240: push 4
+242: push 10
+244: mul
+245: push 2
+247: add
+248: push 4
+250: push 10
+252: mul
+253: push 2
+255: add
+256: push 4
+258: push 10
+260: mul
+261: push 2
+263: add
+264: push 4
+266: push 10
+268: mul
+269: push 2
+271: add
+272: push 4
+274: push 10
+276: mul
+277: push 2
+279: add
+280: push 4
+282: push 10
+284: mul
+285: push 2
+287: add
+288: push 4
+290: push 10
+292: mul
+293: push 2
+295: add
+296: push 4
+298: push 10
+300: mul
+301: push 2
+303: add
+304: push 4
+306: push 10
+308: mul
+309: push 2
+311: add
+312: push 0
+314: push 0
+316: gset
+317: push 1
+319: push 0
+321: gset
+322: push 2
+324: push 0
+326: gset
+327: push 3
+329: push 0
+331: gset
+332: push 4
+334: push 0
+336: gset
+337: push 5
+339: push 0
+341: gset
+342: push 6
+344: push 0
+346: gset
+347: push 7
+349: push 0
+351: gset
+352: push 8
+354: push 0
+356: gset
+357: push 9
+359: push 0
+361: gset
+362: push 10
+364: push 0
+366: gset
+367: push 1
+369: push 10
+371: mul
+372: push 1
+374: add
+375: push 0
+377: gset
+378: push 1
+380: push 10
+382: mul
+383: push 2
+385: add
+386: push 0
+388: gset
+389: push 1
+391: push 10
+393: mul
+394: push 3
+396: add
+397: push 0
+399: gset
+400: push 1
+402: push 10
+404: mul
+405: push 4
+407: add
+408: push 0
+410: gset
+411: push 1
+413: push 10
+415: mul
+416: push 5
+418: add
+419: push 0
+421: gset
+422: push 1
+424: push 10
+426: mul
+427: push 6
+429: add
+430: push 0
+432: gset
+433: push 1
+435: push 10
+437: mul
+438: push 7
+440: add
+441: push 0
+443: gset
+444: push 1
+446: push 10
+448: mul
+449: push 8
+451: add
+452: push 0
+454: gset
+455: push 1
+457: push 10
+459: mul
+460: push 9
+462: add
+463: push 0
+465: gset
+466: push 2
+468: push 10
+470: mul
+471: push 0
+473: add
+474: push 0
+476: gset
+477: push 2
+479: push 10
+481: mul
+482: push 1
+484: add
+485: push 0
+487: gset
+488: push 2
+490: push 10
+492: mul
+493: push 2
+495: add
+496: push 0
+498: gset
+499: push 2
+501: push 10
+503: mul
+504: push 3
+506: add
+507: push 0
+509: gset
+510: push 2
+512: push 10
+514: mul
+515: push 4
+517: add
+518: push 0
+520: gset
+521: push 2
+523: push 10
+525: mul
+526: push 5
+528: add
+529: push 0
+531: gset
+532: push 2
+534: push 10
+536: mul
+537: push 6
+539: add
+540: push 0
+542: gset
+543: push 2
+545: push 10
+547: mul
+548: push 7
+550: add
+551: push 0
+553: gset
+554: push 2
+556: push 10
+558: mul
+559: push 8
+561: add
+562: push 0
+564: gset
+565: push 2
+567: push 10
+569: mul
+570: push 9
+572: add
+573: push 0
+575: gset
+576: push 3
+578: push 10
+580: mul
+581: push 0
+583: add
+584: push 0
+586: gset
+587: push 3
+589: push 10
+591: mul
+592: push 1
+594: add
+595: push 0
+597: gset
+598: push 3
+600: push 10
+602: mul
+603: push 2
+605: add
+606: push 0
+608: gset
+609: push 3
+611: push 10
+613: mul
+614: push 3
+616: add
+617: push 0
+619: gset
+620: push 3
+622: push 10
+624: mul
+625: push 4
+627: add
+628: push 0
+630: gset
+631: push 3
+633: push 10
+635: mul
+636: push 5
+638: add
+639: push 0
+641: gset
+642: push 3
+644: push 10
+646: mul
+647: push 6
+649: add
+650: push 0
+652: gset
+653: push 3
+655: push 10
+657: mul
+658: push 7
+660: add
+661: push 0
+663: gset
+664: push 3
+666: push 10
+668: mul
+669: push 8
+671: add
+672: push 0
+674: gset
+675: push 0
+677: gwrite
+678: push 0
+680: push 10
+682: push 4
+684: push 10
+686: mul
+687: push 2
+689: add
+690: push 3
+692: push 10
+694: mul
+695: push 2
+697: add
+698: push 3
+700: push 10
+702: mul
+703: push 2
+705: add
+706: push 3
+708: push 10
+710: mul
+711: push 2
+713: add
+714: push 3
+716: push 10
+718: mul
+719: push 2
+721: add
+722: push 3
+724: push 10
+726: mul
+727: push 2
+729: add
+730: push 3
+732: push 10
+734: mul
+735: push 2
+737: add
+738: push 3
+740: push 10
+742: mul
+743: push 2
+745: add
+746: push 3
+748: push 10
+750: mul
+751: push 2
+753: add
+754: push 3
+756: push 10
+758: mul
+759: push 2
+761: add
+762: push 3
+764: push 10
+766: mul
+767: push 2
+769: add
+770: push 3
+772: push 10
+774: mul
+775: push 2
+777: add
+778: push 3
+780: push 10
+782: mul
+783: push 2
+785: add
+786: push 3
+788: push 10
+790: mul
+791: push 2
+793: add
+794: push 3
+796: push 10
+798: mul
+799: push 2
+801: add
+802: push 3
+804: push 10
+806: mul
+807: push 2
+809: add
+810: push 3
+812: push 10
+814: mul
+815: push 2
+817: add
+818: push 3
+820: push 10
+822: mul
+823: push 2
+825: add
+826: push 3
+828: push 10
+830: mul
+831: push 2
+833: add
+834: push 3
+836: push 10
+838: mul
+839: push 2
+841: add
+842: push 3
+844: push 10
+846: mul
+847: push 2
+849: add
+850: push 3
+852: push 10
+854: mul
+855: push 2
+857: add
+858: push 3
+860: push 10
+862: mul
+863: push 2
+865: add
+866: push 3
+868: push 10
+870: mul
+871: push 2
+873: add
+874: push 3
+876: push 10
+878: mul
+879: push 2
+881: add
+882: push 3
+884: push 10
+886: mul
+887: push 2
+889: add
+890: push 3
+892: push 10
+894: mul
+895: push 2
+897: add
+898: push 3
+900: push 10
+902: mul
+903: push 2
+905: add
+906: push 3
+908: push 10
+910: mul
+911: push 2
+913: add
+914: push 3
+916: push 10
+918: mul
+919: push 2
+921: add
+922: push 3
+924: push 10
+926: mul
+927: push 2
+929: add
+930: push 3
+932: push 10
+934: mul
+935: push 2
+937: add
+938: push 3
+940: push 10
+942: mul
+943: push 2
+945: add
+946: push 3
+948: push 10
+950: mul
+951: push 2
+953: add
+954: push 3
+956: push 10
+958: mul
+959: push 2
+961: add
+962: push 3
+964: push 10
+966: mul
+967: push 2
+969: add
+970: push 4
+972: push 10
+974: mul
+975: push 2
+977: add
+978: push 0
+980: push 0
+982: gset
+983: push 1
+985: push 0
+987: gset
+988: push 2
+990: push 0
+992: gset
+993: push 3
+995: push 0
+997: gset
+998: push 4
+1000: push 0
+1002: gset
+1003: push 5
+1005: push 0
+1007: gset
+1008: push 6
+1010: push 0
+1012: gset
+1013: push 7
+1015: push 0
+1017: gset
+1018: push 8
+1020: push 0
+1022: gset
+1023: push 9
+1025: push 0
+1027: gset
+1028: push 10
+1030: push 0
+1032: gset
+1033: push 1
+1035: push 10
+1037: mul
+1038: push 1
+1040: add
+1041: push 0
+1043: gset
+1044: push 1
+1046: push 10
+1048: mul
+1049: push 2
+1051: add
+1052: push 0
+1054: gset
+1055: push 1
+1057: push 10
+1059: mul
+1060: push 3
+1062: add
+1063: push 0
+1065: gset
+1066: push 1
+1068: push 10
+1070: mul
+1071: push 4
+1073: add
+1074: push 0
+1076: gset
+1077: push 1
+1079: push 10
+1081: mul
+1082: push 5
+1084: add
+1085: push 0
+1087: gset
+1088: push 1
+1090: push 10
+1092: mul
+1093: push 6
+1095: add
+1096: push 0
+1098: gset
+1099: push 1
+1101: push 10
+1103: mul
+1104: push 7
+1106: add
+1107: push 0
+1109: gset
+1110: push 1
+1112: push 10
+1114: mul
+1115: push 8
+1117: add
+1118: push 0
+1120: gset
+1121: push 1
+1123: push 10
+1125: mul
+1126: push 9
+1128: add
+1129: push 0
+1131: gset
+1132: push 2
+1134: push 10
+1136: mul
+1137: push 0
+1139: add
+1140: push 0
+1142: gset
+1143: push 2
+1145: push 10
+1147: mul
+1148: push 1
+1150: add
+1151: push 0
+1153: gset
+1154: push 2
+1156: push 10
+1158: mul
+1159: push 2
+1161: add
+1162: push 0
+1164: gset
+1165: push 2
+1167: push 10
+1169: mul
+1170: push 3
+1172: add
+1173: push 0
+1175: gset
+1176: push 2
+1178: push 10
+1180: mul
+1181: push 4
+1183: add
+1184: push 0
+1186: gset
+1187: push 2
+1189: push 10
+1191: mul
+1192: push 5
+1194: add
+1195: push 0
+1197: gset
+1198: push 2
+1200: push 10
+1202: mul
+1203: push 6
+1205: add
+1206: push 0
+1208: gset
+1209: push 2
+1211: push 10
+1213: mul
+1214: push 7
+1216: add
+1217: push 0
+1219: gset
+1220: push 2
+1222: push 10
+1224: mul
+1225: push 8
+1227: add
+1228: push 0
+1230: gset
+1231: push 2
+1233: push 10
+1235: mul
+1236: push 9
+1238: add
+1239: push 0
+1241: gset
+1242: push 3
+1244: push 10
+1246: mul
+1247: push 0
+1249: add
+1250: push 0
+1252: gset
+1253: push 3
+1255: push 10
+1257: mul
+1258: push 1
+1260: add
+1261: push 0
+1263: gset
+1264: push 3
+1266: push 10
+1268: mul
+1269: push 2
+1271: add
+1272: push 0
+1274: gset
+1275: push 3
+1277: push 10
+1279: mul
+1280: push 3
+1282: add
+1283: push 0
+1285: gset
+1286: push 3
+1288: push 10
+1290: mul
+1291: push 4
+1293: add
+1294: push 0
+1296: gset
+1297: push 3
+1299: push 10
+1301: mul
+1302: push 5
+1304: add
+1305: push 0
+1307: gset
+1308: push 3
+1310: push 10
+1312: mul
+1313: push 6
+1315: add
+1316: push 0
+1318: gset
+1319: push 3
+1321: push 10
+1323: mul
+1324: push 7
+1326: add
+1327: push 0
+1329: gset
+1330: push 3
+1332: push 10
+1334: mul
+1335: push 8
+1337: add
+1338: push 0
+1340: gset
+1341: push 0
+1343: gwrite
+1344: push 0
+1346: push 10
+1348: push 4
+1350: push 10
+1352: mul
+1353: push 2
+1355: add
+1356: push 3
+1358: push 10
+1360: mul
+1361: push 2
+1363: add
+1364: push 3
+1366: push 10
+1368: mul
+1369: push 2
+1371: add
+1372: push 3
+1374: push 10
+1376: mul
+1377: push 2
+1379: add
+1380: push 3
+1382: push 10
+1384: mul
+1385: push 2
+1387: add
+1388: push 3
+1390: push 10
+1392: mul
+1393: push 2
+1395: add
+1396: push 3
+1398: push 10
+1400: mul
+1401: push 2
+1403: add
+1404: push 3
+1406: push 10
+1408: mul
+1409: push 2
+1411: add
+1412: push 3
+1414: push 10
+1416: mul
+1417: push 2
+1419: add
+1420: push 3
+1422: push 10
+1424: mul
+1425: push 2
+1427: add
+1428: push 3
+1430: push 10
+1432: mul
+1433: push 2
+1435: add
+1436: push 3
+1438: push 10
+1440: mul
+1441: push 2
+1443: add
+1444: push 3
+1446: push 10
+1448: mul
+1449: push 2
+1451: add
+1452: push 1
+1454: push 10
+1456: mul
+1457: push 10
+1459: mul
+1460: push 1
+1462: push 10
+1464: mul
+1465: push 1
+1467: add
+1468: add
+1469: push 1
+1471: push 10
+1473: mul
+1474: push 10
+1476: mul
+1477: push 1
+1479: push 10
+1481: mul
+1482: push 6
+1484: add
+1485: add
+1486: push 3
+1488: push 10
+1490: mul
+1491: push 2
+1493: add
+1494: push 1
+1496: push 10
+1498: mul
+1499: push 10
+1501: mul
+1502: push 0
+1504: push 10
+1506: mul
+1507: push 1
+1509: add
+1510: add
+1511: push 1
+1513: push 10
+1515: mul
+1516: push 10
+1518: mul
+1519: push 0
+1521: push 10
+1523: mul
+1524: push 9
+1526: add
+1527: add
+1528: push 1
+1530: push 10
+1532: mul
+1533: push 10
+1535: mul
+1536: push 1
+1538: push 10
+1540: mul
+1541: push 1
+1543: add
+1544: add
+1545: push 9
+1547: push 10
+1549: mul
+1550: push 9
+1552: add
+1553: push 1
+1555: push 10
+1557: mul
+1558: push 10
+1560: mul
+1561: push 0
+1563: push 10
+1565: mul
+1566: push 8
+1568: add
+1569: add
+1570: push 1
+1572: push 10
+1574: mul
+1575: push 10
+1577: mul
+1578: push 0
+1580: push 10
+1582: mul
+1583: push 1
+1585: add
+1586: add
+1587: push 8
+1589: push 10
+1591: mul
+1592: push 7
+1594: add
+1595: push 3
+1597: push 10
+1599: mul
+1600: push 2
+1602: add
+1603: push 3
+1605: push 10
+1607: mul
+1608: push 2
+1610: add
+1611: push 3
+1613: push 10
+1615: mul
+1616: push 2
+1618: add
+1619: push 3
+1621: push 10
+1623: mul
+1624: push 2
+1626: add
+1627: push 3
+1629: push 10
+1631: mul
+1632: push 2
+1634: add
+1635: push 3
+1637: push 10
+1639: mul
+1640: push 2
+1642: add
+1643: push 3
+1645: push 10
+1647: mul
+1648: push 2
+1650: add
+1651: push 3
+1653: push 10
+1655: mul
+1656: push 2
+1658: add
+1659: push 3
+1661: push 10
+1663: mul
+1664: push 2
+1666: add
+1667: push 3
+1669: push 10
+1671: mul
+1672: push 2
+1674: add
+1675: push 3
+1677: push 10
+1679: mul
+1680: push 2
+1682: add
+1683: push 3
+1685: push 10
+1687: mul
+1688: push 2
+1690: add
+1691: push 3
+1693: push 10
+1695: mul
+1696: push 2
+1698: add
+1699: push 4
+1701: push 10
+1703: mul
+1704: push 2
+1706: add
+1707: push 0
+1709: push 0
+1711: gset
+1712: push 1
+1714: push 0
+1716: gset
+1717: push 2
+1719: push 0
+1721: gset
+1722: push 3
+1724: push 0
+1726: gset
+1727: push 4
+1729: push 0
+1731: gset
+1732: push 5
+1734: push 0
+1736: gset
+1737: push 6
+1739: push 0
+1741: gset
+1742: push 7
+1744: push 0
+1746: gset
+1747: push 8
+1749: push 0
+1751: gset
+1752: push 9
+1754: push 0
+1756: gset
+1757: push 10
+1759: push 0
+1761: gset
+1762: push 1
+1764: push 10
+1766: mul
+1767: push 1
+1769: add
+1770: push 0
+1772: gset
+1773: push 1
+1775: push 10
+1777: mul
+1778: push 2
+1780: add
+1781: push 0
+1783: gset
+1784: push 1
+1786: push 10
+1788: mul
+1789: push 3
+1791: add
+1792: push 0
+1794: gset
+1795: push 1
+1797: push 10
+1799: mul
+1800: push 4
+1802: add
+1803: push 0
+1805: gset
+1806: push 1
+1808: push 10
+1810: mul
+1811: push 5
+1813: add
+1814: push 0
+1816: gset
+1817: push 1
+1819: push 10
+1821: mul
+1822: push 6
+1824: add
+1825: push 0
+1827: gset
+1828: push 1
+1830: push 10
+1832: mul
+1833: push 7
+1835: add
+1836: push 0
+1838: gset
+1839: push 1
+1841: push 10
+1843: mul
+1844: push 8
+1846: add
+1847: push 0
+1849: gset
+1850: push 1
+1852: push 10
+1854: mul
+1855: push 9
+1857: add
+1858: push 0
+1860: gset
+1861: push 2
+1863: push 10
+1865: mul
+1866: push 0
+1868: add
+1869: push 0
+1871: gset
+1872: push 2
+1874: push 10
+1876: mul
+1877: push 1
+1879: add
+1880: push 0
+1882: gset
+1883: push 2
+1885: push 10
+1887: mul
+1888: push 2
+1890: add
+1891: push 0
+1893: gset
+1894: push 2
+1896: push 10
+1898: mul
+1899: push 3
+1901: add
+1902: push 0
+1904: gset
+1905: push 2
+1907: push 10
+1909: mul
+1910: push 4
+1912: add
+1913: push 0
+1915: gset
+1916: push 2
+1918: push 10
+1920: mul
+1921: push 5
+1923: add
+1924: push 0
+1926: gset
+1927: push 2
+1929: push 10
+1931: mul
+1932: push 6
+1934: add
+1935: push 0
+1937: gset
+1938: push 2
+1940: push 10
+1942: mul
+1943: push 7
+1945: add
+1946: push 0
+1948: gset
+1949: push 2
+1951: push 10
+1953: mul
+1954: push 8
+1956: add
+1957: push 0
+1959: gset
+1960: push 2
+1962: push 10
+1964: mul
+1965: push 9
+1967: add
+1968: push 0
+1970: gset
+1971: push 3
+1973: push 10
+1975: mul
+1976: push 0
+1978: add
+1979: push 0
+1981: gset
+1982: push 3
+1984: push 10
+1986: mul
+1987: push 1
+1989: add
+1990: push 0
+1992: gset
+1993: push 3
+1995: push 10
+1997: mul
+1998: push 2
+2000: add
+2001: push 0
+2003: gset
+2004: push 3
+2006: push 10
+2008: mul
+2009: push 3
+2011: add
+2012: push 0
+2014: gset
+2015: push 3
+2017: push 10
+2019: mul
+2020: push 4
+2022: add
+2023: push 0
+2025: gset
+2026: push 3
+2028: push 10
+2030: mul
+2031: push 5
+2033: add
+2034: push 0
+2036: gset
+2037: push 3
+2039: push 10
+2041: mul
+2042: push 6
+2044: add
+2045: push 0
+2047: gset
+2048: push 3
+2050: push 10
+2052: mul
+2053: push 7
+2055: add
+2056: push 0
+2058: gset
+2059: push 3
+2061: push 10
+2063: mul
+2064: push 8
+2066: add
+2067: push 0
+2069: gset
+2070: push 0
+2072: gwrite
+2073: push 0
+2075: push 10
+2077: push 4
+2079: push 10
+2081: mul
+2082: push 2
+2084: add
+2085: push 3
+2087: push 10
+2089: mul
+2090: push 2
+2092: add
+2093: push 3
+2095: push 10
+2097: mul
+2098: push 2
+2100: add
+2101: push 3
+2103: push 10
+2105: mul
+2106: push 2
+2108: add
+2109: push 3
+2111: push 10
+2113: mul
+2114: push 2
+2116: add
+2117: push 3
+2119: push 10
+2121: mul
+2122: push 2
+2124: add
+2125: push 3
+2127: push 10
+2129: mul
+2130: push 2
+2132: add
+2133: push 3
+2135: push 10
+2137: mul
+2138: push 2
+2140: add
+2141: push 1
+2143: push 10
+2145: mul
+2146: push 10
+2148: mul
+2149: push 7
+2151: push 10
+2153: mul
+2154: push 4
+2156: add
+2157: add
+2158: push 1
+2160: push 10
+2162: mul
+2163: push 10
+2165: mul
+2166: push 5
+2168: push 10
+2170: mul
+2171: push 2
+2173: add
+2174: add
+2175: push 1
+2177: push 10
+2179: mul
+2180: push 10
+2182: mul
+2183: push 5
+2185: push 10
+2187: mul
+2188: push 9
+2190: add
+2191: add
+2192: push 2
+2194: push 10
+2196: mul
+2197: push 10
+2199: mul
+2200: push 4
+2202: push 10
+2204: mul
+2205: push 0
+2207: add
+2208: add
+2209: push 1
+2211: push 10
+2213: mul
+2214: push 10
+2216: mul
+2217: push 6
+2219: push 10
+2221: mul
+2222: push 8
+2224: add
+2225: add
+2226: push 1
+2228: push 10
+2230: mul
+2231: push 10
+2233: mul
+2234: push 6
+2236: push 10
+2238: mul
+2239: push 4
+2241: add
+2242: add
+2243: push 1
+2245: push 10
+2247: mul
+2248: push 10
+2250: mul
+2251: push 5
+2253: push 10
+2255: mul
+2256: push 9
+2258: add
+2259: add
+2260: push 2
+2262: push 10
+2264: mul
+2265: push 10
+2267: mul
+2268: push 4
+2270: push 10
+2272: mul
+2273: push 0
+2275: add
+2276: add
+2277: push 1
+2279: push 10
+2281: mul
+2282: push 10
+2284: mul
+2285: push 4
+2287: push 10
+2289: mul
+2290: push 8
+2292: add
+2293: add
+2294: push 1
+2296: push 10
+2298: mul
+2299: push 10
+2301: mul
+2302: push 6
+2304: push 10
+2306: mul
+2307: push 4
+2309: add
+2310: add
+2311: push 1
+2313: push 10
+2315: mul
+2316: push 10
+2318: mul
+2319: push 5
+2321: push 10
+2323: mul
+2324: push 9
+2326: add
+2327: add
+2328: push 2
+2330: push 10
+2332: mul
+2333: push 10
+2335: mul
+2336: push 4
+2338: push 10
+2340: mul
+2341: push 0
+2343: add
+2344: add
+2345: push 1
+2347: push 10
+2349: mul
+2350: push 10
+2352: mul
+2353: push 6
+2355: push 10
+2357: mul
+2358: push 3
+2360: add
+2361: add
+2362: push 1
+2364: push 10
+2366: mul
+2367: push 10
+2369: mul
+2370: push 6
+2372: push 10
+2374: mul
+2375: push 4
+2377: add
+2378: add
+2379: push 1
+2381: push 10
+2383: mul
+2384: push 10
+2386: mul
+2387: push 5
+2389: push 10
+2391: mul
+2392: push 9
+2394: add
+2395: add
+2396: push 2
+2398: push 10
+2400: mul
+2401: push 10
+2403: mul
+2404: push 4
+2406: push 10
+2408: mul
+2409: push 0
+2411: add
+2412: add
+2413: push 1
+2415: push 10
+2417: mul
+2418: push 10
+2420: mul
+2421: push 2
+2423: push 10
+2425: mul
+2426: push 9
+2428: add
+2429: add
+2430: push 1
+2432: push 10
+2434: mul
+2435: push 10
+2437: mul
+2438: push 5
+2440: push 10
+2442: mul
+2443: push 2
+2445: add
+2446: add
+2447: push 1
+2449: push 10
+2451: mul
+2452: push 10
+2454: mul
+2455: push 5
+2457: push 10
+2459: mul
+2460: push 9
+2462: add
+2463: add
+2464: push 2
+2466: push 10
+2468: mul
+2469: push 10
+2471: mul
+2472: push 4
+2474: push 10
+2476: mul
+2477: push 0
+2479: add
+2480: add
+2481: push 1
+2483: push 10
+2485: mul
+2486: push 10
+2488: mul
+2489: push 2
+2491: push 10
+2493: mul
+2494: push 8
+2496: add
+2497: add
+2498: push 1
+2500: push 10
+2502: mul
+2503: push 10
+2505: mul
+2506: push 5
+2508: push 10
+2510: mul
+2511: push 2
+2513: add
+2514: add
+2515: push 1
+2517: push 10
+2519: mul
+2520: push 10
+2522: mul
+2523: push 5
+2525: push 10
+2527: mul
+2528: push 9
+2530: add
+2531: add
+2532: push 2
+2534: push 10
+2536: mul
+2537: push 10
+2539: mul
+2540: push 4
+2542: push 10
+2544: mul
+2545: push 0
+2547: add
+2548: add
+2549: push 3
+2551: push 10
+2553: mul
+2554: push 2
+2556: add
+2557: push 7
+2559: push 10
+2561: mul
+2562: push 7
+2564: add
+2565: push 8
+2567: push 10
+2569: mul
+2570: push 6
+2572: add
+2573: push 1
+2575: push 10
+2577: mul
+2578: push 10
+2580: mul
+2581: push 0
+2583: push 10
+2585: mul
+2586: push 5
+2588: add
+2589: add
+2590: push 1
+2592: push 10
+2594: mul
+2595: push 10
+2597: mul
+2598: push 0
+2600: push 10
+2602: mul
+2603: push 6
+2605: add
+2606: add
+2607: push 1
+2609: push 10
+2611: mul
+2612: push 10
+2614: mul
+2615: push 1
+2617: push 10
+2619: mul
+2620: push 1
+2622: add
+2623: add
+2624: push 1
+2626: push 10
+2628: mul
+2629: push 10
+2631: mul
+2632: push 0
+2634: push 10
+2636: mul
+2637: push 9
+2639: add
+2640: add
+2641: push 6
+2643: push 10
+2645: mul
+2646: push 9
+2648: add
+2649: push 3
+2651: push 10
+2653: mul
+2654: push 2
+2656: add
+2657: push 3
+2659: push 10
+2661: mul
+2662: push 2
+2664: add
+2665: push 3
+2667: push 10
+2669: mul
+2670: push 2
+2672: add
+2673: push 3
+2675: push 10
+2677: mul
+2678: push 2
+2680: add
+2681: push 3
+2683: push 10
+2685: mul
+2686: push 2
+2688: add
+2689: push 3
+2691: push 10
+2693: mul
+2694: push 2
+2696: add
+2697: push 3
+2699: push 10
+2701: mul
+2702: push 2
+2704: add
+2705: push 3
+2707: push 10
+2709: mul
+2710: push 2
+2712: add
+2713: push 4
+2715: push 10
+2717: mul
+2718: push 2
+2720: add
+2721: push 0
+2723: push 0
+2725: gset
+2726: push 1
+2728: push 0
+2730: gset
+2731: push 2
+2733: push 0
+2735: gset
+2736: push 3
+2738: push 0
+2740: gset
+2741: push 4
+2743: push 0
+2745: gset
+2746: push 5
+2748: push 0
+2750: gset
+2751: push 6
+2753: push 0
+2755: gset
+2756: push 7
+2758: push 0
+2760: gset
+2761: push 8
+2763: push 0
+2765: gset
+2766: push 9
+2768: push 0
+2770: gset
+2771: push 10
+2773: push 0
+2775: gset
+2776: push 1
+2778: push 10
+2780: mul
+2781: push 1
+2783: add
+2784: push 0
+2786: gset
+2787: push 1
+2789: push 10
+2791: mul
+2792: push 2
+2794: add
+2795: push 0
+2797: gset
+2798: push 1
+2800: push 10
+2802: mul
+2803: push 3
+2805: add
+2806: push 0
+2808: gset
+2809: push 1
+2811: push 10
+2813: mul
+2814: push 4
+2816: add
+2817: push 0
+2819: gset
+2820: push 1
+2822: push 10
+2824: mul
+2825: push 5
+2827: add
+2828: push 0
+2830: gset
+2831: push 1
+2833: push 10
+2835: mul
+2836: push 6
+2838: add
+2839: push 0
+2841: gset
+2842: push 1
+2844: push 10
+2846: mul
+2847: push 7
+2849: add
+2850: push 0
+2852: gset
+2853: push 1
+2855: push 10
+2857: mul
+2858: push 8
+2860: add
+2861: push 0
+2863: gset
+2864: push 1
+2866: push 10
+2868: mul
+2869: push 9
+2871: add
+2872: push 0
+2874: gset
+2875: push 2
+2877: push 10
+2879: mul
+2880: push 0
+2882: add
+2883: push 0
+2885: gset
+2886: push 2
+2888: push 10
+2890: mul
+2891: push 1
+2893: add
+2894: push 0
+2896: gset
+2897: push 2
+2899: push 10
+2901: mul
+2902: push 2
+2904: add
+2905: push 0
+2907: gset
+2908: push 2
+2910: push 10
+2912: mul
+2913: push 3
+2915: add
+2916: push 0
+2918: gset
+2919: push 2
+2921: push 10
+2923: mul
+2924: push 4
+2926: add
+2927: push 0
+2929: gset
+2930: push 2
+2932: push 10
+2934: mul
+2935: push 5
+2937: add
+2938: push 0
+2940: gset
+2941: push 2
+2943: push 10
+2945: mul
+2946: push 6
+2948: add
+2949: push 0
+2951: gset
+2952: push 2
+2954: push 10
+2956: mul
+2957: push 7
+2959: add
+2960: push 0
+2962: gset
+2963: push 2
+2965: push 10
+2967: mul
+2968: push 8
+2970: add
+2971: push 0
+2973: gset
+2974: push 2
+2976: push 10
+2978: mul
+2979: push 9
+2981: add
+2982: push 0
+2984: gset
+2985: push 3
+2987: push 10
+2989: mul
+2990: push 0
+2992: add
+2993: push 0
+2995: gset
+2996: push 3
+2998: push 10
+3000: mul
+3001: push 1
+3003: add
+3004: push 0
+3006: gset
+3007: push 3
+3009: push 10
+3011: mul
+3012: push 2
+3014: add
+3015: push 0
+3017: gset
+3018: push 3
+3020: push 10
+3022: mul
+3023: push 3
+3025: add
+3026: push 0
+3028: gset
+3029: push 3
+3031: push 10
+3033: mul
+3034: push 4
+3036: add
+3037: push 0
+3039: gset
+3040: push 3
+3042: push 10
+3044: mul
+3045: push 5
+3047: add
+3048: push 0
+3050: gset
+3051: push 3
+3053: push 10
+3055: mul
+3056: push 6
+3058: add
+3059: push 0
+3061: gset
+3062: push 3
+3064: push 10
+3066: mul
+3067: push 7
+3069: add
+3070: push 0
+3072: gset
+3073: push 3
+3075: push 10
+3077: mul
+3078: push 8
+3080: add
+3081: push 0
+3083: gset
+3084: push 3
+3086: push 10
+3088: mul
+3089: push 9
+3091: add
+3092: push 0
+3094: gset
+3095: push 4
+3097: push 10
+3099: mul
+3100: push 0
+3102: add
+3103: push 0
+3105: gset
+3106: push 4
+3108: push 10
+3110: mul
+3111: push 1
+3113: add
+3114: push 0
+3116: gset
+3117: push 4
+3119: push 10
+3121: mul
+3122: push 2
+3124: add
+3125: push 0
+3127: gset
+3128: push 4
+3130: push 10
+3132: mul
+3133: push 3
+3135: add
+3136: push 0
+3138: gset
+3139: push 4
+3141: push 10
+3143: mul
+3144: push 4
+3146: add
+3147: push 0
+3149: gset
+3150: push 4
+3152: push 10
+3154: mul
+3155: push 5
+3157: add
+3158: push 0
+3160: gset
+3161: push 4
+3163: push 10
+3165: mul
+3166: push 6
+3168: add
+3169: push 0
+3171: gset
+3172: push 4
+3174: push 10
+3176: mul
+3177: push 7
+3179: add
+3180: push 0
+3182: gset
+3183: push 4
+3185: push 10
+3187: mul
+3188: push 8
+3190: add
+3191: push 0
+3193: gset
+3194: push 4
+3196: push 10
+3198: mul
+3199: push 9
+3201: add
+3202: push 0
+3204: gset
+3205: push 5
+3207: push 10
+3209: mul
+3210: push 0
+3212: add
+3213: push 0
+3215: gset
+3216: push 0
+3218: gwrite
+3219: push 0
+3221: push 10
+3223: push 4
+3225: push 10
+3227: mul
+3228: push 2
+3230: add
+3231: push 3
+3233: push 10
+3235: mul
+3236: push 2
+3238: add
+3239: push 3
+3241: push 10
+3243: mul
+3244: push 2
+3246: add
+3247: push 3
+3249: push 10
+3251: mul
+3252: push 2
+3254: add
+3255: push 3
+3257: push 10
+3259: mul
+3260: push 2
+3262: add
+3263: push 3
+3265: push 10
+3267: mul
+3268: push 2
+3270: add
+3271: push 3
+3273: push 10
+3275: mul
+3276: push 2
+3278: add
+3279: push 3
+3281: push 10
+3283: mul
+3284: push 2
+3286: add
+3287: push 1
+3289: push 10
+3291: mul
+3292: push 10
+3294: mul
+3295: push 0
+3297: push 10
+3299: mul
+3300: push 1
+3302: add
+3303: add
+3304: push 1
+3306: push 10
+3308: mul
+3309: push 10
+3311: mul
+3312: push 0
+3314: push 10
+3316: mul
+3317: push 3
+3319: add
+3320: add
+3321: push 1
+3323: push 10
+3325: mul
+3326: push 10
+3328: mul
+3329: push 1
+3331: push 10
+3333: mul
+3334: push 0
+3336: add
+3337: add
+3338: push 1
+3340: push 10
+3342: mul
+3343: push 10
+3345: mul
+3346: push 0
+3348: push 10
+3350: mul
+3351: push 1
+3353: add
+3354: add
+3355: push 1
+3357: push 10
+3359: mul
+3360: push 10
+3362: mul
+3363: push 0
+3365: push 10
+3367: mul
+3368: push 8
+3370: add
+3371: add
+3372: push 1
+3374: push 10
+3376: mul
+3377: push 10
+3379: mul
+3380: push 0
+3382: push 10
+3384: mul
+3385: push 8
+3387: add
+3388: add
+3389: push 9
+3391: push 10
+3393: mul
+3394: push 7
+3396: add
+3397: push 1
+3399: push 10
+3401: mul
+3402: push 10
+3404: mul
+3405: push 0
+3407: push 10
+3409: mul
+3410: push 4
+3412: add
+3413: add
+3414: push 6
+3416: push 10
+3418: mul
+3419: push 7
+3421: add
+3422: push 3
+3424: push 10
+3426: mul
+3427: push 2
+3429: add
+3430: push 1
+3432: push 10
+3434: mul
+3435: push 10
+3437: mul
+3438: push 0
+3440: push 10
+3442: mul
+3443: push 1
+3445: add
+3446: add
+3447: push 1
+3449: push 10
+3451: mul
+3452: push 10
+3454: mul
+3455: push 1
+3457: push 10
+3459: mul
+3460: push 5
+3462: add
+3463: add
+3464: push 1
+3466: push 10
+3468: mul
+3469: push 10
+3471: mul
+3472: push 1
+3474: push 10
+3476: mul
+3477: push 4
+3479: add
+3480: add
+3481: push 1
+3483: push 10
+3485: mul
+3486: push 10
+3488: mul
+3489: push 0
+3491: push 10
+3493: mul
+3494: push 1
+3496: add
+3497: add
+3498: push 1
+3500: push 10
+3502: mul
+3503: push 10
+3505: mul
+3506: push 1
+3508: push 10
+3510: mul
+3511: push 8
+3513: add
+3514: add
+3515: push 1
+3517: push 10
+3519: mul
+3520: push 10
+3522: mul
+3523: push 0
+3525: push 10
+3527: mul
+3528: push 1
+3530: add
+3531: add
+3532: push 8
+3534: push 10
+3536: mul
+3537: push 2
+3539: add
+3540: push 3
+3542: push 10
+3544: mul
+3545: push 2
+3547: add
+3548: push 1
+3550: push 10
+3552: mul
+3553: push 10
+3555: mul
+3556: push 0
+3558: push 10
+3560: mul
+3561: push 1
+3563: add
+3564: add
+3565: push 1
+3567: push 10
+3569: mul
+3570: push 10
+3572: mul
+3573: push 0
+3575: push 10
+3577: mul
+3578: push 4
+3580: add
+3581: add
+3582: push 8
+3584: push 10
+3586: mul
+3587: push 4
+3589: add
+3590: push 3
+3592: push 10
+3594: mul
+3595: push 2
+3597: add
+3598: push 3
+3600: push 10
+3602: mul
+3603: push 2
+3605: add
+3606: push 3
+3608: push 10
+3610: mul
+3611: push 2
+3613: add
+3614: push 3
+3616: push 10
+3618: mul
+3619: push 2
+3621: add
+3622: push 3
+3624: push 10
+3626: mul
+3627: push 2
+3629: add
+3630: push 3
+3632: push 10
+3634: mul
+3635: push 2
+3637: add
+3638: push 3
+3640: push 10
+3642: mul
+3643: push 2
+3645: add
+3646: push 4
+3648: push 10
+3650: mul
+3651: push 2
+3653: add
+3654: push 0
+3656: push 0
+3658: gset
+3659: push 1
+3661: push 0
+3663: gset
+3664: push 2
+3666: push 0
+3668: gset
+3669: push 3
+3671: push 0
+3673: gset
+3674: push 4
+3676: push 0
+3678: gset
+3679: push 5
+3681: push 0
+3683: gset
+3684: push 6
+3686: push 0
+3688: gset
+3689: push 7
+3691: push 0
+3693: gset
+3694: push 8
+3696: push 0
+3698: gset
+3699: push 9
+3701: push 0
+3703: gset
+3704: push 10
+3706: push 0
+3708: gset
+3709: push 1
+3711: push 10
+3713: mul
+3714: push 1
+3716: add
+3717: push 0
+3719: gset
+3720: push 1
+3722: push 10
+3724: mul
+3725: push 2
+3727: add
+3728: push 0
+3730: gset
+3731: push 1
+3733: push 10
+3735: mul
+3736: push 3
+3738: add
+3739: push 0
+3741: gset
+3742: push 1
+3744: push 10
+3746: mul
+3747: push 4
+3749: add
+3750: push 0
+3752: gset
+3753: push 1
+3755: push 10
+3757: mul
+3758: push 5
+3760: add
+3761: push 0
+3763: gset
+3764: push 1
+3766: push 10
+3768: mul
+3769: push 6
+3771: add
+3772: push 0
+3774: gset
+3775: push 1
+3777: push 10
+3779: mul
+3780: push 7
+3782: add
+3783: push 0
+3785: gset
+3786: push 1
+3788: push 10
+3790: mul
+3791: push 8
+3793: add
+3794: push 0
+3796: gset
+3797: push 1
+3799: push 10
+3801: mul
+3802: push 9
+3804: add
+3805: push 0
+3807: gset
+3808: push 2
+3810: push 10
+3812: mul
+3813: push 0
+3815: add
+3816: push 0
+3818: gset
+3819: push 2
+3821: push 10
+3823: mul
+3824: push 1
+3826: add
+3827: push 0
+3829: gset
+3830: push 2
+3832: push 10
+3834: mul
+3835: push 2
+3837: add
+3838: push 0
+3840: gset
+3841: push 2
+3843: push 10
+3845: mul
+3846: push 3
+3848: add
+3849: push 0
+3851: gset
+3852: push 2
+3854: push 10
+3856: mul
+3857: push 4
+3859: add
+3860: push 0
+3862: gset
+3863: push 2
+3865: push 10
+3867: mul
+3868: push 5
+3870: add
+3871: push 0
+3873: gset
+3874: push 2
+3876: push 10
+3878: mul
+3879: push 6
+3881: add
+3882: push 0
+3884: gset
+3885: push 2
+3887: push 10
+3889: mul
+3890: push 7
+3892: add
+3893: push 0
+3895: gset
+3896: push 2
+3898: push 10
+3900: mul
+3901: push 8
+3903: add
+3904: push 0
+3906: gset
+3907: push 2
+3909: push 10
+3911: mul
+3912: push 9
+3914: add
+3915: push 0
+3917: gset
+3918: push 3
+3920: push 10
+3922: mul
+3923: push 0
+3925: add
+3926: push 0
+3928: gset
+3929: push 3
+3931: push 10
+3933: mul
+3934: push 1
+3936: add
+3937: push 0
+3939: gset
+3940: push 3
+3942: push 10
+3944: mul
+3945: push 2
+3947: add
+3948: push 0
+3950: gset
+3951: push 3
+3953: push 10
+3955: mul
+3956: push 3
+3958: add
+3959: push 0
+3961: gset
+3962: push 3
+3964: push 10
+3966: mul
+3967: push 4
+3969: add
+3970: push 0
+3972: gset
+3973: push 3
+3975: push 10
+3977: mul
+3978: push 5
+3980: add
+3981: push 0
+3983: gset
+3984: push 3
+3986: push 10
+3988: mul
+3989: push 6
+3991: add
+3992: push 0
+3994: gset
+3995: push 3
+3997: push 10
+3999: mul
+4000: push 7
+4002: add
+4003: push 0
+4005: gset
+4006: push 3
+4008: push 10
+4010: mul
+4011: push 8
+4013: add
+4014: push 0
+4016: gset
+4017: push 0
+4019: gwrite
+4020: push 0
+4022: push 10
+4024: push 4
+4026: push 10
+4028: mul
+4029: push 2
+4031: add
+4032: push 3
+4034: push 10
+4036: mul
+4037: push 2
+4039: add
+4040: push 3
+4042: push 10
+4044: mul
+4045: push 2
+4047: add
+4048: push 3
+4050: push 10
+4052: mul
+4053: push 2
+4055: add
+4056: push 3
+4058: push 10
+4060: mul
+4061: push 2
+4063: add
+4064: push 3
+4066: push 10
+4068: mul
+4069: push 2
+4071: add
+4072: push 3
+4074: push 10
+4076: mul
+4077: push 2
+4079: add
+4080: push 3
+4082: push 10
+4084: mul
+4085: push 2
+4087: add
+4088: push 3
+4090: push 10
+4092: mul
+4093: push 2
+4095: add
+4096: push 3
+4098: push 10
+4100: mul
+4101: push 2
+4103: add
+4104: push 3
+4106: push 10
+4108: mul
+4109: push 2
+4111: add
+4112: push 3
+4114: push 10
+4116: mul
+4117: push 2
+4119: add
+4120: push 3
+4122: push 10
+4124: mul
+4125: push 2
+4127: add
+4128: push 3
+4130: push 10
+4132: mul
+4133: push 2
+4135: add
+4136: push 3
+4138: push 10
+4140: mul
+4141: push 2
+4143: add
+4144: push 3
+4146: push 10
+4148: mul
+4149: push 2
+4151: add
+4152: push 3
+4154: push 10
+4156: mul
+4157: push 2
+4159: add
+4160: push 3
+4162: push 10
+4164: mul
+4165: push 2
+4167: add
+4168: push 3
+4170: push 10
+4172: mul
+4173: push 2
+4175: add
+4176: push 3
+4178: push 10
+4180: mul
+4181: push 2
+4183: add
+4184: push 3
+4186: push 10
+4188: mul
+4189: push 2
+4191: add
+4192: push 3
+4194: push 10
+4196: mul
+4197: push 2
+4199: add
+4200: push 3
+4202: push 10
+4204: mul
+4205: push 2
+4207: add
+4208: push 3
+4210: push 10
+4212: mul
+4213: push 2
+4215: add
+4216: push 3
+4218: push 10
+4220: mul
+4221: push 2
+4223: add
+4224: push 3
+4226: push 10
+4228: mul
+4229: push 2
+4231: add
+4232: push 3
+4234: push 10
+4236: mul
+4237: push 2
+4239: add
+4240: push 3
+4242: push 10
+4244: mul
+4245: push 2
+4247: add
+4248: push 3
+4250: push 10
+4252: mul
+4253: push 2
+4255: add
+4256: push 3
+4258: push 10
+4260: mul
+4261: push 2
+4263: add
+4264: push 3
+4266: push 10
+4268: mul
+4269: push 2
+4271: add
+4272: push 3
+4274: push 10
+4276: mul
+4277: push 2
+4279: add
+4280: push 3
+4282: push 10
+4284: mul
+4285: push 2
+4287: add
+4288: push 3
+4290: push 10
+4292: mul
+4293: push 2
+4295: add
+4296: push 3
+4298: push 10
+4300: mul
+4301: push 2
+4303: add
+4304: push 3
+4306: push 10
+4308: mul
+4309: push 2
+4311: add
+4312: push 4
+4314: push 10
+4316: mul
+4317: push 2
+4319: add
+4320: push 0
+4322: push 0
+4324: gset
+4325: push 1
+4327: push 0
+4329: gset
+4330: push 2
+4332: push 0
+4334: gset
+4335: push 3
+4337: push 0
+4339: gset
+4340: push 4
+4342: push 0
+4344: gset
+4345: push 5
+4347: push 0
+4349: gset
+4350: push 6
+4352: push 0
+4354: gset
+4355: push 7
+4357: push 0
+4359: gset
+4360: push 8
+4362: push 0
+4364: gset
+4365: push 9
+4367: push 0
+4369: gset
+4370: push 10
+4372: push 0
+4374: gset
+4375: push 1
+4377: push 10
+4379: mul
+4380: push 1
+4382: add
+4383: push 0
+4385: gset
+4386: push 1
+4388: push 10
+4390: mul
+4391: push 2
+4393: add
+4394: push 0
+4396: gset
+4397: push 1
+4399: push 10
+4401: mul
+4402: push 3
+4404: add
+4405: push 0
+4407: gset
+4408: push 1
+4410: push 10
+4412: mul
+4413: push 4
+4415: add
+4416: push 0
+4418: gset
+4419: push 1
+4421: push 10
+4423: mul
+4424: push 5
+4426: add
+4427: push 0
+4429: gset
+4430: push 1
+4432: push 10
+4434: mul
+4435: push 6
+4437: add
+4438: push 0
+4440: gset
+4441: push 1
+4443: push 10
+4445: mul
+4446: push 7
+4448: add
+4449: push 0
+4451: gset
+4452: push 1
+4454: push 10
+4456: mul
+4457: push 8
+4459: add
+4460: push 0
+4462: gset
+4463: push 1
+4465: push 10
+4467: mul
+4468: push 9
+4470: add
+4471: push 0
+4473: gset
+4474: push 2
+4476: push 10
+4478: mul
+4479: push 0
+4481: add
+4482: push 0
+4484: gset
+4485: push 2
+4487: push 10
+4489: mul
+4490: push 1
+4492: add
+4493: push 0
+4495: gset
+4496: push 2
+4498: push 10
+4500: mul
+4501: push 2
+4503: add
+4504: push 0
+4506: gset
+4507: push 2
+4509: push 10
+4511: mul
+4512: push 3
+4514: add
+4515: push 0
+4517: gset
+4518: push 2
+4520: push 10
+4522: mul
+4523: push 4
+4525: add
+4526: push 0
+4528: gset
+4529: push 2
+4531: push 10
+4533: mul
+4534: push 5
+4536: add
+4537: push 0
+4539: gset
+4540: push 2
+4542: push 10
+4544: mul
+4545: push 6
+4547: add
+4548: push 0
+4550: gset
+4551: push 2
+4553: push 10
+4555: mul
+4556: push 7
+4558: add
+4559: push 0
+4561: gset
+4562: push 2
+4564: push 10
+4566: mul
+4567: push 8
+4569: add
+4570: push 0
+4572: gset
+4573: push 2
+4575: push 10
+4577: mul
+4578: push 9
+4580: add
+4581: push 0
+4583: gset
+4584: push 3
+4586: push 10
+4588: mul
+4589: push 0
+4591: add
+4592: push 0
+4594: gset
+4595: push 3
+4597: push 10
+4599: mul
+4600: push 1
+4602: add
+4603: push 0
+4605: gset
+4606: push 3
+4608: push 10
+4610: mul
+4611: push 2
+4613: add
+4614: push 0
+4616: gset
+4617: push 3
+4619: push 10
+4621: mul
+4622: push 3
+4624: add
+4625: push 0
+4627: gset
+4628: push 3
+4630: push 10
+4632: mul
+4633: push 4
+4635: add
+4636: push 0
+4638: gset
+4639: push 3
+4641: push 10
+4643: mul
+4644: push 5
+4646: add
+4647: push 0
+4649: gset
+4650: push 3
+4652: push 10
+4654: mul
+4655: push 6
+4657: add
+4658: push 0
+4660: gset
+4661: push 3
+4663: push 10
+4665: mul
+4666: push 7
+4668: add
+4669: push 0
+4671: gset
+4672: push 3
+4674: push 10
+4676: mul
+4677: push 8
+4679: add
+4680: push 0
+4682: gset
+4683: push 0
+4685: gwrite
+4686: push 0
+4688: push 10
+4690: push 4
+4692: push 10
+4694: mul
+4695: push 2
+4697: add
+4698: push 4
+4700: push 10
+4702: mul
+4703: push 2
+4705: add
+4706: push 4
+4708: push 10
+4710: mul
+4711: push 2
+4713: add
+4714: push 4
+4716: push 10
+4718: mul
+4719: push 2
+4721: add
+4722: push 4
+4724: push 10
+4726: mul
+4727: push 2
+4729: add
+4730: push 4
+4732: push 10
+4734: mul
+4735: push 2
+4737: add
+4738: push 4
+4740: push 10
+4742: mul
+4743: push 2
+4745: add
+4746: push 4
+4748: push 10
+4750: mul
+4751: push 2
+4753: add
+4754: push 4
+4756: push 10
+4758: mul
+4759: push 2
+4761: add
+4762: push 4
+4764: push 10
+4766: mul
+4767: push 2
+4769: add
+4770: push 4
+4772: push 10
+4774: mul
+4775: push 2
+4777: add
+4778: push 4
+4780: push 10
+4782: mul
+4783: push 2
+4785: add
+4786: push 4
+4788: push 10
+4790: mul
+4791: push 2
+4793: add
+4794: push 4
+4796: push 10
+4798: mul
+4799: push 2
+4801: add
+4802: push 4
+4804: push 10
+4806: mul
+4807: push 2
+4809: add
+4810: push 4
+4812: push 10
+4814: mul
+4815: push 2
+4817: add
+4818: push 4
+4820: push 10
+4822: mul
+4823: push 2
+4825: add
+4826: push 4
+4828: push 10
+4830: mul
+4831: push 2
+4833: add
+4834: push 4
+4836: push 10
+4838: mul
+4839: push 2
+4841: add
+4842: push 4
+4844: push 10
+4846: mul
+4847: push 2
+4849: add
+4850: push 4
+4852: push 10
+4854: mul
+4855: push 2
+4857: add
+4858: push 4
+4860: push 10
+4862: mul
+4863: push 2
+4865: add
+4866: push 4
+4868: push 10
+4870: mul
+4871: push 2
+4873: add
+4874: push 4
+4876: push 10
+4878: mul
+4879: push 2
+4881: add
+4882: push 4
+4884: push 10
+4886: mul
+4887: push 2
+4889: add
+4890: push 4
+4892: push 10
+4894: mul
+4895: push 2
+4897: add
+4898: push 4
+4900: push 10
+4902: mul
+4903: push 2
+4905: add
+4906: push 4
+4908: push 10
+4910: mul
+4911: push 2
+4913: add
+4914: push 4
+4916: push 10
+4918: mul
+4919: push 2
+4921: add
+4922: push 4
+4924: push 10
+4926: mul
+4927: push 2
+4929: add
+4930: push 4
+4932: push 10
+4934: mul
+4935: push 2
+4937: add
+4938: push 4
+4940: push 10
+4942: mul
+4943: push 2
+4945: add
+4946: push 4
+4948: push 10
+4950: mul
+4951: push 2
+4953: add
+4954: push 4
+4956: push 10
+4958: mul
+4959: push 2
+4961: add
+4962: push 4
+4964: push 10
+4966: mul
+4967: push 2
+4969: add
+4970: push 4
+4972: push 10
+4974: mul
+4975: push 2
+4977: add
+4978: push 4
+4980: push 10
+4982: mul
+4983: push 2
+4985: add
+4986: push 0
+4988: push 0
+4990: gset
+4991: push 1
+4993: push 0
+4995: gset
+4996: push 2
+4998: push 0
+5000: gset
+5001: push 3
+5003: push 0
+5005: gset
+5006: push 4
+5008: push 0
+5010: gset
+5011: push 5
+5013: push 0
+5015: gset
+5016: push 6
+5018: push 0
+5020: gset
+5021: push 7
+5023: push 0
+5025: gset
+5026: push 8
+5028: push 0
+5030: gset
+5031: push 9
+5033: push 0
+5035: gset
+5036: push 10
+5038: push 0
+5040: gset
+5041: push 1
+5043: push 10
+5045: mul
+5046: push 1
+5048: add
+5049: push 0
+5051: gset
+5052: push 1
+5054: push 10
+5056: mul
+5057: push 2
+5059: add
+5060: push 0
+5062: gset
+5063: push 1
+5065: push 10
+5067: mul
+5068: push 3
+5070: add
+5071: push 0
+5073: gset
+5074: push 1
+5076: push 10
+5078: mul
+5079: push 4
+5081: add
+5082: push 0
+5084: gset
+5085: push 1
+5087: push 10
+5089: mul
+5090: push 5
+5092: add
+5093: push 0
+5095: gset
+5096: push 1
+5098: push 10
+5100: mul
+5101: push 6
+5103: add
+5104: push 0
+5106: gset
+5107: push 1
+5109: push 10
+5111: mul
+5112: push 7
+5114: add
+5115: push 0
+5117: gset
+5118: push 1
+5120: push 10
+5122: mul
+5123: push 8
+5125: add
+5126: push 0
+5128: gset
+5129: push 1
+5131: push 10
+5133: mul
+5134: push 9
+5136: add
+5137: push 0
+5139: gset
+5140: push 2
+5142: push 10
+5144: mul
+5145: push 0
+5147: add
+5148: push 0
+5150: gset
+5151: push 2
+5153: push 10
+5155: mul
+5156: push 1
+5158: add
+5159: push 0
+5161: gset
+5162: push 2
+5164: push 10
+5166: mul
+5167: push 2
+5169: add
+5170: push 0
+5172: gset
+5173: push 2
+5175: push 10
+5177: mul
+5178: push 3
+5180: add
+5181: push 0
+5183: gset
+5184: push 2
+5186: push 10
+5188: mul
+5189: push 4
+5191: add
+5192: push 0
+5194: gset
+5195: push 2
+5197: push 10
+5199: mul
+5200: push 5
+5202: add
+5203: push 0
+5205: gset
+5206: push 2
+5208: push 10
+5210: mul
+5211: push 6
+5213: add
+5214: push 0
+5216: gset
+5217: push 2
+5219: push 10
+5221: mul
+5222: push 7
+5224: add
+5225: push 0
+5227: gset
+5228: push 2
+5230: push 10
+5232: mul
+5233: push 8
+5235: add
+5236: push 0
+5238: gset
+5239: push 2
+5241: push 10
+5243: mul
+5244: push 9
+5246: add
+5247: push 0
+5249: gset
+5250: push 3
+5252: push 10
+5254: mul
+5255: push 0
+5257: add
+5258: push 0
+5260: gset
+5261: push 3
+5263: push 10
+5265: mul
+5266: push 1
+5268: add
+5269: push 0
+5271: gset
+5272: push 3
+5274: push 10
+5276: mul
+5277: push 2
+5279: add
+5280: push 0
+5282: gset
+5283: push 3
+5285: push 10
+5287: mul
+5288: push 3
+5290: add
+5291: push 0
+5293: gset
+5294: push 3
+5296: push 10
+5298: mul
+5299: push 4
+5301: add
+5302: push 0
+5304: gset
+5305: push 3
+5307: push 10
+5309: mul
+5310: push 5
+5312: add
+5313: push 0
+5315: gset
+5316: push 3
+5318: push 10
+5320: mul
+5321: push 6
+5323: add
+5324: push 0
+5326: gset
+5327: push 3
+5329: push 10
+5331: mul
+5332: push 7
+5334: add
+5335: push 0
+5337: gset
+5338: push 3
+5340: push 10
+5342: mul
+5343: push 8
+5345: add
+5346: push 0
+5348: gset
+5349: push 0
+5351: gwrite
+5352: push 0
+5354: push 0
+5356: push 10
+5358: push 0
+5360: push 0
+5362: gset
+5363: push 1
+5365: push 0
+5367: gset
+5368: push 2
+5370: push 0
+5372: gset
+5373: push 0
+5375: gwrite
+5376: push 0
+5378: push 3
+5380: push 10
+5382: mul
+5383: push 2
+5385: add
+5386: push 5
+5388: push 10
+5390: mul
+5391: push 8
+5393: add
+5394: push 1
+5396: push 10
+5398: mul
+5399: push 10
+5401: mul
+5402: push 1
+5404: push 10
+5406: mul
+5407: push 6
+5409: add
+5410: add
+5411: push 1
+5413: push 10
+5415: mul
+5416: push 10
+5418: mul
+5419: push 0
+5421: push 10
+5423: mul
+5424: push 1
+5426: add
+5427: add
+5428: push 1
+5430: push 10
+5432: mul
+5433: push 10
+5435: mul
+5436: push 1
+5438: push 10
+5440: mul
+5441: push 4
+5443: add
+5444: add
+5445: push 9
+5447: push 10
+5449: mul
+5450: push 9
+5452: add
+5453: push 1
+5455: push 10
+5457: mul
+5458: push 10
+5460: mul
+5461: push 0
+5463: push 10
+5465: mul
+5466: push 1
+5468: add
+5469: add
+5470: push 1
+5472: push 10
+5474: mul
+5475: push 10
+5477: mul
+5478: push 1
+5480: push 10
+5482: mul
+5483: push 5
+5485: add
+5486: add
+5487: push 3
+5489: push 10
+5491: mul
+5492: push 2
+5494: add
+5495: push 1
+5497: push 10
+5499: mul
+5500: push 10
+5502: mul
+5503: push 0
+5505: push 10
+5507: mul
+5508: push 1
+5510: add
+5511: add
+5512: push 1
+5514: push 10
+5516: mul
+5517: push 10
+5519: mul
+5520: push 0
+5522: push 10
+5524: mul
+5525: push 4
+5527: add
+5528: add
+5529: push 1
+5531: push 10
+5533: mul
+5534: push 10
+5536: mul
+5537: push 1
+5539: push 10
+5541: mul
+5542: push 6
+5544: add
+5545: add
+5546: push 3
+5548: push 10
+5550: mul
+5551: push 2
+5553: add
+5554: push 1
+5556: push 10
+5558: mul
+5559: push 10
+5561: mul
+5562: push 1
+5564: push 10
+5566: mul
+5567: push 6
+5569: add
+5570: add
+5571: push 1
+5573: push 10
+5575: mul
+5576: push 10
+5578: mul
+5579: push 1
+5581: push 10
+5583: mul
+5584: push 7
+5586: add
+5587: add
+5588: push 1
+5590: push 10
+5592: mul
+5593: push 10
+5595: mul
+5596: push 1
+5598: push 10
+5600: mul
+5601: push 2
+5603: add
+5604: add
+5605: push 1
+5607: push 10
+5609: mul
+5610: push 10
+5612: mul
+5613: push 1
+5615: push 10
+5617: mul
+5618: push 0
+5620: add
+5621: add
+5622: push 1
+5624: push 10
+5626: mul
+5627: push 10
+5629: mul
+5630: push 0
+5632: push 10
+5634: mul
+5635: push 5
+5637: add
+5638: add
+5639: push 3
+5641: push 10
+5643: mul
+5644: push 2
+5646: add
+5647: push 1
+5649: push 10
+5651: mul
+5652: push 10
+5654: mul
+5655: push 0
+5657: push 10
+5659: mul
+5660: push 1
+5662: add
+5663: add
+5664: push 1
+5666: push 10
+5668: mul
+5669: push 10
+5671: mul
+5672: push 1
+5674: push 10
+5676: mul
+5677: push 5
+5679: add
+5680: add
+5681: push 9
+5683: push 10
+5685: mul
+5686: push 7
+5688: add
+5689: push 1
+5691: push 10
+5693: mul
+5694: push 10
+5696: mul
+5697: push 0
+5699: push 10
+5701: mul
+5702: push 1
+5704: add
+5705: add
+5706: push 1
+5708: push 10
+5710: mul
+5711: push 10
+5713: mul
+5714: push 0
+5716: push 10
+5718: mul
+5719: push 8
+5721: add
+5722: add
+5723: push 8
+5725: push 10
+5727: mul
+5728: push 0
+5730: add
+5731: push 0
+5733: push 0
+5735: gset
+5736: push 1
+5738: push 0
+5740: gset
+5741: push 2
+5743: push 0
+5745: gset
+5746: push 3
+5748: push 0
+5750: gset
+5751: push 4
+5753: push 0
+5755: gset
+5756: push 5
+5758: push 0
+5760: gset
+5761: push 6
+5763: push 0
+5765: gset
+5766: push 7
+5768: push 0
+5770: gset
+5771: push 8
+5773: push 0
+5775: gset
+5776: push 9
+5778: push 0
+5780: gset
+5781: push 10
+5783: push 0
+5785: gset
+5786: push 1
+5788: push 10
+5790: mul
+5791: push 1
+5793: add
+5794: push 0
+5796: gset
+5797: push 1
+5799: push 10
+5801: mul
+5802: push 2
+5804: add
+5805: push 0
+5807: gset
+5808: push 1
+5810: push 10
+5812: mul
+5813: push 3
+5815: add
+5816: push 0
+5818: gset
+5819: push 1
+5821: push 10
+5823: mul
+5824: push 4
+5826: add
+5827: push 0
+5829: gset
+5830: push 1
+5832: push 10
+5834: mul
+5835: push 5
+5837: add
+5838: push 0
+5840: gset
+5841: push 1
+5843: push 10
+5845: mul
+5846: push 6
+5848: add
+5849: push 0
+5851: gset
+5852: push 1
+5854: push 10
+5856: mul
+5857: push 7
+5859: add
+5860: push 0
+5862: gset
+5863: push 1
+5865: push 10
+5867: mul
+5868: push 8
+5870: add
+5871: push 0
+5873: gset
+5874: push 1
+5876: push 10
+5878: mul
+5879: push 9
+5881: add
+5882: push 0
+5884: gset
+5885: push 2
+5887: push 10
+5889: mul
+5890: push 0
+5892: add
+5893: push 0
+5895: gset
+5896: push 2
+5898: push 10
+5900: mul
+5901: push 1
+5903: add
+5904: push 0
+5906: gset
+5907: push 2
+5909: push 10
+5911: mul
+5912: push 2
+5914: add
+5915: push 0
+5917: gset
+5918: push 2
+5920: push 10
+5922: mul
+5923: push 3
+5925: add
+5926: push 0
+5928: gset
+5929: push 2
+5931: push 10
+5933: mul
+5934: push 4
+5936: add
+5937: push 0
+5939: gset
+5940: push 2
+5942: push 10
+5944: mul
+5945: push 5
+5947: add
+5948: push 0
+5950: gset
+5951: push 0
+5953: gwrite
+5954: push 3
+5956: push 10
+5958: mul
+5959: push 0
+5961: add
+5962: galloc
+5963: push 3
+5965: push 10
+5967: mul
+5968: push 0
+5970: add
+5971: galloc
+5972: push 3
+5974: push 10
+5976: mul
+5977: push 0
+5979: add
+5980: galloc
+5981: push 3
+5983: push 10
+5985: mul
+5986: push 0
+5988: add
+5989: galloc
+5990: push 0
+5992: push 2
+5994: push 10
+5996: mul
+5997: push 6
+5999: add
+6000: push 5
+6002: push 9
+6004: push 10
+6006: mul
+6007: push 1
+6009: add
+6010: push 9
+6012: push 6
+6014: push 10
+6016: mul
+6017: push 4
+6019: add
+6020: push 8
+6022: push 10
+6024: mul
+6025: push 6
+6027: add
+6028: push 1
+6030: push 10
+6032: mul
+6033: push 10
+6035: mul
+6036: push 0
+6038: push 10
+6040: mul
+6041: push 8
+6043: add
+6044: add
+6045: push 9
+6047: push 4
+6049: push 10
+6051: mul
+6052: push 8
+6054: add
+6055: push 1
+6057: push 10
+6059: mul
+6060: push 10
+6062: mul
+6063: push 1
+6065: push 10
+6067: mul
+6068: push 4
+6070: add
+6071: add
+6072: push 0
+6074: push 6
+6076: push 10
+6078: mul
+6079: push 4
+6081: add
+6082: push 2
+6084: push 10
+6086: mul
+6087: push 3
+6089: add
+6090: push 8
+6092: push 9
+6094: push 10
+6096: mul
+6097: push 1
+6099: add
+6100: push 0
+6102: push 3
+6104: push 10
+6106: mul
+6107: push 6
+6109: add
+6110: push 7
+6112: push 10
+6114: mul
+6115: push 4
+6117: add
+6118: push 9
+6120: push 6
+6122: push 10
+6124: mul
+6125: push 6
+6127: add
+6128: push 1
+6130: push 10
+6132: mul
+6133: push 6
+6135: add
+6136: push 2
+6138: push 10
+6140: mul
+6141: push 9
+6143: add
+6144: push 5
+6146: push 2
+6148: push 10
+6150: mul
+6151: push 4
+6153: add
+6154: push 0
+6156: push 2
+6158: gset
+6159: push 1
+6161: push 2
+6163: gset
+6164: push 2
+6166: push 2
+6168: gset
+6169: push 3
+6171: push 2
+6173: gset
+6174: push 4
+6176: push 2
+6178: gset
+6179: push 5
+6181: push 2
+6183: gset
+6184: push 6
+6186: push 2
+6188: gset
+6189: push 7
+6191: push 2
+6193: gset
+6194: push 8
+6196: push 2
+6198: gset
+6199: push 9
+6201: push 2
+6203: gset
+6204: push 10
+6206: push 2
+6208: gset
+6209: push 1
+6211: push 10
+6213: mul
+6214: push 1
+6216: add
+6217: push 2
+6219: gset
+6220: push 1
+6222: push 10
+6224: mul
+6225: push 2
+6227: add
+6228: push 2
+6230: gset
+6231: push 1
+6233: push 10
+6235: mul
+6236: push 3
+6238: add
+6239: push 2
+6241: gset
+6242: push 1
+6244: push 10
+6246: mul
+6247: push 4
+6249: add
+6250: push 2
+6252: gset
+6253: push 1
+6255: push 10
+6257: mul
+6258: push 5
+6260: add
+6261: push 2
+6263: gset
+6264: push 1
+6266: push 10
+6268: mul
+6269: push 6
+6271: add
+6272: push 2
+6274: gset
+6275: push 1
+6277: push 10
+6279: mul
+6280: push 7
+6282: add
+6283: push 2
+6285: gset
+6286: push 1
+6288: push 10
+6290: mul
+6291: push 8
+6293: add
+6294: push 2
+6296: gset
+6297: push 1
+6299: push 10
+6301: mul
+6302: push 9
+6304: add
+6305: push 2
+6307: gset
+6308: push 2
+6310: push 10
+6312: mul
+6313: push 0
+6315: add
+6316: push 2
+6318: gset
+6319: push 2
+6321: push 10
+6323: mul
+6324: push 1
+6326: add
+6327: push 2
+6329: gset
+6330: push 2
+6332: push 10
+6334: mul
+6335: push 2
+6337: add
+6338: push 2
+6340: gset
+6341: push 2
+6343: push 10
+6345: mul
+6346: push 3
+6348: add
+6349: push 2
+6351: gset
+6352: push 2
+6354: push 10
+6356: mul
+6357: push 4
+6359: add
+6360: push 2
+6362: gset
+6363: push 0
+6365: push 6
+6367: push 3
+6369: push 10
+6371: mul
+6372: push 2
+6374: add
+6375: push 4
+6377: push 10
+6379: mul
+6380: push 6
+6382: add
+6383: push 1
+6385: push 10
+6387: mul
+6388: push 10
+6390: mul
+6391: push 3
+6393: push 10
+6395: mul
+6396: push 2
+6398: add
+6399: add
+6400: push 7
+6402: push 10
+6404: mul
+6405: push 6
+6407: add
+6408: push 2
+6410: push 10
+6412: mul
+6413: push 10
+6415: mul
+6416: push 0
+6418: push 10
+6420: mul
+6421: push 9
+6423: add
+6424: add
+6425: push 4
+6427: push 10
+6429: mul
+6430: push 4
+6432: add
+6433: push 1
+6435: push 10
+6437: mul
+6438: push 10
+6440: mul
+6441: push 3
+6443: push 10
+6445: mul
+6446: push 4
+6448: add
+6449: add
+6450: push 2
+6452: push 10
+6454: mul
+6455: push 1
+6457: add
+6458: push 2
+6460: push 10
+6462: mul
+6463: push 5
+6465: add
+6466: push 4
+6468: push 10
+6470: mul
+6471: push 4
+6473: add
+6474: push 8
+6476: push 10
+6478: mul
+6479: push 1
+6481: add
+6482: push 4
+6484: push 2
+6486: push 10
+6488: mul
+6489: push 10
+6491: mul
+6492: push 1
+6494: push 10
+6496: mul
+6497: push 7
+6499: add
+6500: add
+6501: push 3
+6503: push 10
+6505: mul
+6506: push 4
+6508: add
+6509: push 8
+6511: push 10
+6513: mul
+6514: push 1
+6516: add
+6517: push 2
+6519: push 10
+6521: mul
+6522: push 3
+6524: add
+6525: push 2
+6527: push 10
+6529: mul
+6530: push 1
+6532: add
+6533: push 8
+6535: push 10
+6537: mul
+6538: push 8
+6540: add
+6541: push 7
+6543: push 10
+6545: mul
+6546: push 5
+6548: add
+6549: push 1
+6551: push 10
+6553: mul
+6554: push 8
+6556: add
+6557: push 2
+6559: push 10
+6561: mul
+6562: push 10
+6564: mul
+6565: push 0
+6567: push 10
+6569: mul
+6570: push 5
+6572: add
+6573: add
+6574: push 9
+6576: push 10
+6578: mul
+6579: push 9
+6581: add
+6582: push 1
+6584: push 10
+6586: mul
+6587: push 10
+6589: mul
+6590: push 4
+6592: push 10
+6594: mul
+6595: push 2
+6597: add
+6598: add
+6599: push 0
+6601: push 4
+6603: gset
+6604: push 1
+6606: push 4
+6608: gset
+6609: push 2
+6611: push 4
+6613: gset
+6614: push 3
+6616: push 4
+6618: gset
+6619: push 4
+6621: push 4
+6623: gset
+6624: push 5
+6626: push 4
+6628: gset
+6629: push 6
+6631: push 4
+6633: gset
+6634: push 7
+6636: push 4
+6638: gset
+6639: push 8
+6641: push 4
+6643: gset
+6644: push 9
+6646: push 4
+6648: gset
+6649: push 10
+6651: push 4
+6653: gset
+6654: push 1
+6656: push 10
+6658: mul
+6659: push 1
+6661: add
+6662: push 4
+6664: gset
+6665: push 1
+6667: push 10
+6669: mul
+6670: push 2
+6672: add
+6673: push 4
+6675: gset
+6676: push 1
+6678: push 10
+6680: mul
+6681: push 3
+6683: add
+6684: push 4
+6686: gset
+6687: push 1
+6689: push 10
+6691: mul
+6692: push 4
+6694: add
+6695: push 4
+6697: gset
+6698: push 1
+6700: push 10
+6702: mul
+6703: push 5
+6705: add
+6706: push 4
+6708: gset
+6709: push 1
+6711: push 10
+6713: mul
+6714: push 6
+6716: add
+6717: push 4
+6719: gset
+6720: push 1
+6722: push 10
+6724: mul
+6725: push 7
+6727: add
+6728: push 4
+6730: gset
+6731: push 1
+6733: push 10
+6735: mul
+6736: push 8
+6738: add
+6739: push 4
+6741: gset
+6742: push 1
+6744: push 10
+6746: mul
+6747: push 9
+6749: add
+6750: push 4
+6752: gset
+6753: push 2
+6755: push 10
+6757: mul
+6758: push 0
+6760: add
+6761: push 4
+6763: gset
+6764: push 2
+6766: push 10
+6768: mul
+6769: push 1
+6771: add
+6772: push 4
+6774: gset
+6775: push 2
+6777: push 10
+6779: mul
+6780: push 2
+6782: add
+6783: push 4
+6785: gset
+6786: push 2
+6788: push 10
+6790: mul
+6791: push 3
+6793: add
+6794: push 4
+6796: gset
+6797: push 2
+6799: push 10
+6801: mul
+6802: push 4
+6804: add
+6805: push 4
+6807: gset
+6808: push 1
+6810: gread
+6811: push 5
+6813: galloc
+6814: push 1
+6816: push 5
+6818: gget
+6819: push 1
+6821: gget
+6822: push 0
+6824: eq
+6825: push 7
+6827: push 10
+6829: mul
+6830: push 10
+6832: mul
+6833: push 10
+6835: mul
+6836: push 0
+6838: push 10
+6840: mul
+6841: push 10
+6843: mul
+6844: push 5
+6846: push 10
+6848: mul
+6849: push 2
+6851: add
+6852: add
+6853: add
+6854: jnz
+6855: nop
+6856: nop
+6857: nop
+6858: nop
+6859: nop
+6860: nop
+6861: nop
+6862: nop
+6863: nop
+6864: nop
+6865: nop
+6866: nop
+6867: nop
+6868: nop
+6869: nop
+6870: push 1
+6872: push 5
+6874: gget
+6875: push 1
+6877: gget
+6878: push 10
+6880: eq
+6881: push 6
+6883: push 10
+6885: mul
+6886: push 10
+6888: mul
+6889: push 10
+6891: mul
+6892: push 9
+6894: push 10
+6896: mul
+6897: push 10
+6899: mul
+6900: push 9
+6902: push 10
+6904: mul
+6905: push 7
+6907: add
+6908: add
+6909: add
+6910: jnz
+6911: nop
+6912: nop
+6913: nop
+6914: nop
+6915: nop
+6916: nop
+6917: nop
+6918: nop
+6919: nop
+6920: nop
+6921: nop
+6922: nop
+6923: nop
+6924: nop
+6925: nop
+6926: push 0
+6928: push 5
+6930: gget
+6931: push 1
+6933: add
+6934: push 0
+6936: push 5
+6938: gset
+6939: push 1
+6941: push 5
+6943: gget
+6944: push 1
+6946: add
+6947: push 1
+6949: push 5
+6951: gset
+6952: push 6
+6954: push 10
+6956: mul
+6957: push 10
+6959: mul
+6960: push 10
+6962: mul
+6963: push 8
+6965: push 10
+6967: mul
+6968: push 10
+6970: mul
+6971: push 1
+6973: push 10
+6975: mul
+6976: push 4
+6978: add
+6979: add
+6980: add
+6981: jmp
+6982: nop
+6983: nop
+6984: nop
+6985: nop
+6986: nop
+6987: nop
+6988: nop
+6989: nop
+6990: nop
+6991: nop
+6992: nop
+6993: nop
+6994: nop
+6995: nop
+6996: nop
+6997: push 0
+6999: push 1
+7001: push 5
+7003: gget
+7004: push 1
+7006: gset
+7007: push 7
+7009: push 10
+7011: mul
+7012: push 10
+7014: mul
+7015: push 10
+7017: mul
+7018: push 0
+7020: push 10
+7022: mul
+7023: push 10
+7025: mul
+7026: push 5
+7028: push 10
+7030: mul
+7031: push 2
+7033: add
+7034: add
+7035: add
+7036: jmp
+7037: nop
+7038: nop
+7039: nop
+7040: nop
+7041: nop
+7042: nop
+7043: nop
+7044: nop
+7045: nop
+7046: nop
+7047: nop
+7048: nop
+7049: nop
+7050: nop
+7051: nop
+7052: push 0
+7054: push 5
+7056: gget
+7057: push 2
+7059: push 10
+7061: mul
+7062: push 4
+7064: add
+7065: eq
+7066: push 8
+7068: push 10
+7070: mul
+7071: push 10
+7073: mul
+7074: push 10
+7076: mul
+7077: push 5
+7079: push 10
+7081: mul
+7082: push 10
+7084: mul
+7085: push 5
+7087: push 10
+7089: mul
+7090: push 0
+7092: add
+7093: add
+7094: add
+7095: jz
+7096: nop
+7097: nop
+7098: nop
+7099: nop
+7100: nop
+7101: nop
+7102: nop
+7103: nop
+7104: nop
+7105: nop
+7106: nop
+7107: nop
+7108: nop
+7109: nop
+7110: nop
+7111: push 0
+7113: push 1
+7115: push 5
+7117: gset
+7118: push 5
+7120: push 1
+7122: push 5
+7124: gget
+7125: push 1
+7127: add
+7128: mod
+7129: push 0
+7131: eq
+7132: push 7
+7134: push 10
+7136: mul
+7137: push 10
+7139: mul
+7140: push 10
+7142: mul
+7143: push 2
+7145: push 10
+7147: mul
+7148: push 10
+7150: mul
+7151: push 9
+7153: push 10
+7155: mul
+7156: push 4
+7158: add
+7159: add
+7160: add
+7161: jnz
+7162: nop
+7163: nop
+7164: nop
+7165: nop
+7166: nop
+7167: nop
+7168: nop
+7169: nop
+7170: nop
+7171: nop
+7172: nop
+7173: nop
+7174: nop
+7175: nop
+7176: nop
+7177: push 1
+7179: push 5
+7181: gget
+7182: push 1
+7184: add
+7185: push 1
+7187: push 5
+7189: gset
+7190: push 2
+7192: push 10
+7194: mul
+7195: push 4
+7197: add
+7198: push 1
+7200: push 5
+7202: gget
+7203: lt
+7204: push 7
+7206: push 10
+7208: mul
+7209: push 10
+7211: mul
+7212: push 10
+7214: mul
+7215: push 1
+7217: push 10
+7219: mul
+7220: push 10
+7222: mul
+7223: push 1
+7225: push 10
+7227: mul
+7228: push 8
+7230: add
+7231: add
+7232: add
+7233: jnz
+7234: nop
+7235: nop
+7236: nop
+7237: nop
+7238: nop
+7239: nop
+7240: nop
+7241: nop
+7242: nop
+7243: nop
+7244: nop
+7245: nop
+7246: nop
+7247: nop
+7248: nop
+7249: push 7
+7251: push 10
+7253: mul
+7254: push 10
+7256: mul
+7257: push 10
+7259: mul
+7260: push 4
+7262: push 10
+7264: mul
+7265: push 10
+7267: mul
+7268: push 0
+7270: push 10
+7272: mul
+7273: push 1
+7275: add
+7276: add
+7277: add
+7278: jmp
+7279: nop
+7280: nop
+7281: nop
+7282: nop
+7283: nop
+7284: nop
+7285: nop
+7286: nop
+7287: nop
+7288: nop
+7289: nop
+7290: nop
+7291: nop
+7292: nop
+7293: nop
+7294: push 4
+7296: push 10
+7298: mul
+7299: push 5
+7301: add
+7302: push 1
+7304: push 5
+7306: gget
+7307: push 1
+7309: gget
+7310: eq
+7311: push 8
+7313: push 10
+7315: mul
+7316: push 10
+7318: mul
+7319: push 10
+7321: mul
+7322: push 5
+7324: push 10
+7326: mul
+7327: push 10
+7329: mul
+7330: push 5
+7332: push 10
+7334: mul
+7335: push 0
+7337: add
+7338: add
+7339: add
+7340: jz
+7341: nop
+7342: nop
+7343: nop
+7344: nop
+7345: nop
+7346: nop
+7347: nop
+7348: nop
+7349: nop
+7350: nop
+7351: nop
+7352: nop
+7353: nop
+7354: nop
+7355: nop
+7356: push 7
+7358: push 10
+7360: mul
+7361: push 10
+7363: mul
+7364: push 10
+7366: mul
+7367: push 1
+7369: push 10
+7371: mul
+7372: push 10
+7374: mul
+7375: push 7
+7377: push 10
+7379: mul
+7380: push 7
+7382: add
+7383: add
+7384: add
+7385: jmp
+7386: nop
+7387: nop
+7388: nop
+7389: nop
+7390: nop
+7391: nop
+7392: nop
+7393: nop
+7394: nop
+7395: nop
+7396: nop
+7397: nop
+7398: nop
+7399: nop
+7400: nop
+7401: push 0
+7403: push 1
+7405: push 5
+7407: gset
+7408: push 4
+7410: push 1
+7412: push 5
+7414: gget
+7415: mod
+7416: push 2
+7418: push 5
+7420: gset
+7421: push 2
+7423: push 5
+7425: gget
+7426: push 0
+7428: eq
+7429: push 7
+7431: push 10
+7433: mul
+7434: push 10
+7436: mul
+7437: push 10
+7439: mul
+7440: push 7
+7442: push 10
+7444: mul
+7445: push 10
+7447: mul
+7448: push 5
+7450: push 10
+7452: mul
+7453: push 0
+7455: add
+7456: add
+7457: add
+7458: jnz
+7459: nop
+7460: nop
+7461: nop
+7462: nop
+7463: nop
+7464: nop
+7465: nop
+7466: nop
+7467: nop
+7468: nop
+7469: nop
+7470: nop
+7471: nop
+7472: nop
+7473: nop
+7474: push 2
+7476: push 5
+7478: gget
+7479: push 1
+7481: eq
+7482: push 7
+7484: push 10
+7486: mul
+7487: push 10
+7489: mul
+7490: push 10
+7492: mul
+7493: push 8
+7495: push 10
+7497: mul
+7498: push 10
+7500: mul
+7501: push 2
+7503: push 10
+7505: mul
+7506: push 0
+7508: add
+7509: add
+7510: add
+7511: jnz
+7512: nop
+7513: nop
+7514: nop
+7515: nop
+7516: nop
+7517: nop
+7518: nop
+7519: nop
+7520: nop
+7521: nop
+7522: nop
+7523: nop
+7524: nop
+7525: nop
+7526: nop
+7527: push 2
+7529: push 5
+7531: gget
+7532: push 2
+7534: eq
+7535: push 7
+7537: push 10
+7539: mul
+7540: push 10
+7542: mul
+7543: push 10
+7545: mul
+7546: push 8
+7548: push 10
+7550: mul
+7551: push 10
+7553: mul
+7554: push 8
+7556: push 10
+7558: mul
+7559: push 7
+7561: add
+7562: add
+7563: add
+7564: jnz
+7565: nop
+7566: nop
+7567: nop
+7568: nop
+7569: nop
+7570: nop
+7571: nop
+7572: nop
+7573: nop
+7574: nop
+7575: nop
+7576: nop
+7577: nop
+7578: nop
+7579: nop
+7580: push 2
+7582: push 5
+7584: gget
+7585: push 3
+7587: eq
+7588: push 7
+7590: push 10
+7592: mul
+7593: push 10
+7595: mul
+7596: push 10
+7598: mul
+7599: push 9
+7601: push 10
+7603: mul
+7604: push 10
+7606: mul
+7607: push 6
+7609: push 10
+7611: mul
+7612: push 9
+7614: add
+7615: add
+7616: add
+7617: jnz
+7618: nop
+7619: nop
+7620: nop
+7621: nop
+7622: nop
+7623: nop
+7624: nop
+7625: nop
+7626: nop
+7627: nop
+7628: nop
+7629: nop
+7630: nop
+7631: nop
+7632: nop
+7633: push 1
+7635: push 5
+7637: gget
+7638: push 1
+7640: add
+7641: push 1
+7643: push 5
+7645: gset
+7646: push 2
+7648: push 10
+7650: mul
+7651: push 4
+7653: add
+7654: push 1
+7656: push 5
+7658: gget
+7659: lt
+7660: push 7
+7662: push 10
+7664: mul
+7665: push 10
+7667: mul
+7668: push 10
+7670: mul
+7671: push 4
+7673: push 10
+7675: mul
+7676: push 10
+7678: mul
+7679: push 0
+7681: push 10
+7683: mul
+7684: push 8
+7686: add
+7687: add
+7688: add
+7689: jnz
+7690: nop
+7691: nop
+7692: nop
+7693: nop
+7694: nop
+7695: nop
+7696: nop
+7697: nop
+7698: nop
+7699: nop
+7700: nop
+7701: nop
+7702: nop
+7703: nop
+7704: nop
+7705: push 8
+7707: push 10
+7709: mul
+7710: push 10
+7712: mul
+7713: push 10
+7715: mul
+7716: push 0
+7718: push 10
+7720: mul
+7721: push 10
+7723: mul
+7724: push 7
+7726: push 10
+7728: mul
+7729: push 5
+7731: add
+7732: add
+7733: add
+7734: jmp
+7735: nop
+7736: nop
+7737: nop
+7738: nop
+7739: nop
+7740: nop
+7741: nop
+7742: nop
+7743: nop
+7744: nop
+7745: nop
+7746: nop
+7747: nop
+7748: nop
+7749: nop
+7750: push 1
+7752: push 5
+7754: gget
+7755: push 1
+7757: gget
+7758: push 3
+7760: push 10
+7762: mul
+7763: push 0
+7765: add
+7766: add
+7767: push 1
+7769: push 5
+7771: gget
+7772: push 3
+7774: gset
+7775: push 7
+7777: push 10
+7779: mul
+7780: push 10
+7782: mul
+7783: push 10
+7785: mul
+7786: push 6
+7788: push 10
+7790: mul
+7791: push 10
+7793: mul
+7794: push 3
+7796: push 10
+7798: mul
+7799: push 3
+7801: add
+7802: add
+7803: add
+7804: jmp
+7805: nop
+7806: nop
+7807: nop
+7808: nop
+7809: nop
+7810: nop
+7811: nop
+7812: nop
+7813: nop
+7814: nop
+7815: nop
+7816: nop
+7817: nop
+7818: nop
+7819: nop
+7820: push 8
+7822: push 1
+7824: push 5
+7826: gget
+7827: push 1
+7829: gget
+7830: sub
+7831: push 7
+7833: xor
+7834: push 1
+7836: push 5
+7838: gget
+7839: push 3
+7841: gset
+7842: push 7
+7844: push 10
+7846: mul
+7847: push 10
+7849: mul
+7850: push 10
+7852: mul
+7853: push 6
+7855: push 10
+7857: mul
+7858: push 10
+7860: mul
+7861: push 3
+7863: push 10
+7865: mul
+7866: push 3
+7868: add
+7869: add
+7870: add
+7871: jmp
+7872: nop
+7873: nop
+7874: nop
+7875: nop
+7876: nop
+7877: nop
+7878: nop
+7879: nop
+7880: nop
+7881: nop
+7882: nop
+7883: nop
+7884: nop
+7885: nop
+7886: nop
+7887: push 4
+7889: push 1
+7891: push 5
+7893: gget
+7894: push 1
+7896: gget
+7897: push 4
+7899: push 10
+7901: mul
+7902: push 4
+7904: add
+7905: add
+7906: push 6
+7908: push 10
+7910: mul
+7911: push 8
+7913: add
+7914: xor
+7915: sub
+7916: push 1
+7918: push 5
+7920: gget
+7921: push 3
+7923: gset
+7924: push 7
+7926: push 10
+7928: mul
+7929: push 10
+7931: mul
+7932: push 10
+7934: mul
+7935: push 6
+7937: push 10
+7939: mul
+7940: push 10
+7942: mul
+7943: push 3
+7945: push 10
+7947: mul
+7948: push 3
+7950: add
+7951: add
+7952: add
+7953: jmp
+7954: nop
+7955: nop
+7956: nop
+7957: nop
+7958: nop
+7959: nop
+7960: nop
+7961: nop
+7962: nop
+7963: nop
+7964: nop
+7965: nop
+7966: nop
+7967: nop
+7968: nop
+7969: push 1
+7971: push 5
+7973: gget
+7974: push 1
+7976: gget
+7977: push 1
+7979: push 10
+7981: mul
+7982: push 10
+7984: mul
+7985: push 0
+7987: push 10
+7989: mul
+7990: push 1
+7992: add
+7993: add
+7994: xor
+7995: push 1
+7997: push 10
+7999: mul
+8000: push 10
+8002: mul
+8003: push 7
+8005: push 10
+8007: mul
+8008: push 2
+8010: add
+8011: add
+8012: push 2
+8014: push 10
+8016: mul
+8017: push 0
+8019: add
+8020: and
+8021: xor
+8022: push 1
+8024: push 5
+8026: gget
+8027: push 3
+8029: gset
+8030: push 7
+8032: push 10
+8034: mul
+8035: push 10
+8037: mul
+8038: push 10
+8040: mul
+8041: push 6
+8043: push 10
+8045: mul
+8046: push 10
+8048: mul
+8049: push 3
+8051: push 10
+8053: mul
+8054: push 3
+8056: add
+8057: add
+8058: add
+8059: jmp
+8060: nop
+8061: nop
+8062: nop
+8063: nop
+8064: nop
+8065: nop
+8066: nop
+8067: nop
+8068: nop
+8069: nop
+8070: nop
+8071: nop
+8072: nop
+8073: nop
+8074: nop
+8075: push 0
+8077: push 1
+8079: push 5
+8081: gset
+8082: push 0
+8084: push 2
+8086: push 5
+8088: gset
+8089: push 1
+8091: push 5
+8093: gget
+8094: push 3
+8096: gget
+8097: push 1
+8099: push 5
+8101: gget
+8102: push 4
+8104: gget
+8105: eq
+8106: push 8
+8108: push 10
+8110: mul
+8111: push 10
+8113: mul
+8114: push 10
+8116: mul
+8117: push 2
+8119: push 10
+8121: mul
+8122: push 10
+8124: mul
+8125: push 8
+8127: push 10
+8129: mul
+8130: push 4
+8132: add
+8133: add
+8134: add
+8135: jnz
+8136: nop
+8137: nop
+8138: nop
+8139: nop
+8140: nop
+8141: nop
+8142: nop
+8143: nop
+8144: nop
+8145: nop
+8146: nop
+8147: nop
+8148: nop
+8149: nop
+8150: nop
+8151: push 1
+8153: push 0
+8155: sub
+8156: push 2
+8158: push 5
+8160: gget
+8161: add
+8162: push 2
+8164: push 5
+8166: gset
+8167: push 1
+8169: push 5
+8171: gget
+8172: push 1
+8174: add
+8175: push 1
+8177: push 5
+8179: gset
+8180: push 2
+8182: push 10
+8184: mul
+8185: push 4
+8187: add
+8188: push 1
+8190: push 5
+8192: gget
+8193: lt
+8194: push 8
+8196: push 10
+8198: mul
+8199: push 10
+8201: mul
+8202: push 10
+8204: mul
+8205: push 0
+8207: push 10
+8209: mul
+8210: push 10
+8212: mul
+8213: push 8
+8215: push 10
+8217: mul
+8218: push 9
+8220: add
+8221: add
+8222: add
+8223: jnz
+8224: nop
+8225: nop
+8226: nop
+8227: nop
+8228: nop
+8229: nop
+8230: nop
+8231: nop
+8232: nop
+8233: nop
+8234: nop
+8235: nop
+8236: nop
+8237: nop
+8238: nop
+8239: push 8
+8241: push 10
+8243: mul
+8244: push 10
+8246: mul
+8247: push 10
+8249: mul
+8250: push 3
+8252: push 10
+8254: mul
+8255: push 10
+8257: mul
+8258: push 4
+8260: push 10
+8262: mul
+8263: push 2
+8265: add
+8266: add
+8267: add
+8268: jmp
+8269: nop
+8270: nop
+8271: nop
+8272: nop
+8273: nop
+8274: nop
+8275: nop
+8276: nop
+8277: nop
+8278: nop
+8279: nop
+8280: nop
+8281: nop
+8282: nop
+8283: nop
+8284: push 1
+8286: push 2
+8288: push 5
+8290: gget
+8291: add
+8292: push 2
+8294: push 5
+8296: gset
+8297: push 8
+8299: push 10
+8301: mul
+8302: push 10
+8304: mul
+8305: push 10
+8307: mul
+8308: push 1
+8310: push 10
+8312: mul
+8313: push 10
+8315: mul
+8316: push 6
+8318: push 10
+8320: mul
+8321: push 7
+8323: add
+8324: add
+8325: add
+8326: jmp
+8327: nop
+8328: nop
+8329: nop
+8330: nop
+8331: nop
+8332: nop
+8333: nop
+8334: nop
+8335: nop
+8336: nop
+8337: nop
+8338: nop
+8339: nop
+8340: nop
+8341: nop
+8342: push 2
+8344: push 5
+8346: gget
+8347: push 2
+8349: push 10
+8351: mul
+8352: push 4
+8354: add
+8355: eq
+8356: push 8
+8358: push 10
+8360: mul
+8361: push 10
+8363: mul
+8364: push 10
+8366: mul
+8367: push 5
+8369: push 10
+8371: mul
+8372: push 10
+8374: mul
+8375: push 5
+8377: push 10
+8379: mul
+8380: push 0
+8382: add
+8383: add
+8384: add
+8385: jz
+8386: nop
+8387: nop
+8388: nop
+8389: nop
+8390: nop
+8391: nop
+8392: nop
+8393: nop
+8394: nop
+8395: nop
+8396: nop
+8397: nop
+8398: nop
+8399: nop
+8400: nop
+8401: push 0
+8403: push 1
+8405: push 5
+8407: gset
+8408: push 1
+8410: push 5
+8412: gget
+8413: push 1
+8415: gget
+8416: push 1
+8418: push 5
+8420: gget
+8421: push 2
+8423: gget
+8424: xor
+8425: push 1
+8427: push 5
+8429: gget
+8430: push 2
+8432: gset
+8433: push 1
+8435: push 5
+8437: gget
+8438: push 1
+8440: add
+8441: push 1
+8443: push 5
+8445: gset
+8446: push 2
+8448: push 10
+8450: mul
+8451: push 4
+8453: add
+8454: push 1
+8456: push 5
+8458: gget
+8459: lt
+8460: push 8
+8462: push 10
+8464: mul
+8465: push 10
+8467: mul
+8468: push 10
+8470: mul
+8471: push 4
+8473: push 10
+8475: mul
+8476: push 10
+8478: mul
+8479: push 0
+8481: push 10
+8483: mul
+8484: push 8
+8486: add
+8487: add
+8488: add
+8489: jnz
+8490: nop
+8491: nop
+8492: nop
+8493: nop
+8494: nop
+8495: nop
+8496: nop
+8497: nop
+8498: nop
+8499: nop
+8500: nop
+8501: nop
+8502: nop
+8503: nop
+8504: nop
+8505: push 8
+8507: push 10
+8509: mul
+8510: push 10
+8512: mul
+8513: push 10
+8515: mul
+8516: push 7
+8518: push 10
+8520: mul
+8521: push 10
+8523: mul
+8524: push 0
+8526: push 10
+8528: mul
+8529: push 0
+8531: add
+8532: add
+8533: add
+8534: jmp
+8535: nop
+8536: nop
+8537: nop
+8538: nop
+8539: nop
+8540: nop
+8541: nop
+8542: nop
+8543: nop
+8544: nop
+8545: nop
+8546: nop
+8547: nop
+8548: nop
+8549: nop
+8550: push 0
+8552: push 10
+8554: push 1
+8556: push 10
+8558: mul
+8559: push 10
+8561: mul
+8562: push 7
+8564: push 10
+8566: mul
+8567: push 3
+8569: add
+8570: add
+8571: push 1
+8573: push 10
+8575: mul
+8576: push 10
+8578: mul
+8579: push 5
+8581: push 10
+8583: mul
+8584: push 2
+8586: add
+8587: add
+8588: push 1
+8590: push 10
+8592: mul
+8593: push 10
+8595: mul
+8596: push 5
+8598: push 10
+8600: mul
+8601: push 9
+8603: add
+8604: add
+8605: push 2
+8607: push 10
+8609: mul
+8610: push 10
+8612: mul
+8613: push 4
+8615: push 10
+8617: mul
+8618: push 0
+8620: add
+8621: add
+8622: push 0
+8624: push 0
+8626: gset
+8627: push 1
+8629: push 0
+8631: gset
+8632: push 2
+8634: push 0
+8636: gset
+8637: push 3
+8639: push 0
+8641: gset
+8642: push 4
+8644: push 0
+8646: gset
+8647: push 5
+8649: push 0
+8651: gset
+8652: push 0
+8654: gwrite
+8655: push 8
+8657: push 10
+8659: mul
+8660: push 10
+8662: mul
+8663: push 10
+8665: mul
+8666: push 8
+8668: push 10
+8670: mul
+8671: push 10
+8673: mul
+8674: push 2
+8676: push 10
+8678: mul
+8679: push 5
+8681: add
+8682: add
+8683: add
+8684: jmp
+8685: nop
+8686: nop
+8687: nop
+8688: nop
+8689: nop
+8690: nop
+8691: nop
+8692: nop
+8693: nop
+8694: nop
+8695: nop
+8696: nop
+8697: nop
+8698: nop
+8699: nop
+8700: push 0
+8702: push 10
+8704: push 1
+8706: push 10
+8708: mul
+8709: push 10
+8711: mul
+8712: push 4
+8714: push 10
+8716: mul
+8717: push 1
+8719: add
+8720: add
+8721: push 1
+8723: push 10
+8725: mul
+8726: push 10
+8728: mul
+8729: push 5
+8731: push 10
+8733: mul
+8734: push 2
+8736: add
+8737: add
+8738: push 1
+8740: push 10
+8742: mul
+8743: push 10
+8745: mul
+8746: push 5
+8748: push 10
+8750: mul
+8751: push 9
+8753: add
+8754: add
+8755: push 2
+8757: push 10
+8759: mul
+8760: push 10
+8762: mul
+8763: push 4
+8765: push 10
+8767: mul
+8768: push 0
+8770: add
+8771: add
+8772: push 0
+8774: push 0
+8776: gset
+8777: push 1
+8779: push 0
+8781: gset
+8782: push 2
+8784: push 0
+8786: gset
+8787: push 3
+8789: push 0
+8791: gset
+8792: push 4
+8794: push 0
+8796: gset
+8797: push 5
+8799: push 0
+8801: gset
+8802: push 0
+8804: gwrite
+8805: push 2
+8807: gwrite
+8808: push 0
+8810: push 10
+8812: push 0
+8814: push 0
+8816: gset
+8817: push 1
+8819: push 0
+8821: gset
+8822: push 0
+8824: gwrite
+8825: halt

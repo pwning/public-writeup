@@ -1,0 +1,470 @@
+00: nop
+01: nop
+02: nop
+
+03: push 60
+11: galloc
+12: GSET_STR(0, "*************************************\n\x00")
+675: push 0
+677: gwrite
+
+678: GSET_STR(0, "*                                   *\n\x00")
+1341: push 0
+1343: gwrite
+
+1344: GSET_STR(0, "*             Welcome to            *\n\x00")
+2070: push 0
+2072: gwrite
+
+2073: GSET_STR(0, "*        EmojiVM 😀😁🤣🤔🤨😮       *\n\x00")
+3216: push 0
+3218: gwrite
+
+3219: GSET_STR(0, "*       The Reverse Challenge       *\n\x00")
+4017: push 0
+4019: gwrite
+
+4020: GSET_STR(0, "*                                   *\n\x00")
+4683: push 0
+4685: gwrite
+
+4686: GSET_STR(0, "*************************************\n\x00")
+5349: push 0
+5351: gwrite
+
+5352: GSET_STR(0, "\n\x00\x00")
+5373: push 0
+5375: gwrite
+
+5376: GSET_STR(0, "Please input the secret: \x00")
+5951: push 0
+5953: gwrite
+
+5954: push 30
+5962: galloc # 1
+5963: push 30
+5971: galloc # 2
+5972: push 30
+5980: galloc # 3
+5981: push 30
+5989: galloc # 4
+
+5990: GSET_STR(2, '\x18\x05\x1d\x10B\tJ$\x00[\x08\x17@\x00r0\tlV@\t[\x05\x1a\x00')
+6363: GSET_STR(4, '\x8ec\xcd\x12KX\x15\x17Q"\xd9\x04Q,\x19\x15\x86,\xd1L\x84. \x06\x00')
+
+6808: push 1
+6810: gread
+6811: push 5
+6813: galloc # 5
+
+# get g1[g5[1]]
+6814: push 1
+6816: push 5
+6818: gget
+6819: push 1
+6821: gget
+6822: push 0
+6824: eq
+6825: push 7052
+6854: jnz
+
+# get g1[g5[1]]
+6870: push 1
+6872: push 5
+6874: gget
+6875: push 1
+6877: gget
+6878: push 10
+6880: eq
+6881: push 6997
+6910: jnz
+
+# g5[0]++
+6926: push 0
+6928: push 5
+6930: gget
+6931: push 1
+6933: add
+6934: push 0
+6936: push 5
+6938: gset
+
+# g5[1]++
+6939: push 1
+6941: push 5
+6943: gget
+6944: push 1
+6946: add
+6947: push 1
+6949: push 5
+6951: gset
+
+6952: push 6814
+6981: jmp
+
+
+
+# g1[g5[1]] = 0
+6997: push 0
+6999: push 1
+7001: push 5
+7003: gget
+7004: push 1
+7006: gset
+7007: push 7052
+7036: jmp
+
+
+
+# g5[0] == 24?
+7052: push 0
+7054: push 5
+7056: gget
+7057: push 24
+7065: eq
+7066: push 8550
+7095: jz
+
+# g5[1] = 0
+7111: push 0
+7113: push 1
+7115: push 5
+7117: gset
+# (g5[1]+1 % 5) == 0?
+7118: push 5
+7120: push 1
+7122: push 5
+7124: gget
+7125: push 1
+7127: add
+7128: mod
+7129: push 0
+7131: eq
+7132: push 7294
+7161: jnz
+
+# g5[1]++
+7177: push 1
+7179: push 5
+7181: gget
+7182: push 1
+7184: add
+7185: push 1
+7187: push 5
+7189: gset
+# g5[1] < 24 => goto 7118
+7190: push 24
+7198: push 1
+7200: push 5
+7202: gget
+7203: lt
+7204: push 7118
+7233: jnz
+
+7249: push 7401
+7278: jmp
+
+# must be dash
+7294: push 45
+7302: push 1
+7304: push 5
+7306: gget
+7307: push 1
+7309: gget
+7310: eq
+7311: push 8550
+7340: jz
+
+7356: push 7177
+7385: jmp
+
+
+
+# g5[1] = 0
+7401: push 0
+7403: push 1
+7405: push 5
+7407: gset
+# g5[2] = g5[1] % 4
+7408: push 4
+7410: push 1
+7412: push 5
+7414: gget
+7415: mod
+7416: push 2
+7418: push 5
+7420: gset
+# g5[2] == 0 => goto 7750
+7421: push 2
+7423: push 5
+7425: gget
+7426: push 0
+7428: eq
+7429: push 7750
+7458: jnz
+
+# g5[2] == 1 => goto 7820
+7474: push 2
+7476: push 5
+7478: gget
+7479: push 1
+7481: eq
+7482: push 7820
+7511: jnz
+
+# g5[2] == 2 => goto 7887
+7527: push 2
+7529: push 5
+7531: gget
+7532: push 2
+7534: eq
+7535: push 7887
+7564: jnz
+
+# g5[2] == 3 => goto 7969
+7580: push 2
+7582: push 5
+7584: gget
+7585: push 3
+7587: eq
+7588: push 7969
+7617: jnz
+
+# g5[1]++
+7633: push 1
+7635: push 5
+7637: gget
+7638: push 1
+7640: add
+7641: push 1
+7643: push 5
+7645: gset
+# g5[1] < 24 => goto 7408
+7646: push 24
+7654: push 1
+7656: push 5
+7658: gget
+7659: lt
+7660: push 7408
+7689: jnz
+
+7705: push 8075
+7734: jmp
+
+# CASE 0:
+# g3[g5[1]] = g1[g5[1]] + 30
+7750: push 1
+7752: push 5
+7754: gget
+7755: push 1
+7757: gget
+7758: push 30
+7766: add
+7767: push 1
+7769: push 5
+7771: gget
+7772: push 3
+7774: gset
+7775: push 7633
+7804: jmp
+
+# CASE 1:
+# g3[g5[1]] = (g1[g5[1]] - 8) ^ 7
+7820: push 8
+7822: push 1
+7824: push 5
+7826: gget
+7827: push 1
+7829: gget
+7830: sub
+7831: push 7
+7833: xor
+7834: push 1
+7836: push 5
+7838: gget
+7839: push 3
+7841: gset
+7842: push 7633
+7871: jmp
+
+# CASE 2:
+# g3[g5[1]] = ((g1[g5[1]] + 44) ^ 68) - 4
+7887: push 4
+7889: push 1
+7891: push 5
+7893: gget
+7894: push 1
+7896: gget
+7897: push 44
+7905: add
+7906: push 68
+7914: xor
+7915: sub
+7916: push 1
+7918: push 5
+7920: gget
+7921: push 3
+7923: gset
+7924: push 7633
+7953: jmp
+
+# CASE 3:
+# g3[g5[1]] = (g1[g5[1]] ^ 101) ^ (172 & 20)
+7969: push 1
+7971: push 5
+7973: gget
+7974: push 1
+7976: gget
+7977: push 101
+7994: xor
+7995: push 172
+8012: push 20
+8020: and
+8021: xor
+8022: push 1
+8024: push 5
+8026: gget
+8027: push 3
+8029: gset
+8030: push 7633
+8059: jmp
+
+# g5[1] = 0
+8075: push 0
+8077: push 1
+8079: push 5
+8081: gset
+# g5[2] = 0
+8082: push 0
+8084: push 2
+8086: push 5
+8088: gset
+# g3[g5[1]] == g4[g5[1]] => goto 8284
+8089: push 1
+8091: push 5
+8093: gget
+8094: push 3
+8096: gget
+8097: push 1
+8099: push 5
+8101: gget
+8102: push 4
+8104: gget
+8105: eq
+8106: push 8284
+8135: jnz
+
+# g5[2]--
+8151: push 1
+8153: push 0
+8155: sub
+8156: push 2
+8158: push 5
+8160: gget
+8161: add
+8162: push 2
+8164: push 5
+8166: gset
+# g5[1]++
+8167: push 1
+8169: push 5
+8171: gget
+8172: push 1
+8174: add
+8175: push 1
+8177: push 5
+8179: gset
+# g5[1] < 24 => 8089
+8180: push 24
+8188: push 1
+8190: push 5
+8192: gget
+8193: lt
+8194: push 8089
+8223: jnz
+
+8239: push 8342
+8268: jmp
+
+8284: push 1
+8286: push 2
+8288: push 5
+8290: gget
+8291: add
+8292: push 2
+8294: push 5
+8296: gset
+8297: push 8167
+8326: jmp
+
+8342: push 2
+8344: push 5
+8346: gget
+8347: push 24
+8355: eq
+8356: push 8550
+8385: jz
+
+8401: push 0
+8403: push 1
+8405: push 5
+8407: gset
+8408: push 1
+8410: push 5
+8412: gget
+8413: push 1
+8415: gget
+8416: push 1
+8418: push 5
+8420: gget
+8421: push 2
+8423: gget
+8424: xor
+8425: push 1
+8427: push 5
+8429: gget
+8430: push 2
+8432: gset
+8433: push 1
+8435: push 5
+8437: gget
+8438: push 1
+8440: add
+8441: push 1
+8443: push 5
+8445: gset
+8446: push 24
+8454: push 1
+8456: push 5
+8458: gget
+8459: lt
+8460: push 8408
+8489: jnz
+
+8505: push 8700
+8534: jmp
+
+
+# fail
+8550: GSET_STR(0, "😭\n\x00")
+8652: push 0
+8654: gwrite
+
+8655: push 8825
+8684: jmp
+
+
+
+# success
+
+8700: GSET_STR(0, "😍\n\x00")
+8802: push 0
+8804: gwrite
+
+8805: push 2
+8807: gwrite
+
+8808: GSET_STR(0, "\n\x00")
+8822: push 0
+8824: gwrite
+8825: halt
