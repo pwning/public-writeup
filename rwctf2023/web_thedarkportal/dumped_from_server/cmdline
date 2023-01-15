@@ -1,0 +1,14 @@
+/opt/jdk/bin/java
+-Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties
+-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+-Djdk.tls.ephemeralDHKeySize=2048
+-Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+-Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+-Dignore.endorsed.dirs=
+-classpath
+/opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar
+-Dcatalina.base=/opt/tomcat
+-Dcatalina.home=/opt/tomcat
+-Djava.io.tmpdir=/opt/tomcat/temp
+org.apache.catalina.startup.Bootstrap
+start

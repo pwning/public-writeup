@@ -1,0 +1,634 @@
+
+
+file:///etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+ctf:x:1000:1000::/home/ctf:/bin/sh
+
+
+
+
+file:///etc
+.pwd.lock
+adduser.conf
+alternatives
+apt
+bash.bashrc
+bindresvport.blacklist
+cron.daily
+debconf.conf
+debian_version
+default
+deluser.conf
+dpkg
+environment
+fstab
+gai.conf
+group
+group-
+gshadow
+gshadow-
+host.conf
+hostname
+hosts
+init.d
+inputrc
+issue
+issue.net
+kernel
+ld.so.cache
+ld.so.conf
+ld.so.conf.d
+ldap
+legal
+libaudit.conf
+logcheck
+login.defs
+logrotate.d
+lsb-release
+machine-id
+mke2fs.conf
+mtab
+network
+networks
+nsswitch.conf
+opt
+os-release
+pam.conf
+pam.d
+passwd
+passwd-
+perl
+profile
+profile.d
+protocols
+rc0.d
+rc1.d
+rc2.d
+rc3.d
+rc4.d
+rc5.d
+rc6.d
+rcS.d
+resolv.conf
+rmt
+rpc
+securetty
+security
+selinux
+services
+shadow
+shadow-
+shells
+skel
+subgid
+subgid-
+subuid
+subuid-
+sysctl.conf
+sysctl.d
+systemd
+terminfo
+update-motd.d
+X11
+
+
+
+
+file:///
+.dockerenv
+bin
+boot
+dev
+etc
+flag
+home
+lib
+lib32
+lib64
+media
+mnt
+opt
+proc
+readflag
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+
+
+
+
+file:///flag
+
+
+
+
+file:///etc
+.pwd.lock
+adduser.conf
+alternatives
+apt
+bash.bashrc
+bindresvport.blacklist
+cron.daily
+debconf.conf
+debian_version
+default
+deluser.conf
+dpkg
+environment
+fstab
+gai.conf
+group
+group-
+gshadow
+gshadow-
+host.conf
+hostname
+hosts
+init.d
+inputrc
+issue
+issue.net
+kernel
+ld.so.cache
+ld.so.conf
+ld.so.conf.d
+ldap
+legal
+libaudit.conf
+logcheck
+login.defs
+logrotate.d
+lsb-release
+machine-id
+mke2fs.conf
+mtab
+network
+networks
+nsswitch.conf
+opt
+os-release
+pam.conf
+pam.d
+passwd
+passwd-
+perl
+profile
+profile.d
+protocols
+rc0.d
+rc1.d
+rc2.d
+rc3.d
+rc4.d
+rc5.d
+rc6.d
+rcS.d
+resolv.conf
+rmt
+rpc
+securetty
+security
+selinux
+services
+shadow
+shadow-
+shells
+skel
+subgid
+subgid-
+subuid
+subuid-
+sysctl.conf
+sysctl.d
+systemd
+terminfo
+update-motd.d
+X11
+
+
+
+
+file:///opt
+jdk
+tomcat
+
+
+
+
+file:///opt/tomcat
+bin
+BUILDING.txt
+conf
+CONTRIBUTING.md
+lib
+LICENSE
+logs
+NOTICE
+README.md
+RELEASE-NOTES
+RUNNING.txt
+temp
+webapps
+work
+
+
+
+
+file:///opt/tomcat/webapps
+ROOT
+ROOT.war
+
+
+
+
+file:///opt/tomcat/webapps/ROOT
+imgs
+index.jsp
+META-INF
+portal.jsp
+WEB-INF
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF
+classes
+cxf-servlet.xml
+lib
+web.xml
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/index.jsp
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TheDarkPortal</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<body>
+    <div
+         style="background-image: url('imgs/map.jpg');height: 100vh;background-repeat: no-repeat;background-size:cover">
+
+        <div class="d-flex justify-content-center align-items-center" style="height:100vh;">
+            <main role="main" class="inner cover">
+                <h1 class="cover-heading text-white">From prof Apache.CXF:</h1>
+                <p class="lead text-white"><strong>There are all the secrets I know about The Dark Portal. May the Eternal Sun guides us..</strong></p>
+                <p class="lead">
+                    <a href="services/guidance?wsdl" class="btn btn-lg btn-secondary">Seek for guidance</a>
+                </p>
+                <p class="lead">
+                    <a href="portal.jsp" class="btn btn-lg btn-secondary">The front of The Dark Portal</a>
+                </p>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+file:///opt/tomcat/webapps/ROOT/portal.jsp
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>TheDarkPortal</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<body>
+<div
+        style="background-image: url('imgs/portal.jpg');height: 100vh;background-repeat: no-repeat;background-size:cover">
+
+    <div class="d-flex justify-content-center align-items-center" style="height:100vh;">
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading text-white">Voices from the other side of The Dark Portal:</h1>
+            <p class="lead text-white" id="voice"><strong>...</strong></p>
+        </main>
+    </div>
+</div>
+<script>
+
+    $(document).ready(function () {
+       $.ajax({
+           url: "7he_d4rk_p0rt4l",
+           type: "GET",
+           success: function (data) {
+                $("#voice").html(data);
+           }
+       })
+    });
+
+</script>
+</body>
+</html>
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/
+imgs
+index.jsp
+META-INF
+portal.jsp
+WEB-INF
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/META-INF
+MANIFEST.MF
+maven
+war-tracker
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/META-INF/war-tracker
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/META-INF/MANIFEST.MF
+Manifest-Version: 1.0
+Build-Jdk-Spec: 1.8
+Created-By: Maven WAR Plugin 3.3.2
+Obfuscated-By: RWCTF DEBUG
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/META-INF/maven
+com.rw
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/
+imgs
+index.jsp
+META-INF
+portal.jsp
+WEB-INF
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/imgs
+map.jpg
+portal.jpg
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/imgs/map.jpg
+    DUMPED TO FILE
+
+
+
+file:///opt/tomcat/webapps/ROOT/imgs/portal.jpg
+    DUMPED TO FILE
+
+
+
+file:///opt/tomcat/webapps/ROOT/imgs/
+map.jpg
+portal.jpg
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/
+imgs
+index.jsp
+META-INF
+portal.jsp
+WEB-INF
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF
+classes
+cxf-servlet.xml
+lib
+web.xml
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF/web.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <display-name>cxf</display-name>
+    <servlet>
+        <description>Apache CXF Endpoint</description>
+        <display-name>cxf</display-name>
+        <servlet-name>cxf</servlet-name>
+        <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>the_dark_portal</servlet-name>
+        <servlet-class>com.rw.rwctf2023.TheDarkPortal</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cxf</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>the_dark_portal</servlet-name>
+        <url-pattern>/7he_d4rk_p0rt4l</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+    
+</web-app>
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF/cxf-servlet.xml
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+    <jaxws:endpoint id="guidance" implementor="com.rw.rwctf2023.GuidanceServiceImpl" address="/guidance">
+    </jaxws:endpoint>
+</beans>
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF/lib
+asm-9.3.jar
+cxf-core-3.5.4.jar
+cxf-rt-bindings-soap-3.5.4.jar
+cxf-rt-bindings-xml-3.5.4.jar
+cxf-rt-databinding-jaxb-3.5.4.jar
+cxf-rt-frontend-jaxws-3.5.4.jar
+cxf-rt-frontend-simple-3.5.4.jar
+cxf-rt-transports-http-3.5.4.jar
+cxf-rt-transports-http-jetty-3.5.4.jar
+cxf-rt-ws-addr-3.5.4.jar
+cxf-rt-wsdl-3.5.4.jar
+cxf-rt-ws-policy-3.5.4.jar
+istack-commons-runtime-3.0.12.jar
+jakarta.activation-1.2.2.jar
+jakarta.activation-api-1.2.2.jar
+jakarta.xml.bind-api-2.3.3.jar
+jaxb-runtime-2.3.5.jar
+jetty-continuation-9.4.49.v20220914.jar
+jetty-http-9.4.49.v20220914.jar
+jetty-io-9.4.49.v20220914.jar
+jetty-security-9.4.49.v20220914.jar
+jetty-server-9.4.49.v20220914.jar
+jetty-util-9.4.49.v20220914.jar
+neethi-3.2.0.jar
+slf4j-api-1.7.36.jar
+spring-aop-5.3.24.jar
+spring-beans-5.3.24.jar
+spring-context-5.3.24.jar
+spring-core-5.3.24.jar
+spring-expression-5.3.24.jar
+spring-jcl-5.3.24.jar
+spring-web-5.3.24.jar
+stax2-api-4.2.1.jar
+txw2-2.3.5.jar
+woodstox-core-6.2.8.jar
+wsdl4j-1.6.3.jar
+xml-resolver-1.2.jar
+xmlschema-core-2.3.0.jar
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF/
+classes
+cxf-servlet.xml
+lib
+web.xml
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF/classes
+com
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF/classes/com
+rw
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF/classes/com/rw
+rwctf2023
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF/classes/com/rw/rwctf2023/
+DarkMagic.class
+GuidanceService.class
+GuidanceServiceImpl.class
+TheDarkPortal.class
+
+
+
+
+file:///opt/tomcat/webapps/ROOT/WEB-INF/
+classes
+cxf-servlet.xml
+lib
+web.xml
+
+
+
+
+file:///proc/self/cmdline
+/opt/jdk/bin/java
+-Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties
+-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+-Djdk.tls.ephemeralDHKeySize=2048
+-Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+-Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+-Dignore.endorsed.dirs=
+-classpath
+/opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar
+-Dcatalina.base=/opt/tomcat
+-Dcatalina.home=/opt/tomcat
+-Djava.io.tmpdir=/opt/tomcat/temp
+org.apache.catalina.startup.Bootstrap
+start
+
+
+
+
+file:///proc/self/environ
+MAIL=/var/mail/ctf
+USER=ctf
+HOSTNAME=c3b1ced3092f
+HOME=/home/ctf
+CATALINA_HOME=/opt/tomcat
+LOGNAME=ctf
+JDK_JAVA_OPTIONS= --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SHELL=/bin/sh
+TOMCAT_ZIP=apache-tomcat-8.5.84.zip
+JDK_TAR_GZ=jdk-8u311-linux-x64.tar.gz
+JAVA_HOME=/opt/jdk
+PWD=/
+
+
+
+
+file:///flag
+
+
+
+
+file:///readflag
+    DUMPED TO FILE
+

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 1.8
+Created-By: Maven WAR Plugin 3.3.2
+Obfuscated-By: RWCTF DEBUG

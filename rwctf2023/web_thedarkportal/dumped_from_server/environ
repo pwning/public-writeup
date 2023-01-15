@@ -1,0 +1,13 @@
+MAIL=/var/mail/ctf
+USER=ctf
+HOSTNAME=c3b1ced3092f
+HOME=/home/ctf
+CATALINA_HOME=/opt/tomcat
+LOGNAME=ctf
+JDK_JAVA_OPTIONS= --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SHELL=/bin/sh
+TOMCAT_ZIP=apache-tomcat-8.5.84.zip
+JDK_TAR_GZ=jdk-8u311-linux-x64.tar.gz
+JAVA_HOME=/opt/jdk
+PWD=/

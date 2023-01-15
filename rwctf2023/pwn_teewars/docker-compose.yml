@@ -1,0 +1,14 @@
+# You need to have a valid ./data directory set up; I suggest launching without
+# the volume mount first, then copying the files from the container to your
+# host.
+version: "3.7"
+services:
+  teeworlds:
+    image: riftbit/teeworlds
+    ports:
+      - "8303:8303/udp"
+      - "8304:8304/tcp"
+    volumes:
+      - ./data:/teeworlds/data
+    environment:
+      TW_sv_map: pwn

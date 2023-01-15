@@ -1,0 +1,9 @@
+# ChatUWU&emsp;<sub><sup>Web, 150 points</sup></sub>
+
+> I can assure you that there is no XSS on the server! You will find the flag in admin's cookie.
+
+The application is a simple SocketIO-based web chat application.  It has two rooms: one where messages are plaintext, and one where messages are sanitized with DOMPurify on the server and inserted as HTML on the client.
+
+At face value, this looks like a pretty reasonable setup for a challenge exploiting some behavior difference in DOMPurify when operating on jsdom vs. operating in an actual browser environment.  We tracked down a number of reported bugs in jsdom that seemed like what we would need (in particular, we spent a large amount of time on [this one](https://github.com/jsdom/jsdom/issues/3040) about faulty `NodeIterator`s), but none of them appeared to be exploitable in DOMPurify.
+
+Eventually, I tried metagaming the problem a little bit.  If you could solve the problem by exploiting DOMPurify, then what's the point of having an XSS bot that you could send to any location?  Pretty quickly thereafter I realized that the client was connecting to `/${location.search}`, and after poking around in the implementation of SocketIO's URL parser a bit, I realized that you could just insert an `@` and it would incorrectly think that everything before that was basic auth credentials.  Therefore, the path `/?room=DOMPurify&nickname=xxx@pichu.blue` would make it connect to the server at `pichu.blue` instead of the proper server, and it would messages sent by _that_ server as HTML on the client.  One [slight rewrite of the challenge server](./solve.js) later, and we had a flag.
