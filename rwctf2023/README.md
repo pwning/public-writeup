@@ -17,4 +17,4 @@
 | [HappyCard](./pwn_happycard/)           | 425    | @b2xiao @bluepichu @panda        |
 | [The Dark Portal](./web_thedarkportal/) | 304    | @bluepichu @f0xtr0t @b2xiao      |
 | Printer2                                | 401    | @yves @b2xiao @n00bi3s @ricky    |
-| SealUnseal                              | 451    | @ath0 @Mindy                     |
+| [SealUnseal](./pwn_sealunseal/)         | 451    | @ath0 @Mindy                     |
