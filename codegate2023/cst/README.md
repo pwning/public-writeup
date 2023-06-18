@@ -56,7 +56,7 @@ attacker-controlled values. For example, in
 `MyASTVisitor::VisitWhileStmt()`, there is code that at a high level,
 does:
 
-```
+```cpp
 void MyASTVisitor::VisitWhileStmt(WhileStmt* while_stmt) {
   WhileBlock *while_block = new WhileBlock(/*type=*/"WhileBlock",
                                            /*notation=*/"");
@@ -64,7 +64,7 @@ void MyASTVisitor::VisitWhileStmt(WhileStmt* while_stmt) {
     ...
     if (call_expr = dyn_cast<CallExpr>(expr)) {
       std::string callee_str = ...;  // name of function being called
-      std::string args_str = ...;     // text of the arguments to the call
+      std::string args_str = ...;    // text of the arguments to the call
       if (callee_str == "annotation") {
         size_t length = arg_str.size();
         if (arg_str.front() == '"') {
