@@ -19,7 +19,8 @@ All the operations were happening on 32-bit values, and likely this could be
 solved by some form of symbolic execution.
 
 After annotating a little bit, she handed me (@f0xtr0t) [an assembly
-dump](./gatecodegate.asm.xz).
+dump](./gatecodegate.asm.xz), while working trying to see if angr might work
+on this challenge.
 
 I wrote up a short little [Python script](./solv.py) that parsed the lines,
 worked on a symbolic set of registers (and stack variables, which I also marked
