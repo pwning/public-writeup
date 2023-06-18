@@ -183,3 +183,5 @@ NODE_ENV=production
 ```
 
 See `s.py` and `brute.py` for the full server and client scripts used for the attack.
+
+Thanks to @bluepichu for the discussion and help with all the web stuff I failed at horribly.
