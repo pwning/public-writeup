@@ -6,7 +6,7 @@ _Writeup by [@bluepichu](https://github.com/bluepichu)_
 
 The handout for this problem is an ONNX execution graph.  For those unfamiliar, ONNX is a format for representing ML models in a standardized graph format for better interoperability between tooling.
 
-I've had some experience before debugging misbehaving ONNX-formatted ML models, and immediately remembered a very convenient tool, [Netron](https://netron.app/), for inspecting ONNX files.  Loading the handout into Netron, we saw that the entire graph consists of a series of checks, all of which presumably need to succeed in order for our input to be accepted.
+I've had some experience before debugging misbehaving ONNX-formatted ML models, and immediately remembered a very convenient tool, [Netron](https://netron.app/), for inspecting them in a nice web UI.  Loading the handout into Netron, we saw that the entire graph consists of a series of checks, all of which presumably need to succeed in order for our input to be accepted.
 
 To start, we took a look at the entrypoint graph:
 
