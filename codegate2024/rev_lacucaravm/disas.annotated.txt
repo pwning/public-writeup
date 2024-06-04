@@ -1,0 +1,630 @@
+f1_u16_permute:
+    0x0000: shr r1, r0, 7
+    0x0004: shr r21, r0, 4
+    0x0008: shr r5, r0, 11
+    0x000c: shr r20, r0, 12
+    0x0010: shr r12, r0, 8
+    0x0014: shr r2, r0, 15
+    0x0018: shr r17, r0, 3
+    0x001c: shr r18, r0, 6
+    0x0020: xor r9, r20, r12
+    0x0024: shr r10, r0, 14
+    0x0028: xor r8, r5, r2
+    0x002c: shr r11, r0, 10
+    0x0030: xor r5, r1
+    0x0031: xor r12, r21
+    0x0032: shr r4, r0, 2
+    0x0036: xor r7, r10, r11
+    0x003a: xor r12, r0, r12
+    0x003e: xor r10, r18
+    0x003f: xor r5, r17, r5
+    0x0043: and r12, 0x1
+    0x0044: xor r10, r4, r10
+    0x0048: shl r5, 15
+    0x0049: shr r22, r0, 13
+    0x004d: shr r19, r0, 9
+    0x0051: or r5, r12
+    0x0052: shl r10, 14
+    0x0053: mov r12, 0x4000
+    0x0054: xor r3, r22, r19
+    0x0058: shr r16, r0, 1
+    0x005c: and r10, r12
+    0x005d: or r5, r10
+    0x005e: xor r10, r3, r16
+    0x0062: mov r12, 0x2000
+    0x0063: shl r10, 13
+    0x0064: and r10, r12
+    0x0065: or r5, r10
+    0x0066: xor r10, r9, r21
+    0x006a: mov r12, 0x1000
+    0x006b: shl r10, 12
+    0x006c: and r10, r12
+    0x006d: or r5, r10
+    0x006e: mov r12, 0x1000
+    0x006f: xor r10, r1, r8
+    0x0073: sub r12, 0x800
+    0x0074: shl r10, 11
+    0x0075: and r10, r12
+    0x0076: or r5, r10
+    0x0077: xor r10, r18, r4
+    0x007b: shr r6, r0, 5
+    0x007f: xor r11, r10
+    0x0080: xor r22, r16
+    0x0081: shl r11, 10
+    0x0082: xor r22, r6, r22
+    0x0086: and r11, 0x400
+    0x0087: xor r9, r0
+    0x0088: shl r22, 9
+    0x0089: or r5, r11
+    0x008a: and r22, 0x200
+    0x008b: shl r9, 8
+    0x008c: xor r8, r17, r8
+    0x0090: and r9, 0x100
+    0x0091: or r5, r22
+    0x0092: shl r8, 7
+    0x0093: xor r18, r7
+    0x0094: xor r19, r16
+    0x0095: or r5, r9
+    0x0096: and r8, 0xff
+    0x0097: shl r18, 6
+    0x0098: xor r19, r6, r19
+    0x009c: xor r20, r21
+    0x009d: or r5, r8
+    0x009e: and r18, 0x40
+    0x009f: shl r19, 5
+    0x00a0: xor r0, r20
+    0x00a1: or r5, r18
+    0x00a2: and r19, 0x20
+    0x00a3: shl r0, 4
+    0x00a4: or r5, r19
+    0x00a5: and r0, 0x10
+    0x00a6: or r0, r5, r0
+    0x00aa: xor r5, r1, r17
+    0x00ae: xor r5, r2, r5
+    0x00b2: shl r5, 3
+    0x00b3: xor r4, r7
+    0x00b4: and r5, 0x8
+    0x00b5: shl r4, 2
+    0x00b6: xor r3, r6
+    0x00b7: or r0, r5
+    0x00b8: and r4, 0x4
+    0x00b9: shl r3, 1
+    0x00ba: or r0, r4
+    0x00bb: and r3, 0x2
+    0x00bc: or r0, r3
+    0x00bd: shl r0, 16
+    0x00be: shr r0, 16
+    0x00bf: ret
+
+f2_u16_permute2:
+    0x00c0: shr r4, r0, 15
+    0x00c4: shr r7, r0, 11
+    0x00c8: shr r8, r0, 12
+    0x00cc: shr r21, r0, 8
+    0x00d0: shr r20, r0, 7
+    0x00d4: shr r6, r0, 6
+    0x00d8: xor r12, r8, r21
+    0x00dc: shr r22, r0, 4
+    0x00e0: xor r11, r4, r7
+    0x00e4: shr r13, r0, 10
+    0x00e8: shr r1, r0, 14
+    0x00ec: shr r19, r0, 2
+    0x00f0: xor r18, r13, r1
+    0x00f4: xor r5, r11, r20
+    0x00f8: xor r14, r12, r22
+    0x00fc: xor r13, r6
+    0x00fd: shr r16, r0, 5
+    0x0101: shr r9, r0, 13
+    0x0105: shr r10, r0, 9
+    0x0109: and r14, 0x1
+    0x010a: shl r5, 15
+    0x010b: xor r13, r19, r13
+    0x010f: shr r3, r0, 1
+    0x0113: xor r17, r9, r10
+    0x0117: or r5, r14
+    0x0118: xor r9, r16
+    0x0119: mov r14, 0x4000
+    0x011a: shl r13, 14
+    0x011b: and r13, r14
+    0x011c: xor r9, r3, r9
+    0x0120: or r5, r13
+    0x0121: shl r9, 13
+    0x0122: mov r13, 0x2000
+    0x0123: and r9, r13
+    0x0124: xor r12, r0
+    0x0125: shr r2, r0, 3
+    0x0129: or r5, r9
+    0x012a: shl r12, 12
+    0x012b: mov r9, 0x1000
+    0x012c: and r12, r9
+    0x012d: xor r11, r2
+    0x012e: mov r9, 0x1000
+    0x012f: sub r9, 0x800
+    0x0130: shl r11, 11
+    0x0131: and r11, r9
+    0x0132: xor r9, r6, r18
+    0x0136: or r5, r12
+    0x0137: shl r9, 10
+    0x0138: or r5, r11
+    0x0139: and r9, 0x400
+    0x013a: or r5, r9
+    0x013b: xor r9, r16, r3
+    0x013f: xor r10, r9
+    0x0140: xor r8, r22
+    0x0141: xor r8, r0, r8
+    0x0145: shl r10, 9
+    0x0146: xor r4, r20
+    0x0147: and r10, 0x200
+    0x0148: shl r8, 8
+    0x0149: xor r4, r2, r4
+    0x014d: or r5, r10
+    0x014e: and r8, 0x100
+    0x014f: shl r4, 7
+    0x0150: xor r18, r19, r18
+    0x0154: or r5, r8
+    0x0155: and r4, 0xff
+    0x0156: shl r18, 6
+    0x0157: xor r16, r17
+    0x0158: xor r21, r22
+    0x0159: or r5, r4
+    0x015a: and r18, 0x40
+    0x015b: shl r16, 5
+    0x015c: xor r0, r21
+    0x015d: or r5, r18
+    0x015e: and r16, 0x20
+    0x015f: shl r0, 4
+    0x0160: or r5, r16
+    0x0161: and r0, 0x10
+    0x0162: or r0, r5, r0
+    0x0166: xor r5, r7, r20
+    0x016a: xor r5, r2, r5
+    0x016e: shl r5, 3
+    0x016f: and r5, 0x8
+    0x0170: or r0, r5
+    0x0171: xor r5, r6, r19
+    0x0175: xor r5, r1, r5
+    0x0179: shl r5, 2
+    0x017a: xor r3, r17
+    0x017b: and r5, 0x4
+    0x017c: shl r3, 1
+    0x017d: or r0, r5
+    0x017e: and r3, 0x2
+    0x017f: or r0, r3
+    0x0180: shl r0, 16
+    0x0181: shr r0, 16
+    0x0182: ret
+
+f3_u64_permute3:
+    0x0183: mov r11, r0
+
+    0x0184: shr r0, r1, 16
+    0x0188: pushad
+    0x0189: push r1
+    0x018a: call f1_u16_permute
+    0x018b: pop r1
+    0x018c: popad
+    # r10 = f1(r1 >> 16)
+    0x018d: mov r10, r0
+
+    0x018e: shl r0, r1, 16
+    0x0192: shr r0, 16
+    0x0193: pushad
+    0x0194: call f2_u16_permute2
+    0x0195: popad
+    # r9 = f2(r1 & 0xffff)
+    0x0196: mov r9, r0
+
+    0x0197: shr r0, r11, 16
+    0x019b: pushad
+    0x019c: call f2_u16_permute2
+    0x019d: popad
+    # r8 = f2(r0 >> 16)
+    0x019e: mov r8, r0
+
+    0x019f: shl r0, r11, 16
+    0x01a3: shr r0, 16
+    0x01a4: pushad
+    0x01a5: call f1_u16_permute
+    0x01a6: popad
+    # r0 = f1(r0 & 0xffff)
+
+    # r0 |= (r8 << 16)
+    0x01a7: shr r1, r8, 16
+    0x01ab: shl r8, 16
+    0x01ac: or r0, r8
+    # r1 = (r10 << 16) | r9
+    0x01ad: shl r5, r10, 16
+    0x01b1: or r5, r9, r5
+    0x01b5: or r1, r5, r1
+    0x01b9: ret
+
+f4_u64_shl:
+    0x01ba: cmp r2, 0x0
+    0x01bb: jne 0x01bd
+    0x01bc: ret
+    0x01bd: cmp r2, 0x40
+    0x01be: jl 0x01c2
+    0x01bf: mov r0, 0x0
+    0x01c0: mov r1, 0x0
+    0x01c1: ret
+    0x01c2: cmp r2, 0x20
+    0x01c3: jl 0x01c5
+    0x01c4: jmp 0x01d5
+    0x01c5: shl r8, r1, r2
+    0x01c9: mov r10, 0x20
+    0x01ca: sub r10, r2
+    0x01cb: shr r9, r0, r2
+    0x01cf: or r1, r8, r9
+    0x01d3: shl r0, r2
+    0x01d4: ret
+    0x01d5: sub r8, r2, 0x20
+    0x01d9: shl r1, r0, r8
+    0x01dd: mov r0, 0x0
+    0x01de: ret
+
+f5_u64_shr:
+    0x01df: cmp r2, 0x0
+    0x01e0: jne 0x01e2
+    0x01e1: ret
+    0x01e2: cmp r2, 0x40
+    0x01e3: jl 0x01e7
+    0x01e4: mov r0, 0x0
+    0x01e5: mov r1, 0x0
+    0x01e6: ret
+    0x01e7: cmp r2, 0x20
+    0x01e8: jl 0x01ea
+    0x01e9: jmp 0x01fa
+    0x01ea: shr r8, r0, r2
+    0x01ee: mov r10, 0x20
+    0x01ef: sub r10, r2
+    0x01f0: shl r9, r1, r10
+    0x01f4: or r0, r8, r9
+    0x01f8: shr r1, r2
+    0x01f9: ret
+    0x01fa: sub r8, r2, 0x20
+    0x01fe: shr r0, r1, r8
+    0x0202: mov r1, 0x0
+    0x0203: ret
+
+f6_4bit_sbox:
+    0x0204: mov r14, r0
+    0x0205: mov r15, r1
+    0x0206: mov r12, r2
+    0x0207: mov r8, 0x0
+    0x0208: mov r10, 0x0
+    0x0209: mov r9, 0x0
+    0x020a: mov r11, 0x40
+        # r1:r0 = r15:r14 >> r8
+        0x020b: mov r2, r8
+        0x020c: mov r0, r14
+        0x020d: mov r1, r15
+        0x020e: pushad
+        0x020f: call f5_u64_shr
+        0x0210: popad
+        0x0211: and r0, 0xf
+        0x0212: add r0, r12
+        0x0213: mov r0, mem[r0]
+        # r1:r0 = 0x0:r0 << r8
+        0x0214: mov r2, r8
+        0x0215: mov r1, 0x0
+        0x0216: pushad
+        0x0217: call f4_u64_shl
+        0x0218: popad
+        0x0219: add r8, 0x4
+        # r9:r10 |= r1:r0
+        0x021a: or r10, r0
+        0x021b: or r9, r1
+        0x021c: cmp r8, r11
+        0x021d: jne 0x020b
+    0x021e: mov r0, r10
+    0x021f: mov r1, r9
+    0x0220: ret
+
+f7:
+    0x0221: shr r5, r1, 28
+    0x0225: shl r5, 20
+    0x0226: shr r4, r1, 24
+    0x022a: and r4, 0xf
+    0x022b: shr r3, r1, 4
+    0x022f: shl r3, 28
+    0x0230: or r5, r3
+    0x0231: shl r2, r0, 8
+    0x0235: mov r3, 0x1000
+    0x0236: sub r3, 0x100
+    0x0237: and r2, r3
+    0x0238: or r5, r2
+    0x0239: shr r2, r1, 8
+    0x023d: mov r6, 0xf000
+    0x023e: and r2, r6
+    0x023f: or r4, r2
+    0x0240: shl r2, r1, 8
+    0x0244: mov r7, 0xf000000
+    0x0245: and r2, r7
+    0x0246: or r4, r2
+    0x0247: shr r2, r1, 8
+    0x024b: and r2, 0xf0
+    0x024c: or r5, r2
+    0x024d: shl r2, r1, 8
+    0x0251: mov r6, 0xf0000
+    0x0252: and r2, r6
+    0x0253: or r5, r2
+    0x0254: shl r2, r1, 8
+    0x0258: and r3, r2
+    0x0259: or r4, r3
+    0x025a: shl r2, r1, 4
+    0x025e: shr r3, r0, 28
+    0x0262: or r3, r2
+    0x0263: shl r3, 20
+    0x0264: mov r2, 0xf00000
+    0x0265: and r3, r2
+    0x0266: or r4, r3
+    0x0267: shr r2, r0, 24
+    0x026b: and r2, 0xf
+    0x026c: or r5, r2
+    0x026d: shl r1, 12
+    0x026e: shr r3, r0, 20
+    0x0272: or r3, r1
+    0x0273: shl r3, 12
+    0x0274: mov r2, 0xf000
+    0x0275: and r3, r2
+    0x0276: or r5, r3
+    0x0277: shl r1, r0, 8
+    0x027b: and r1, r7
+    0x027c: shr r2, r0, 8
+    0x0280: and r2, 0xf0
+    0x0281: or r4, r2
+    0x0282: shl r3, r0, 8
+    0x0286: and r3, r6
+    0x0287: or r4, r3
+    0x0288: shr r0, 4
+    0x0289: shl r0, 28
+    0x028a: or r0, r4
+    0x028b: or r1, r5
+    0x028c: ret
+
+f8:
+    0x028d: shr r5, r1, 28
+    0x0291: shl r5, 20
+    0x0292: shr r4, r1, 4
+    0x0296: shl r4, 28
+    0x0297: or r5, r4
+    0x0298: shl r2, r1, 8
+    0x029c: shr r4, r0, 24
+    0x02a0: shr r6, r1, 24
+    0x02a4: and r4, 0xf
+    0x02a5: shl r7, r0, 8
+    0x02a9: mov r3, 0x1000
+    0x02aa: sub r3, 0x100
+    0x02ab: and r7, r3
+    0x02ac: or r4, r7
+    0x02ad: and r6, 0xf
+    0x02ae: or r5, r6
+    0x02af: shr r6, r1, 8
+    0x02b3: mov r7, 0xf000
+    0x02b4: and r6, r7
+    0x02b5: or r4, r6
+    0x02b6: mov r17, 0xf000000
+    0x02b7: and r6, r2, r17
+    0x02bb: or r5, r6
+    0x02bc: shr r6, r1, 8
+    0x02c0: and r6, 0xf0
+    0x02c1: or r5, r6
+    0x02c2: mov r6, 0xf0000
+    0x02c3: and r7, r2, r6
+    0x02c7: or r4, r7
+    0x02c8: and r3, r2
+    0x02c9: or r5, r3
+    0x02ca: shl r2, r1, 4
+    0x02ce: shr r3, r0, 28
+    0x02d2: or r3, r2
+    0x02d3: shl r3, 20
+    0x02d4: mov r2, 0xf00000
+    0x02d5: and r3, r2
+    0x02d6: or r4, r3
+    0x02d7: shl r1, 12
+    0x02d8: shr r3, r0, 20
+    0x02dc: or r3, r1
+    0x02dd: shl r3, 12
+    0x02de: mov r2, 0xf000
+    0x02df: and r3, r2
+    0x02e0: or r5, r3
+    0x02e1: shl r3, r0, 8
+    0x02e5: and r3, r17
+    0x02e6: or r4, r3
+    0x02e7: shr r3, r0, 8
+    0x02eb: and r3, 0xf0
+    0x02ec: or r4, r3
+    0x02ed: shl r1, r0, 8
+    0x02f1: and r1, r6
+    0x02f2: shr r0, 4
+    0x02f3: shl r0, 28
+    0x02f4: or r0, r4
+    0x02f5: or r1, r5
+    0x02f6: ret
+
+main:
+    0x02f7: mov r10, r2
+    0x02f8: mov r12, r3
+    0x02f9: mov r9, r4
+    0x02fa: mov r8, r5
+    0x02fb: xor r0, r4
+    0x02fc: xor r1, r5
+
+    0x02fd: xor r0, r10
+    0x02fe: xor r1, r3
+    0x02ff: mov r2, 0x0
+    0x0300: pushad
+    0x0301: call f6_4bit_sbox
+    0x0302: popad
+    0x0303: pushad
+    0x0304: call f3_u64_permute3
+    0x0305: popad
+    0x0306: pushad
+    0x0307: call f7
+    0x0308: popad
+
+    0x0309: xor r16, r9, r0
+    0x030d: xor r17, r8, r1
+    0x0311: xor r0, r16, 0x3707344
+    0x0315: xor r1, r17, 0x13198a2e
+    0x0319: pushad
+    0x031a: call f6_4bit_sbox
+    0x031b: popad
+    0x031c: pushad
+    0x031d: call f3_u64_permute3
+    0x031e: popad
+    0x031f: pushad
+    0x0320: call f7
+    0x0321: popad
+
+    0x0322: xor r6, r9, r0
+    0x0326: xor r7, r8, r1
+    0x032a: xor r0, r6, 0x299f31d0
+    0x032e: xor r1, r7, 0xa4093822
+    0x0332: mov r2, 0x0
+    0x0333: pushad
+    0x0334: call f6_4bit_sbox
+    0x0335: popad
+    0x0336: pushad
+    0x0337: call f3_u64_permute3
+    0x0338: popad
+    0x0339: pushad
+    0x033a: call f7
+    0x033b: popad
+
+    0x033c: xor r0, r9
+    0x033d: xor r1, r8
+    0x033e: xor r0, 0xec4e6c89
+    0x033f: xor r1, 0x82efa98
+    0x0340: mov r2, 0x0
+    0x0341: pushad
+    0x0342: call f6_4bit_sbox
+    0x0343: popad
+    0x0344: pushad
+    0x0345: call f3_u64_permute3
+    0x0346: popad
+    0x0347: pushad
+    0x0348: call f7
+    0x0349: popad
+
+    0x034a: xor r3, r9, r0
+    0x034e: xor r4, r8, r1
+    0x0352: xor r0, r3, 0x38d01377
+    0x0356: xor r1, r4, 0x452821e6
+    0x035a: mov r2, 0x0
+    0x035b: pushad
+    0x035c: call f6_4bit_sbox
+    0x035d: popad
+    0x035e: pushad
+    0x035f: call f3_u64_permute3
+    0x0360: popad
+    0x0361: pushad
+    0x0362: call f7
+    0x0363: popad
+
+    0x0364: xor r21, r9, r0
+    0x0368: xor r22, r8, r1
+    0x036c: xor r0, r21, 0x34e90c6c
+    0x0370: xor r1, r22, 0xbe5466cf
+    0x0374: mov r2, 0x0
+    0x0375: pushad
+    0x0376: call f6_4bit_sbox
+    0x0377: popad
+    0x0378: pushad
+    0x0379: call f3_u64_permute3
+    0x037a: popad
+    0x037b: mov r2, 0x10
+    0x037c: pushad
+    0x037d: call f6_4bit_sbox
+    0x037e: popad
+
+    0x037f: xor r2, r9, r0
+    0x0383: xor r17, r8, r1
+    0x0387: xor r0, r2, 0xfd955cb1
+    0x038b: xor r1, r17, 0x7ef84f78
+    0x038f: pushad
+    0x0390: call f8
+    0x0391: popad
+    0x0392: pushad
+    0x0393: call f3_u64_permute3
+    0x0394: popad
+    0x0395: mov r2, 0x10
+    0x0396: pushad
+    0x0397: call f6_4bit_sbox
+    0x0398: popad
+
+    0x0399: xor r6, r9, r0
+    0x039d: xor r7, r8, r1
+    0x03a1: xor r0, r6, 0xf1ac43aa
+    0x03a5: xor r1, r7, 0x85840851
+    0x03a9: pushad
+    0x03aa: call f8
+    0x03ab: popad
+    0x03ac: pushad
+    0x03ad: call f3_u64_permute3
+    0x03ae: popad
+    0x03af: mov r2, 0x10
+    0x03b0: pushad
+    0x03b1: call f6_4bit_sbox
+    0x03b2: popad
+
+    0x03b3: xor r13, r9, r0
+    0x03b7: xor r1, r8
+    0x03b8: xor r0, r13, 0x25323c54
+    0x03bc: xor r1, 0xc882d32f
+    0x03bd: pushad
+    0x03be: call f8
+    0x03bf: popad
+    0x03c0: pushad
+    0x03c1: call f3_u64_permute3
+    0x03c2: popad
+    0x03c3: mov r2, 0x10
+    0x03c4: pushad
+    0x03c5: call f6_4bit_sbox
+    0x03c6: popad
+
+    0x03c7: xor r18, r9, r0
+    0x03cb: xor r3, r8, r1
+    0x03cf: xor r0, r18, 0xe0e3610d
+    0x03d3: xor r1, r3, 0x64a51195
+    0x03d7: pushad
+    0x03d8: call f8
+    0x03d9: popad
+    0x03da: pushad
+    0x03db: call f3_u64_permute3
+    0x03dc: popad
+    0x03dd: mov r2, 0x10
+    0x03de: pushad
+    0x03df: call f6_4bit_sbox
+    0x03e0: popad
+
+    0x03e1: xor r19, r9, r0
+    0x03e5: xor r20, r8, r1
+    0x03e9: xor r0, r19, 0xca0c2399
+    0x03ed: xor r1, r20, 0xd3b5a399
+    0x03f1: pushad
+    0x03f2: call f8
+    0x03f3: popad
+    0x03f4: pushad
+    0x03f5: call f3_u64_permute3
+    0x03f6: popad
+    0x03f7: mov r2, 0x10
+    0x03f8: pushad
+    0x03f9: call f6_4bit_sbox
+    0x03fa: popad
+
+    0x03fb: shl r11, r12, 31
+    0x03ff: shr r16, r10, 1
+    0x0403: or r2, r11, r16
+    0x0407: shl r10, 31
+    0x0408: shr r17, r12, 1
+    0x040c: or r18, r10, r17
+    0x0410: xor r9, r0
+    0x0411: xor r8, r1
+    0x0412: xor r0, r2, r9
+    0x0416: xor r3, r18, r8
+    0x041a: shr r12, 31
+    0x041b: xor r4, r0, r12
+    0x041f: xor r0, r4, 0xc97c50dd
+    0x0423: xor r1, r3, 0xc0ac29b7
+    0x0427: halt
