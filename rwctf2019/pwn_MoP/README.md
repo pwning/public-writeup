@@ -44,7 +44,8 @@ index 24765617cb..66c0402e74 100644
 +#define PHP_VERSION "114514-realworld"
 ```
 
-No idea what the `114514` in the version means. The DS_store is just a mac thing, but the `tttt.py` seems to be a remnant from a different CTF challenge?! (https://www.tuicool.com/articles/RNBJ7fE -- pythonginx). No idea why that file is there.
+The `114514` in the version has no real function; it is a [Japanese internet meme "iiyokoiyo"](https://github.com/pwning/public-writeup/issues/15).
+The DS_store is just a mac thing, but the `tttt.py` seems to be a remnant from a different CTF challenge?! (https://www.tuicool.com/articles/RNBJ7fE -- pythonginx). No idea why that file is there.
 
 Anyways, we now know that the bug is a missing `ze_obj->filename = NULL`, which means that we either have UAF or double-free.
 
